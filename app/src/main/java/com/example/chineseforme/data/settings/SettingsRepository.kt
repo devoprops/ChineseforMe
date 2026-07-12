@@ -22,10 +22,16 @@ data class AppSettings(
     val glossDensity: Int = 5,
     val verticalText: Boolean = false,
     val distractorCount: Int = 8,
-    val restartOnMistake: Boolean = true,
+    /**
+     * Wrong picks allowed before the memorize attempt resets.
+     * Reset when mistakes exceed this value (default 1 ⇒ one free miss).
+     */
+    val memorizeAllowedMistakes: Int = 1,
     val memorizeHintsPerAttempt: Int = 3,
     val memorizeHintStyle: MemorizeHintStyle = MemorizeHintStyle.NarrowPool,
     val strokeHintsPerAttempt: Int = 3,
+    /** Wrong strokes allowed before the stroke attempt fails. */
+    val strokeAllowedMistakes: Int = 3,
     /** Work currently loaded for study; null if none selected. */
     val currentWorkId: Long? = null
 )
@@ -38,15 +44,22 @@ class SettingsRepository(private val context: Context) {
         val glossDensity = intPreferencesKey("gloss_density")
         val verticalText = booleanPreferencesKey("vertical_text")
         val distractorCount = intPreferencesKey("distractor_count")
-        val restartOnMistake = booleanPreferencesKey("restart_on_mistake")
+        val restartOnMistake = booleanPreferencesKey("restart_on_mistake") // legacy
+        val memorizeAllowedMistakes = intPreferencesKey("memorize_allowed_mistakes")
         val memorizeHints = intPreferencesKey("memorize_hints")
         val memorizeHintStyle = stringPreferencesKey("memorize_hint_style")
         val strokeHints = intPreferencesKey("stroke_hints")
+        val strokeAllowedMistakes = intPreferencesKey("stroke_allowed_mistakes")
         val currentWorkId = longPreferencesKey("current_work_id")
     }
 
     val settings: Flow<AppSettings> = context.dataStore.data.map { prefs ->
         val workId = prefs[Keys.currentWorkId]
+        val memorizeMistakes = prefs[Keys.memorizeAllowedMistakes]
+            ?: when (prefs[Keys.restartOnMistake]) {
+                false -> 20
+                else -> 1
+            }
         AppSettings(
             showPinyinOnTiles = prefs[Keys.showPinyin] ?: true,
             showPinyinOnMemorizeSkeleton = prefs[Keys.showPinyinMemorizeSkeleton] ?: false,
@@ -54,10 +67,11 @@ class SettingsRepository(private val context: Context) {
             glossDensity = prefs[Keys.glossDensity] ?: 5,
             verticalText = prefs[Keys.verticalText] ?: false,
             distractorCount = prefs[Keys.distractorCount] ?: 8,
-            restartOnMistake = prefs[Keys.restartOnMistake] ?: true,
+            memorizeAllowedMistakes = memorizeMistakes.coerceIn(0, 20),
             memorizeHintsPerAttempt = prefs[Keys.memorizeHints] ?: 3,
             memorizeHintStyle = MemorizeHintStyle.fromStorage(prefs[Keys.memorizeHintStyle]),
             strokeHintsPerAttempt = prefs[Keys.strokeHints] ?: 3,
+            strokeAllowedMistakes = (prefs[Keys.strokeAllowedMistakes] ?: 3).coerceIn(0, 20),
             currentWorkId = workId?.takeIf { it > 0L }
         )
     }
@@ -86,8 +100,8 @@ class SettingsRepository(private val context: Context) {
         context.dataStore.edit { it[Keys.distractorCount] = value.coerceIn(2, 20) }
     }
 
-    suspend fun setRestartOnMistake(value: Boolean) {
-        context.dataStore.edit { it[Keys.restartOnMistake] = value }
+    suspend fun setMemorizeAllowedMistakes(value: Int) {
+        context.dataStore.edit { it[Keys.memorizeAllowedMistakes] = value.coerceIn(0, 20) }
     }
 
     suspend fun setMemorizeHints(value: Int) {
@@ -100,6 +114,10 @@ class SettingsRepository(private val context: Context) {
 
     suspend fun setStrokeHints(value: Int) {
         context.dataStore.edit { it[Keys.strokeHints] = value.coerceIn(0, 10) }
+    }
+
+    suspend fun setStrokeAllowedMistakes(value: Int) {
+        context.dataStore.edit { it[Keys.strokeAllowedMistakes] = value.coerceIn(0, 20) }
     }
 
     suspend fun setCurrentWorkId(workId: Long?) {

@@ -7,6 +7,8 @@ import com.example.chineseforme.data.importing.BundledTextCatalog
 import com.example.chineseforme.data.importing.DocumentTextExtractor
 import com.example.chineseforme.data.repo.TextRepository
 import com.example.chineseforme.data.settings.SettingsRepository
+import com.example.chineseforme.data.stroke.KangxiRadicalRepository
+import com.example.chineseforme.data.stroke.StrokeDataRepository
 import com.example.chineseforme.domain.analysis.SentenceAnalyzer
 import com.example.chineseforme.domain.segmentation.DictSegmenter
 import com.example.chineseforme.domain.translation.NotionalTranslationService
@@ -34,6 +36,10 @@ class ChineseForMeApp : Application() {
         private set
     lateinit var notionalTranslationService: NotionalTranslationService
         private set
+    lateinit var strokeDataRepository: StrokeDataRepository
+        private set
+    lateinit var kangxiRadicalRepository: KangxiRadicalRepository
+        private set
 
     override fun onCreate() {
         super.onCreate()
@@ -45,6 +51,8 @@ class ChineseForMeApp : Application() {
         segmenter = DictSegmenter(database.glossDao(), database.personalPhraseDao())
         analyzer = SentenceAnalyzer(database.glossDao(), database.overrideDao(), segmenter)
         notionalTranslationService = NotionalTranslationService(database.glossDao(), segmenter)
+        strokeDataRepository = StrokeDataRepository(this)
+        kangxiRadicalRepository = KangxiRadicalRepository(this)
 
         appScope.launch {
             DictionaryImporter(this@ChineseForMeApp, database).ensureLoaded()

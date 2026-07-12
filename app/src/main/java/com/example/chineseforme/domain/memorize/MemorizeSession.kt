@@ -40,6 +40,8 @@ data class MemorizeState(
     /** Characters briefly highlighted after a FlashThree hint. */
     val flashChars: Set<Char> = emptySet(),
     val hintsRemaining: Int,
+    val mistakes: Int = 0,
+    val allowedMistakes: Int = 1,
     val currentFilled: Int,
     val bestFilled: Int,
     val totalHan: Int,
@@ -48,13 +50,14 @@ data class MemorizeState(
 )
 
 /**
- * Pure memorize engine: blank slots, character pool, hints, restart-on-mistake.
+ * Pure memorize engine: blank slots, character pool, hints, mistake budget.
  */
 class MemorizeSession {
     private var sentence: String = ""
     private var workChars: Set<Char> = emptySet()
     private var distractorCount: Int = 8
-    private var restartOnMistake: Boolean = true
+    private var allowedMistakes: Int = 1
+    private var mistakes: Int = 0
     private var hintsPerAttempt: Int = 3
     private var hintStyle: MemorizeHintStyle = MemorizeHintStyle.NarrowPool
     private var bestFilled: Int = 0
@@ -66,7 +69,7 @@ class MemorizeSession {
         sentenceText: String,
         workHanChars: Set<Char>,
         distractorCount: Int,
-        restartOnMistake: Boolean,
+        allowedMistakes: Int,
         hintsPerAttempt: Int,
         hintStyle: MemorizeHintStyle,
         preservedBest: Int = 0
@@ -74,7 +77,7 @@ class MemorizeSession {
         sentence = sentenceText
         workChars = workHanChars
         this.distractorCount = distractorCount.coerceIn(2, 20)
-        this.restartOnMistake = restartOnMistake
+        this.allowedMistakes = allowedMistakes.coerceIn(0, 20)
         this.hintsPerAttempt = hintsPerAttempt.coerceIn(0, 10)
         this.hintStyle = hintStyle
         bestFilled = preservedBest.coerceAtLeast(0)
@@ -167,6 +170,8 @@ class MemorizeSession {
             pool = if (complete) emptyList() else buildPool(slots[nextFocus!!].expected),
             flashChars = emptySet(),
             hintsRemaining = state.hintsRemaining,
+            mistakes = mistakes,
+            allowedMistakes = allowedMistakes,
             currentFilled = filled,
             bestFilled = bestFilled,
             totalHan = state.totalHan,
@@ -177,20 +182,24 @@ class MemorizeSession {
     }
 
     private fun applyWrong(): MemorizeState {
-        state = if (restartOnMistake) {
-            buildFreshAttempt(statusMessage = "Incorrect — attempt reset")
+        mistakes += 1
+        state = if (mistakes > allowedMistakes) {
+            buildFreshAttempt(statusMessage = "Too many mistakes — attempt reset")
         } else {
             val focus = state.focusIndex ?: return state
             state.copy(
                 pool = buildPool(state.slots[focus].expected),
                 flashChars = emptySet(),
-                statusMessage = "Incorrect"
+                mistakes = mistakes,
+                allowedMistakes = allowedMistakes,
+                statusMessage = "Incorrect (${mistakes}/${allowedMistakes} mistakes used)"
             )
         }
         return state
     }
 
     private fun buildFreshAttempt(statusMessage: String?): MemorizeState {
+        mistakes = 0
         val slots = sentence.mapIndexed { index, c ->
             val punct = !isHanish(c)
             MemorizeSlot(
@@ -209,6 +218,8 @@ class MemorizeSession {
             pool = if (complete) emptyList() else buildPool(slots[focus!!].expected),
             flashChars = emptySet(),
             hintsRemaining = hintsPerAttempt,
+            mistakes = 0,
+            allowedMistakes = allowedMistakes,
             currentFilled = 0,
             bestFilled = bestFilled,
             totalHan = totalHan,
@@ -230,6 +241,8 @@ class MemorizeSession {
         focusIndex = null,
         pool = emptyList(),
         hintsRemaining = 0,
+        mistakes = 0,
+        allowedMistakes = 1,
         currentFilled = 0,
         bestFilled = 0,
         totalHan = 0,

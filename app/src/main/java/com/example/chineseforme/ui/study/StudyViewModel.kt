@@ -29,7 +29,11 @@ data class StudyUiState(
     val groupMode: Boolean = false,
     val sentenceIndex: Int = 0,
     val sentenceCount: Int = 0,
-    val error: String? = null
+    val error: String? = null,
+    /** Surface → Google draft when local dictionary has no senses. */
+    val onlineGlossCache: Map<String, String> = emptyMap(),
+    val onlineGlossLoading: Set<String> = emptySet(),
+    val onlineGlossFailed: Set<String> = emptySet()
 )
 
 class StudyViewModel(
@@ -182,6 +186,34 @@ class StudyViewModel(
         }
     }
 
+    /** Fetch a Google draft gloss when the local dictionary has no senses for [surface]. */
+    fun requestOnlineGloss(surface: String) {
+        val key = surface.trim()
+        if (key.isEmpty()) return
+        val s = _state.value
+        if (key in s.onlineGlossCache || key in s.onlineGlossLoading || key in s.onlineGlossFailed) {
+            return
+        }
+        viewModelScope.launch {
+            _state.update { it.copy(onlineGlossLoading = it.onlineGlossLoading + key) }
+            val draft = notionalTranslationService.translateSurface(key)
+            _state.update { cur ->
+                if (draft.isNotBlank()) {
+                    cur.copy(
+                        onlineGlossLoading = cur.onlineGlossLoading - key,
+                        onlineGlossCache = cur.onlineGlossCache + (key to draft),
+                        analysis = cur.analysis?.withFilledSenses(key, listOf(draft))
+                    )
+                } else {
+                    cur.copy(
+                        onlineGlossLoading = cur.onlineGlossLoading - key,
+                        onlineGlossFailed = cur.onlineGlossFailed + key
+                    )
+                }
+            }
+        }
+    }
+
     class Factory(
         private val sentenceId: Long,
         private val workId: Long,
@@ -201,4 +233,30 @@ class StudyViewModel(
                 settingsRepository
             ) as T
     }
+}
+
+/** Fill empty senses on matching tiles/groups after an online gloss fetch. */
+private fun SentenceAnalysis.withFilledSenses(
+    surface: String,
+    senses: List<String>
+): SentenceAnalysis {
+    if (senses.isEmpty()) return this
+    val nextTiles = tiles.map { tile ->
+        if (!tile.isPunctuation && tile.char == surface && tile.senses.isEmpty()) {
+            tile.copy(senses = senses)
+        } else {
+            tile
+        }
+    }
+    val byIndex = nextTiles.associateBy { it.index }
+    val nextGroups = groups.map { group ->
+        val groupTiles = group.tiles.map { tile -> byIndex[tile.index] ?: tile }
+        val groupSenses = if (group.surface == surface && group.senses.isEmpty()) {
+            senses
+        } else {
+            group.senses
+        }
+        group.copy(senses = groupSenses, tiles = groupTiles)
+    }
+    return copy(tiles = nextTiles, groups = nextGroups)
 }

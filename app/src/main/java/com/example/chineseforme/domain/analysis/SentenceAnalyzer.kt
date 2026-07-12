@@ -9,6 +9,7 @@ import com.example.chineseforme.domain.model.GroupSpan
 import com.example.chineseforme.domain.model.SentenceAnalysis
 import com.example.chineseforme.domain.model.SentenceReading
 import com.example.chineseforme.domain.model.WordGroup
+import com.example.chineseforme.domain.pinyin.PinyinResolver
 import com.example.chineseforme.domain.segmentation.DictSegmenter
 import com.example.chineseforme.domain.segmentation.GroupEdit
 import org.json.JSONArray
@@ -63,32 +64,39 @@ class SentenceAnalyzer(
         val text = sentence.text
         val tiles = mutableListOf<CharTile>()
         val groups = mutableListOf<WordGroup>()
+        val pinyinCache = mutableMapOf<Char, List<String>>()
 
         spans.forEachIndexed { groupId, span ->
             val surface = text.substring(span.start, span.endExclusive)
             val glosses = glossDao.lookup(surface)
             val senses = mergeSenses(glosses)
-            val pinyins = preferNonSurnamePinyin(
+            val pinyins = PinyinResolver.preferNonSurname(
                 glosses.map { it.pinyin.trim() }.filter { it.isNotBlank() }.distinct()
             )
             val groupTiles = mutableListOf<CharTile>()
-            val groupSyllables = splitPinyinSyllables(pinyins.firstOrNull().orEmpty())
+            val groupSyllables = PinyinResolver.splitSyllables(pinyins.firstOrNull().orEmpty())
             var hanOffset = 0
             for (i in span.start until span.endExclusive) {
-                val ch = text[i].toString()
-                val isPunct = !isHanish(text[i])
-                val charGlosses = if (isPunct) emptyList() else glossDao.lookup(ch)
+                val ch = text[i]
+                val surfaceChar = ch.toString()
+                val isPunct = !isHanish(ch)
+                val charGlosses = if (isPunct) emptyList() else glossDao.lookup(surfaceChar)
                 val tilePinyin = if (isPunct) {
                     emptyList()
                 } else {
-                    characterPinyinCandidates(
-                        charGlosses = charGlosses,
-                        groupSyllables = groupSyllables,
-                        hanOffsetInGroup = hanOffset
-                    ).also { hanOffset++ }
+                    val groupSyllable = groupSyllables.getOrNull(hanOffset)
+                    hanOffset++
+                    val cached = pinyinCache[ch]
+                    if (cached != null && cached.isNotEmpty()) {
+                        cached
+                    } else {
+                        val resolved = resolveTilePinyin(ch, charGlosses, groupSyllable)
+                        if (resolved.isNotEmpty()) pinyinCache[ch] = resolved
+                        resolved
+                    }
                 }
                 val tile = CharTile(
-                    char = ch,
+                    char = surfaceChar,
                     index = i,
                     pinyinCandidates = tilePinyin,
                     senses = if (isPunct) emptyList() else mergeSenses(charGlosses),
@@ -122,7 +130,6 @@ class SentenceAnalyzer(
                 )
             )
         }
-        // Phrase-gloss chain is a study aid, not a sentence translation.
         val glossChain = groups
             .filter { g -> g.tiles.any { !it.isPunctuation } }
             .mapNotNull { g ->
@@ -149,6 +156,21 @@ class SentenceAnalyzer(
         )
     }
 
+    private suspend fun resolveTilePinyin(
+        ch: Char,
+        charGlosses: List<GlossEntryEntity>,
+        groupSyllable: String?
+    ): List<String> {
+        val direct = PinyinResolver.candidatesFromDirectGlosses(charGlosses)
+        if (direct.isNotEmpty()) return direct
+        if (!groupSyllable.isNullOrBlank()) return listOf(groupSyllable)
+        val inferred = PinyinResolver.fromContainingEntries(
+            ch,
+            glossDao.entriesContaining(ch.toString())
+        )
+        return if (inferred.isNullOrBlank()) emptyList() else listOf(inferred)
+    }
+
     private fun mergeSenses(entries: List<GlossEntryEntity>): List<String> {
         val out = LinkedHashSet<String>()
         for (entry in entries) {
@@ -159,55 +181,6 @@ class SentenceAnalyzer(
                 .forEach { out.add(it) }
         }
         return out.toList()
-    }
-
-    /**
-     * Prefer single-character dictionary pinyin. Never put the whole group reading
-     * on one tile — fall back to the matching syllable from the group pinyin.
-     */
-    private fun characterPinyinCandidates(
-        charGlosses: List<GlossEntryEntity>,
-        groupSyllables: List<String>,
-        hanOffsetInGroup: Int
-    ): List<String> {
-        val fromChar = preferNonSurnamePinyin(
-            charGlosses
-                .map { it.pinyin.trim() }
-                .filter { it.isNotBlank() }
-                // Reject multi-syllable strings wrongly stored on a single-character entry
-                // (e.g. "nèi hán" on 涵) — those belong on the group, not the tile.
-                .filter { !it.contains(' ') && !it.contains('　') }
-                .distinct()
-        )
-        if (fromChar.isNotEmpty()) return fromChar
-        val syllable = groupSyllables.getOrNull(hanOffsetInGroup) ?: return emptyList()
-        return listOf(syllable)
-    }
-
-    /**
-     * CEDICT marks surname readings with a capital (e.g. Hóng). Prefer lowercase
-     * readings for tiles/popups; keep capitalized ones only when they are alone,
-     * or after non-surname options so the user can still see them.
-     */
-    private fun preferNonSurnamePinyin(candidates: List<String>): List<String> {
-        if (candidates.size <= 1) return candidates
-        val nonSurname = candidates.filterNot { looksLikeSurnamePinyin(it) }
-        if (nonSurname.isEmpty()) return candidates
-        val surname = candidates.filter { looksLikeSurnamePinyin(it) }
-        return nonSurname + surname
-    }
-
-    private fun looksLikeSurnamePinyin(pinyin: String): Boolean {
-        val first = pinyin.trim().firstOrNull() ?: return false
-        return first.isUpperCase() && first.isLetter()
-    }
-
-    private fun splitPinyinSyllables(pinyin: String): List<String> {
-        return pinyin
-            .trim()
-            .split(Regex("""[\s　]+"""))
-            .map { it.trim() }
-            .filter { it.isNotEmpty() }
     }
 
     private fun isHanish(c: Char): Boolean =

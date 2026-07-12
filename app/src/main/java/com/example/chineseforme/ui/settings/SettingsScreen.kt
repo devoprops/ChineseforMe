@@ -104,10 +104,14 @@ fun SettingsScreen(
                 label = settings.distractorCount.toString(),
                 onChange = { scope.launch { settingsRepository.setDistractorCount(it.toInt()) } }
             )
-            SettingSwitch(
-                title = "Restart on mistake",
-                checked = settings.restartOnMistake,
-                onCheckedChange = { scope.launch { settingsRepository.setRestartOnMistake(it) } }
+            SettingSlider(
+                title = "Allowed mistakes (reset when exceeded)",
+                value = settings.memorizeAllowedMistakes.toFloat(),
+                range = 0f..10f,
+                label = settings.memorizeAllowedMistakes.toString(),
+                onChange = {
+                    scope.launch { settingsRepository.setMemorizeAllowedMistakes(it.toInt()) }
+                }
             )
             SettingSlider(
                 title = "Hints per attempt",
@@ -127,13 +131,22 @@ fun SettingsScreen(
                     }
                 }
             )
-            Text("Stroke practice (upcoming)", style = MaterialTheme.typography.titleMedium)
+            Text("Stroke practice", style = MaterialTheme.typography.titleMedium)
             SettingSlider(
                 title = "Stroke hints per attempt",
                 value = settings.strokeHintsPerAttempt.toFloat(),
                 range = 0f..10f,
                 label = settings.strokeHintsPerAttempt.toString(),
                 onChange = { scope.launch { settingsRepository.setStrokeHints(it.toInt()) } }
+            )
+            SettingSlider(
+                title = "Allowed mistakes (fail when exceeded)",
+                value = settings.strokeAllowedMistakes.toFloat(),
+                range = 0f..10f,
+                label = settings.strokeAllowedMistakes.toString(),
+                onChange = {
+                    scope.launch { settingsRepository.setStrokeAllowedMistakes(it.toInt()) }
+                }
             )
         }
     }

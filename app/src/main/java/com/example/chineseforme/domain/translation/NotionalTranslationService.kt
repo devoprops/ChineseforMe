@@ -44,6 +44,21 @@ class NotionalTranslationService(
         composeFromSegments(trimmed)
     }
 
+    /**
+     * Online gloss for a character or short phrase when the local FG dictionary has no entry.
+     * Uses the same Google gtx endpoint as sentence notional drafts.
+     */
+    suspend fun translateSurface(text: String): String = withContext(Dispatchers.IO) {
+        val trimmed = text.trim()
+        if (trimmed.isEmpty()) return@withContext ""
+        try {
+            googleTranslate(trimmed)
+        } catch (e: Exception) {
+            Log.w(TAG, "Surface translate failed for '$trimmed'", e)
+            ""
+        }
+    }
+
     private suspend fun composeFromSegments(text: String): String {
         val spans = segmenter.segment(text)
         val parts = spans.mapNotNull { span ->

@@ -1,12 +1,7 @@
 package com.example.chineseforme.ui
 
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavType
@@ -20,10 +15,11 @@ import com.example.chineseforme.ui.library.LibraryScreen
 import com.example.chineseforme.ui.library.LibraryViewModel
 import com.example.chineseforme.ui.memorize.MemorizeScreen
 import com.example.chineseforme.ui.memorize.MemorizeViewModel
-import com.example.chineseforme.ui.modes.ModePlaceholderScreen
 import com.example.chineseforme.ui.reader.ReaderScreen
 import com.example.chineseforme.ui.reader.ReaderViewModel
 import com.example.chineseforme.ui.settings.SettingsScreen
+import com.example.chineseforme.ui.stroke.StrokeScreen
+import com.example.chineseforme.ui.stroke.StrokeViewModel
 import com.example.chineseforme.ui.study.StudyScreen
 import com.example.chineseforme.ui.study.StudyViewModel
 
@@ -154,15 +150,23 @@ fun ChineseForMeNav() {
                 navArgument("sentenceId") { type = NavType.LongType }
             )
         ) { entry ->
+            val workId = entry.arguments!!.getLong("workId")
             val sentenceId = entry.arguments!!.getLong("sentenceId")
-            var preview by remember { mutableStateOf<String?>(null) }
-            LaunchedEffect(sentenceId) {
-                preview = app.textRepository.getSentence(sentenceId)?.text
-            }
-            ModePlaceholderScreen(
-                title = "Stroke practice",
-                blurb = "Large stroke canvas with pinyin and gloss helpers for characters in this sentence.",
-                sentencePreview = preview,
+            val vm: StrokeViewModel = viewModel(
+                factory = StrokeViewModel.Factory(
+                    sentenceId = sentenceId,
+                    workId = workId,
+                    textRepository = app.textRepository,
+                    strokeDataRepository = app.strokeDataRepository,
+                    glossDao = app.database.glossDao(),
+                    strokeStatsDao = app.database.strokeStatsDao(),
+                    notionalTranslationService = app.notionalTranslationService,
+                    kangxiRadicalRepository = app.kangxiRadicalRepository,
+                    settingsRepository = app.settingsRepository
+                )
+            )
+            StrokeScreen(
+                viewModel = vm,
                 onBack = { navController.popBackStack() }
             )
         }

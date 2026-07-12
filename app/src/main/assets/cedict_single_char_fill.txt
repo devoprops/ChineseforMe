@@ -1,0 +1,1209 @@
+Word	Simplified	Traditional	Frequency	Pinyin	Definition
+# CC-CEDICT single-character fillers for FG gaps. CC BY-SA 4.0 https://www.mdbg.net/chinese/dictionary?page=cc-cedict
+# Gloss/pinyin only; frequency=0 and length=1 so DictSegmenter multiCharSurfaces ignores these.
+丁	丁	丁	0	dīng	1. surname Ding
+丁	丁	丁	0	dīng	1. male adult; 2. the 4th of the 10 Heavenly Stems 天干[tian1 gan1]; 3. fourth (used like "4" or "D"); 4. small cube of meat or vegetable; 5. (literary) to encounter; 6. (archaic) ancient Chinese compass point: 195°; 7. (chemistry) butyl
+丁	丁	丁	0	zhēng	1. used in 丁丁[zheng1 zheng1]
+且	且	且	0	qiě	1. and; 2. moreover; 3. yet; 4. for the time being; 5. to be about to; 6. both (... and...)
+丕	丕	丕	0	pī	1. grand
+喪	丧	喪	0	sāng	1. mourning; 2. funeral; 3. (old) corpse
+喪	丧	喪	0	sàng	1. to lose sth abstract but important (courage, authority, one's life etc); 2. to be bereaved of (one's spouse etc); 3. to die; 4. disappointed; 5. discouraged
+丰	丰	丰	0	fēng	1. luxuriant; 2. buxom; 3. variant of 豐|丰[feng1]; 4. variant of 風|风[feng1]; 5. appearance; 6. charm; 7. abundant; 8. plentiful; 9. fertile; 10. plump; 11. great
+豐	丰	豐	0	fēng	1. surname Feng
+臨	临	臨	0	lín	1. to face; 2. to overlook; 3. to arrive; 4. to be (just) about to; 5. just before
+久	久	久	0	jiǔ	1. (of a period of time) long
+乎	乎	乎	0	hū	1. (classical particle similar to 於|于[yu2]) in; 2. at; 3. from; 4. because; 5. than; 6. (classical final particle similar to 嗎|吗[ma5], 吧[ba5], 呢[ne5], expressing question, doubt or astonishment)
+乒	乒	乒	0	pīng	1. (onom.) ping; 2. bing
+乓	乓	乓	0	pāng	1. (onom.) bang
+乘	乘	乘	0	chéng	1. surname Cheng
+乘	乘	乘	0	chéng	1. to ride; 2. to mount; 3. to make use of; 4. to avail oneself of; 5. to take advantage of; 6. to multiply (math.); 7. Buddhist sect or creed; 8. old variant of 乘[cheng2]
+乘	乘	乘	0	shèng	1. (archaic) four horse military chariot; 2. (archaic) four; 3. generic term for history books
+習	习	習	0	xí	1. surname Xi
+習	习	習	0	xí	1. (bound form) to practice; 2. to study; 3. habit; 4. custom
+予	予	予	0	yú	1. (archaic) I; 2. me
+予	予	予	0	yǔ	1. (literary) to give
+云	云	云	0	yún	1. (classical) to say; 2. cloud
+雲	云	雲	0	yún	1. surname Yun; 2. short name for Yunnan 雲南|云南[Yun2 nan2]
+亞	亚	亞	0	yà	1. Asia; 2. Asian; 3. Taiwan pr. [Ya3]
+亞	亚	亞	0	yà	1. second; 2. next to; 3. inferior; 4. sub-; 5. Taiwan pr. [ya3]
+產	产	產	0	chǎn	1. to give birth; 2. to reproduce; 3. to produce; 4. product; 5. resource; 6. estate; 7. property; 8. variant of 產|产[chan3]
+亨	亨	亨	0	hēng	1. prosperous; 2. henry (unit of inductance)
+享	享	享	0	xiǎng	1. to enjoy; 2. to benefit; 3. to have the use of; 4. old variant of 享[xiang3]
+京	京	京	0	jīng	1. surname Jing; 2. short name for Beijing 北京[Bei3 jing1]; 3. Gin or Jing, ethnic minority of China, descendants of ethnic Vietnamese people living mainly in Guangxi; 4. Kinh, the ethnic majority in Vietnam
+京	京	京	0	jīng	1. capital city of a country; 2. big; 3. algebraic term for a large number (old); 4. artificial mound (old)
+仇	仇	仇	0	qiú	1. surname Qiu
+仇	仇	仇	0	chóu	1. hatred; 2. animosity; 3. enmity; 4. foe; 5. enemy; 6. to feel animosity toward (the wealthy, foreigners etc); 7. variant of 仇[chou2]
+仇	仇	仇	0	qiú	1. spouse; 2. companion
+仔	仔	仔	0	zǎi	1. variant of 崽[zai3]; 2. (dialect) (bound form) young man
+仔	仔	仔	0	zī	1. used in 仔肩[zi1 jian1]
+仔	仔	仔	0	zǐ	1. (bound form) (of domestic animals or fowl) young; 2. (bound form) fine; detailed
+令	令	令	0	líng	1. used in 脊令[ji2 ling2]; 2. used in 令狐[Ling2 hu2] (Taiwan pr. [ling4])
+令	令	令	0	lǐng	1. classifier for a ream of paper
+令	令	令	0	lìng	1. to order; 2. to command; 3. an order; 4. warrant; 5. writ; 6. to cause; 7. to make sth happen; 8. virtuous; 9. honorific title; 10. season; 11. government position (old); 12. type of short song or poem
+儀	仪	儀	0	yí	1. apparatus; 2. rites; 3. appearance; 4. present; 5. ceremony
+仲	仲	仲	0	zhòng	1. surname Zhong
+仲	仲	仲	0	zhòng	1. second month of a season; 2. middle; 3. intermediate; 4. second amongst brothers
+价	价	价	0	jiè	1. (literary) messenger; servant
+價	价	價	0	jià	1. price; 2. value; 3. (chemistry) valence
+價	价	價	0	jie	1. particle used between an adverb and a verb or adjective; 2. (dialect) particle used after a negative adverb such as 不[bu4] or 別|别[bie2] without any other following element
+仿	仿	仿	0	fǎng	1. to imitate; 2. to copy; 3. variant of 仿[fang3]
+企	企	企	0	qǐ	1. (bound form) to stand on tiptoe and look; to anticipate; to look forward to; 2. (bound form) company; firm; enterprise; corporation (abbr. for 企業|企业[qi3 ye4]); 3. Taiwan pr. [qi4]
+伙	伙	伙	0	huǒ	1. (bound form) meals (as in 伙食[huo3 shi2]); 2. variant of 夥|伙[huo3]; 3. companion; 4. partner; 5. group; 6. classifier for groups of people; 7. to combine; 8. together
+伴	伴	伴	0	bàn	1. partner; companion; comrade; associate; 2. to accompany
+似	似	似	0	shì	1. used in 似的[shi4 de5]
+似	似	似	0	sì	1. to seem; 2. to appear; 3. to resemble; 4. similar; 5. -like; 6. pseudo-; 7. (more) than; 8. old variant of 似[si4]
+伽	伽	伽	0	gā	1. used in the transliteration of Greek letters
+伽	伽	伽	0	jiā	1. traditionally used as phonetic for "ga"
+伽	伽	伽	0	qié	1. used to transliterate Sanskrit "gha"
+佗	佗	佗	0	tuó	1. carry on the back
+余	余	余	0	yú	1. surname Yu
+余	余	余	0	yú	1. (literary) I; me; 2. variant of 餘|余[yu2]; 3. extra; 4. surplus; 5. remaining; 6. remainder after division; 7. (following numerical value) or more; 8. in excess of (some number); 9. residue (math.); 10. after; 11. I; 12. me
+佣	佣	佣	0	yòng	1. commission (for middleman); 2. brokerage fee
+傭	佣	傭	0	yōng	1. to hire; 2. to employ; 3. servant; 4. hired laborer; 5. domestic help
+佩	佩	佩	0	pèi	1. to respect; 2. to wear (belt etc); 3. girdle ornaments
+佳	佳	佳	0	jiā	1. surname Jia
+佳	佳	佳	0	jiā	1. beautiful; 2. fine; 3. good
+例	例	例	0	lì	1. example; 2. precedent; 3. rule; 4. case; 5. instance
+依	依	依	0	yī	1. to depend on; 2. to comply with or listen to sb; 3. according to; 4. in the light of
+俠	侠	俠	0	xiá	1. knight-errant; 2. brave and chivalrous; 3. hero; 4. heroic
+侮	侮	侮	0	wǔ	1. to insult; 2. to ridicule; 3. to disgrace
+侷	局	侷	0	jú	1. narrow
+促	促	促	0	cù	1. (bound form) of short duration; hasty; rapid; 2. (bound form) to hasten; to hurry; to urge; 3. (literary) close by; pressed against
+俗	俗	俗	0	sú	1. custom; 2. convention; 3. popular; 4. common; 5. coarse; 6. vulgar; 7. secular
+保	保	保	0	bǎo	1. Bulgaria (abbr. for 保加利亞|保加利亚[Bao3 jia1 li4 ya4])
+保	保	保	0	bǎo	1. to defend; to protect; to keep; 2. to guarantee; to ensure; 3. (old) civil administration unit in the baojia 保甲[bao3 jia3] system
+候	候	候	0	hòu	1. to wait; 2. to inquire after; 3. to watch; 4. season; 5. climate; 6. (old) period of five days
+健	健	健	0	jiàn	1. healthy; 2. to invigorate; 3. to strengthen; 4. to be good at; 5. to be strong in
+偶	偶	偶	0	ǒu	1. accidental; 2. image; 3. pair; 4. mate
+償	偿	償	0	cháng	1. to repay; 2. to compensate for; 3. to recompense; 4. to fulfill (hopes etc)
+傅	傅	傅	0	fù	1. surname Fu
+傅	傅	傅	0	fù	1. (bound form) instructor; 2. (literary) to instruct; 3. to attach; 4. to apply (makeup etc)
+傑	杰	傑	0	jié	1. (bound form) hero; 2. heroic; 3. outstanding person; 4. prominent; 5. distinguished
+備	备	備	0	bèi	1. (bound form) to prepare; to equip; 2. (literary) fully; completely
+儲	储	儲	0	chǔ	1. surname Chu; 2. Taiwan pr. [Chu2]
+儲	储	儲	0	chǔ	1. (bound form) to store up; to keep in reserve; 2. heir to the throne; 3. Taiwan pr. [chu2]
+儒	儒	儒	0	rú	1. scholar; 2. Confucian
+儘	尽	儘	0	jǐn	1. to the greatest extent; 2. (when used before a noun of location) furthest or extreme; 3. to be within the limits of; 4. to give priority to
+允	允	允	0	yǔn	1. just; 2. fair; 3. to permit; 4. to allow
+兄	兄	兄	0	xiōng	1. elder brother
+克	克	克	0	kè	1. abbr. for 克羅地亞|克罗地亚[Ke4 luo2 di4 ya4], Croatia; 2. (Tw) abbr. for 克羅埃西亞|克罗埃西亚[Ke4 luo2 ai1 xi1 ya4], Croatia; 3. Ke (c. 2000 BC), seventh of the legendary Flame Emperors, 炎帝[Yan2 di4] descended from Shennong 神農|神农[Shen2 nong2] Farmer God
+克	克	克	0	kè	1. to be able to; 2. to subdue; 3. to restrain; 4. to overcome; 5. gram; 6. Tibetan unit of land area, about 6 ares; 7. variant of 克[ke4]; 8. to overthrow; 9. variant of 剋|克[ke4]
+免	免	免	0	miǎn	1. to excuse sb; 2. to exempt; 3. to remove or dismiss from office; 4. to avoid; 5. to avert; 6. to escape; 7. to be prohibited
+免	免	免	0	wèn	1. old variant of 絻[wen4]
+兢	兢	兢	0	jīng	1. to be fearful; 2. apprehensive
+蘭	兰	蘭	0	lán	1. surname Lan; 2. abbr. for Lanzhou 蘭州|兰州[Lan2 zhou1], Gansu
+蘭	兰	蘭	0	lán	1. orchid (蘭花|兰花 Cymbidium goeringii); 2. fragrant thoroughwort (蘭草|兰草 Eupatorium fortunei); 3. lily magnolia (木蘭|木兰)
+共	共	共	0	gòng	1. common; 2. general; 3. to share; 4. together; 5. total; 6. altogether; 7. abbr. for 共產黨|共产党[Gong4 chan3 dang3], Communist party
+興	兴	興	0	xīng	1. surname Xing
+興	兴	興	0	xīng	1. to rise; 2. to flourish; 3. to become popular; 4. to start; 5. to encourage; 6. to get up; 7. (often used in the negative) to permit or allow (dialect); 8. maybe (dialect)
+興	兴	興	0	xìng	1. feeling or desire to do sth; 2. interest in sth; 3. excitement
+典	典	典	0	diǎn	1. canon; 2. law; 3. standard work of scholarship; 4. literary quotation or allusion; 5. ceremony; 6. to be in charge of; 7. to mortgage or pawn
+養	养	養	0	yǎng	1. to raise (animals); 2. to bring up (children); 3. to keep (pets); 4. to support; 5. to give birth
+獸	兽	獸	0	shòu	1. beast; 2. animal; 3. beastly; 4. bestial
+軍	军	軍	0	jūn	1. (bound form) army; 2. military
+農	农	農	0	nóng	1. surname Nong
+農	农	農	0	nóng	1. (bound form) agriculture; 2. variant of 農|农[nong2]
+冬	冬	冬	0	dōng	1. winter; 2. (onom.) beating a drum; 3. rat-a-tat
+鼕	冬	鼕	0	dōng	1. surname Dong
+准	准	准	0	zhǔn	1. to allow; 2. to grant; 3. in accordance with; 4. in the light of; 5. accurate; 6. standard; 7. definitely; 8. certainly; 9. about to become (bride, son-in-law etc); 10. quasi-; 11. para-
+減	减	減	0	jiǎn	1. to lower; 2. to decrease; 3. to reduce; 4. to subtract; 5. to diminish
+湊	凑	湊	0	còu	1. to gather together, pool or collect; 2. to happen by chance; 3. to move close to; 4. to exploit an opportunity
+凡	凡	凡	0	fán	1. ordinary; 2. commonplace; 3. mundane; 4. temporal; 5. of the material world (as opposed to supernatural or immortal levels); 6. every; 7. all; 8. whatever; 9. altogether; 10. gist; 11. outline; 12. note of Chinese musical scale
+擊	击	擊	0	jī	1. to hit; 2. to strike; 3. to break; 4. Taiwan pr. [ji2]
+鑿	凿	鑿	0	záo	1. (bound form) chisel; 2. to bore a hole; to chisel; to dig; 3. (literary) certain; authentic; irrefutable; 4. also pr. [zuo4]
+切	切	切	0	qiē	1. to cut; to slice; to carve; 2. (math.) tangential
+切	切	切	0	qiè	1. definitely; absolutely (not); 2. (scoffing or dismissive interjection) Yeah, right.; Tut!; 3. to grind; 4. (bound form) close to; 5. (bound form) eager; 6. to correspond to; 7. (used to indicate that the fanqie 反切[fan3 qie4] system should be applied to the previous two characters)
+劉	刘	劉	0	liú	1. surname Liu
+劉	刘	劉	0	liú	1. (classical) a type of battle-ax; 2. to kill; 3. to slaughter
+剏	创	剏	0	chuàng	1. variant of 創|创[chuang4]; 2. to initiate; to create; to achieve (sth for the first time)
+創	创	創	0	chuāng	1. (bound form) a wound; to wound
+初	初	初	0	chū	1. (bound form) at first; initially; 2. (bound form) first; early; 3. (bound form) (in lunar calendar dates, before numerals 1–10) days 1 to 10 of a month, as in 初三[chu1 san1] "the third"
+判	判	判	0	pàn	1. (bound form) to differentiate; to distinguish; 2. (bound form) clearly (different); 3. to judge; to decide; to grade; 4. (of a judge) to sentence
+剎	刹	剎	0	chà	1. Buddhist monastery, temple or shrine (abbr. for 剎多羅|刹多罗[cha4 duo1 luo2], Sanskrit "ksetra")
+剎	刹	剎	0	shā	1. to brake
+刺	刺	刺	0	cī	1. (onom.) whoosh
+刺	刺	刺	0	cì	1. thorn; 2. sting; 3. thrust; 4. to prick; 5. to pierce; 6. to stab; 7. to assassinate; 8. to murder
+剖	剖	剖	0	pōu	1. to cut open; 2. to analyze; 3. Taiwan pr. [pou3]
+劇	剧	劇	0	jù	1. theatrical work (play, opera, TV series etc); 2. dramatic (change, increase etc); 3. acute; 4. severe
+創	创	創	0	chuàng	1. to initiate; to create; to achieve (sth for the first time)
+務	务	務	0	wù	1. affair; 2. business; 3. matter; 4. to be engaged in; 5. to attend to; 6. by all means
+助	助	助	0	zhù	1. to help; 2. to assist
+努	努	努	0	nǔ	1. to exert; 2. to strive
+勢	势	勢	0	shì	1. power; 2. influence; 3. potential; 4. momentum; 5. tendency; 6. trend; 7. situation; 8. conditions; 9. outward appearance; 10. sign; 11. gesture; 12. male genitals
+勇	勇	勇	0	yǒng	1. brave
+勒	勒	勒	0	lè	1. (literary) bridle; halter; headstall; 2. to rein in; 3. to compel; to force; 4. (literary) to carve; to engrave; 5. (literary) to command; to lead (an army etc); 6. (physics) lux (abbr. for 勒克斯[le4 ke4 si1])
+勒	勒	勒	0	lēi	1. to strap tightly; 2. to bind
+勝	胜	勝	0	shèng	1. victory; 2. success; 3. to beat; 4. to defeat; 5. to surpass; 6. victorious; 7. superior to; 8. to get the better of; 9. better than; 10. surpassing; 11. superb (of vista); 12. beautiful (scenery)
+勺	勺	勺	0	sháo	1. spoon; 2. ladle; 3. abbr. for 公勺[gong1 shao2], centiliter (unit of volume)
+匆	匆	匆	0	cōng	1. hurried; 2. hasty; 3. variant of 匆[cong1]
+匯	汇	匯	0	huì	1. to remit; 2. to converge (of rivers); 3. to exchange
+區	区	區	0	ōu	1. surname Ou
+區	区	區	0	qū	1. area; 2. region; 3. district; 4. small; 5. distinguish
+醫	医	醫	0	yī	1. medical; 2. medicine; 3. doctor; 4. to cure; 5. to treat
+協	协	協	0	xié	1. to cooperate; 2. to harmonize; 3. to help; 4. to assist; 5. to join
+卑	卑	卑	0	bēi	1. low; 2. base; 3. vulgar; 4. inferior; 5. humble
+南	南	南	0	nán	1. surname Nan
+南	南	南	0	nā	1. used in 南無|南无[na1 mo2]; 2. Taiwan pr. [na2]
+南	南	南	0	nán	1. south
+博	博	博	0	bó	1. (bound form) abundant; plentiful; extensive; wide; 2. to win; to gain; 3. to play; to gamble; 4. learned; well-read; 5. (bound form) doctoral degree (abbr. for 博士[bo2 shi4]); 6. (bound form) blog (abbr. for 博客[bo2 ke4]); 7. old variant of 博[bo2]
+卡	卡	卡	0	kǎ	1. to stop; 2. to block; 3. (computing) (coll.) slow; 4. (loanword) card; 5. truck (from "car"); 6. calorie (abbr. for 卡路里[ka3 lu4 li3]); 7. cassette
+卡	卡	卡	0	qiǎ	1. to block; 2. to be stuck; 3. to be wedged; 4. customs station; 5. a clip; 6. a fastener; 7. a checkpost; 8. Taiwan pr. [ka3]
+卦	卦	卦	0	guà	1. divinatory diagram; 2. one of the eight divinatory trigrams of the Book of Changes 易經|易经[Yi4 jing1]; 3. one of the sixty-four divinatory hexagrams of the Book of Changes 易經|易经[Yi4 jing1]
+危	危	危	0	wēi	1. surname Wei
+危	危	危	0	wēi	1. danger; 2. to endanger; 3. Taiwan pr. [wei2]
+廳	厅	廳	0	tīng	1. (reception) hall; 2. living room; 3. office; 4. provincial government department
+厤	历	厤	0	lì	1. old variant of 曆|历[li4]; 2. old variant of 歷|历[li4]; 3. calendar; 4. to experience; 5. to undergo; 6. to pass through; 7. all; 8. each; 9. every; 10. history
+厲	厉	厲	0	lì	1. surname Li
+厲	厉	厲	0	lì	1. strict; 2. severe
+厭	厌	厭	0	yàn	1. (bound form) to loathe; to be fed up with; 2. (literary) to satiate; to satisfy
+厠	厕	厠	0	cè	1. variant of 廁|厕[ce4]; 2. (bound form) restroom; toilet; lavatory; 3. (literary) to be mingled with; to be involved in
+廁	厕	廁	0	sì	1. used in 茅廁|茅厕[mao2 si5]
+厮	厮	厮	0	sī	1. variant of 廝|厮[si1]; 2. (bound form) together; each other; 3. (bound form) male servant; 4. (bound form) dude; so-and-so (used in 那廝|那厮[na4 si1] and 這廝|这厮[zhe4 si1])
+縣	县	縣	0	xiàn	1. county; 2. (Japan) prefecture
+㕘	参	㕘	0	cān	1. variant of 參|参[can1]; 2. to take part in; 3. to participate; 4. to join; 5. to attend; 6. to counsel; 7. unequal; 8. varied; 9. irregular; 10. uneven; 11. not uniform; 12. abbr. for 參議院|参议院 Senate, Upper House
+參	参	參	0	cēn	1. used in 參差|参差[cen1 ci1]
+參	参	參	0	shēn	1. ginseng; 2. one of the 28 constellations; 3. variant of 參|参[shen1]
+參	叁	參	0	sān	1. three (banker's anti-fraud numeral)
+參	参	參	0	cān	1. to take part in; 2. to participate; 3. to join; 4. to attend; 5. to counsel; 6. unequal; 7. varied; 8. irregular; 9. uneven; 10. not uniform; 11. abbr. for 參議院|参议院 Senate, Upper House
+參	参	參	0	shēn	1. ginseng; 2. one of the 28 constellations
+及	及	及	0	jí	1. and; 2. to reach; 3. up to; 4. in time for
+友	友	友	0	yǒu	1. friend
+另	另	另	0	lìng	1. other; 2. another; 3. separate; 4. separately
+史	史	史	0	shǐ	1. surname Shi
+史	史	史	0	shǐ	1. history; 2. annals; 3. title of an official historian in ancient China
+司	司	司	0	sī	1. surname Si
+司	司	司	0	sī	1. to take charge of; 2. to manage; 3. department (under a ministry)
+嘆	叹	嘆	0	tàn	1. to sigh; 2. to exclaim; 3. variant of 嘆|叹[tan4]
+吉	吉	吉	0	jí	1. short name for Jilin 吉林[Ji2 lin2]; 2. surname Ji
+吉	吉	吉	0	jí	1. lucky; 2. giga- (meaning billion or 10^9)
+吊	吊	吊	0	diào	1. to suspend; 2. to hang up; 3. to hang a person; 4. a string of 100 cash (arch.); 5. to lament; 6. to condole with; 7. variant of 吊[diao4]
+呂	吕	呂	0	lǚ	1. surname Lü
+呂	吕	呂	0	lǚ	1. pitchpipe, pitch standard, one of the twelve semitones in the traditional tone system
+君	君	君	0	jūn	1. monarch; 2. lord; 3. gentleman; 4. ruler
+吞	吞	吞	0	tūn	1. to swallow; 2. to take
+否	否	否	0	fǒu	1. to negate; 2. to deny; 3. not
+否	否	否	0	pǐ	1. clogged; 2. evil
+唘	启	唘	0	qǐ	1. variant of 啟|启[qi3]; 2. to open; 3. to start; 4. to initiate; 5. to enlighten or awaken; 6. to state; 7. to inform
+啟	启	啟	0	qǐ	1. Qi son of Yu the Great 禹[Yu3], reported founder of the Xia Dynasty 夏朝[Xia4 Chao2] (c. 2070-c. 1600 BC)
+吱	吱	吱	0	zhī	1. (onom.) creaking or groaning
+吱	吱	吱	0	zī	1. (onom.) chirp; squeak; creak
+吶	呐	吶	0	nà	1. battle cry
+吶	呐	吶	0	na	1. sentence-final particle (abbr. for 呢啊[ne5 a5] or variant of 哪[na5])
+吸	吸	吸	0	xī	1. to breathe; 2. to suck in; 3. to absorb; 4. to inhale
+吻	吻	吻	0	wěn	1. kiss; 2. to kiss; 3. mouth; 4. variant of 吻[wen3]
+吾	吾	吾	0	wú	1. surname Wu
+吾	吾	吾	0	wú	1. (old) I; my
+呈	呈	呈	0	chéng	1. to present to a superior; 2. memorial; 3. petition; 4. to present (a certain appearance); 5. to assume (a shape); 6. to be (a certain color)
+員	员	員	0	yuán	1. (bound form) person engaged in a certain field of activity; 2. (bound form) member; 3. classifier for military generals
+嗆	呛	嗆	0	qiāng	1. to choke (because of swallowing the wrong way)
+嗆	呛	嗆	0	qiàng	1. to irritate the nose; 2. to choke (of smoke, smell etc); 3. pungent; 4. (coll.) (Tw) to shout at sb; 5. to scold; 6. to speak out against sb
+嗚	呜	嗚	0	wū	1. (onom.) for humming or whimpering
+呵	呵	呵	0	ā	1. variant of 啊[a1]
+呵	呵	呵	0	hē	1. (bound form) to scold; 2. to expel breath; 3. (onom.) laughter (usu. reduplicated); 4. interjection of surprise
+呼	呼	呼	0	hū	1. to call; 2. to cry; 3. to shout; 4. to breath out; 5. to exhale; 6. variant of 呼[hu1]; 7. to call out
+咖	咖	咖	0	gā	1. used in 咖喱[ga1 li2]
+咖	咖	咖	0	kā	1. (bound form) coffee; café (abbr. for 咖啡[ka1 fei1]); 2. (Tw) (bound form) type of person (esp. in entertainment contexts) (loanword from "cast") (as in 大咖[da4 ka1] and 怪咖[guai4 ka1])
+咚	咚	咚	0	dōng	1. (onom.) boom (of a drum); 2. knock (on the door)
+哆	哆	哆	0	duō	1. used in 哆嗦[duo1 suo5]
+哈	哈	哈	0	hā	1. abbr. for 哈薩克斯坦|哈萨克斯坦[Ha1 sa4 ke4 si1 tan3], Kazakhstan; 2. abbr. for 哈爾濱|哈尔滨[Ha1 er3 bin1], Harbin
+哈	哈	哈	0	hā	1. (interj.) ha!; 2. (onom. for laughter); 3. (slang) to be infatuated with; to adore; 4. (bound form) husky (dog) (abbr. for 哈士奇[ha1 shi4 qi2])
+哈	哈	哈	0	hǎ	1. a Pekinese; a pug; 2. (dialect) to scold
+哎	哎	哎	0	āi	1. hey!; 2. (interjection used to attract attention or to express surprise or disapprobation)
+喲	哟	喲	0	yō	1. Oh! (interjection indicating slight surprise); 2. also pr. [yao1]
+喲	哟	喲	0	yo	1. (sentence-final particle expressing exhortation); 2. (syllable filler in a song)
+哲	哲	哲	0	zhé	1. wise; 2. a sage
+唉	唉	唉	0	āi	1. interjection or grunt of agreement or recognition (e.g. yes, it's me!); 2. to sigh
+唉	唉	唉	0	ài	1. alas; 2. oh dear
+唬	唬	唬	0	hǔ	1. a tiger's roar; 2. to scare; 3. to intimidate; 4. (coll.) to fool; 5. to bluff
+售	售	售	0	shòu	1. (bound form) to sell; to retail; 2. (literary) to carry out (a plan or intrigue etc)
+唱	唱	唱	0	chàng	1. to sing; 2. to call loudly; 3. to chant
+啟	启	啟	0	qǐ	1. to open; 2. to start; 3. to initiate; 4. to enlighten or awaken; 5. to state; 6. to inform
+啡	啡	啡	0	fēi	1. (used in loanwords for its phonetic value)
+啤	啤	啤	0	pí	1. beer
+啼	啼	啼	0	tí	1. (bound form) to cry; to weep loudly; 2. (bound form) (of a bird or animal) to crow; to hoot; to screech; 3. variant of 啼[ti2]
+喇	喇	喇	0	lā	1. (onom.) sound of wind, rain etc
+喇	喇	喇	0	lǎ	1. (phonetic)
+喻	喻	喻	0	yù	1. surname Yu
+喻	喻	喻	0	yù	1. to describe sth as; 2. an analogy; 3. a simile; 4. a metaphor; 5. an allegory
+嗜	嗜	嗜	0	shì	1. (bound form) to have a strong liking for; to be addicted to
+嗦	嗦	嗦	0	suō	1. to suck; 2. used in 囉嗦|啰嗦[luo1 suo5]; 3. used in 哆嗦[duo1 suo5]
+嘆	叹	嘆	0	tàn	1. to sigh; 2. to exclaim
+嘟	嘟	嘟	0	dū	1. (onom.) toot; honk; beep (sound of a horn etc); 2. (coll.) to pout
+嘲	嘲	嘲	0	cháo	1. to ridicule; 2. to mock
+嘲	嘲	嘲	0	zhāo	1. used in 嘲哳[zhao1 zha1]
+噁	𫫇	噁	0	è	1. variant of 惡|恶[e4], used in names of chemical compounds
+園	园	園	0	yuán	1. surname Yuan
+園	园	園	0	yuán	1. land used for growing plants; 2. site used for public recreation; 3. abbr. for a place ending in 園|园, such as a botanical garden 植物園|植物园, kindergarten 幼兒園|幼儿园 etc
+固	固	固	0	gù	1. hard; 2. strong; 3. solid; 4. sure; 5. assuredly; 6. undoubtedly; 7. of course; 8. indeed; 9. admittedly
+均	均	均	0	jūn	1. (bound form) equal; uniform; even; 2. (literary) without exception; all
+坑	坑	坑	0	kēng	1. pit; hollow; depression; 2. (mining) pit; shaft; tunnel; 3. (literary) to bury alive; 4. (coll.) to cheat; to scam; to screw over; 5. variant of 坑[keng1]
+堅	坚	堅	0	jiān	1. strong; 2. solid; 3. firm; 4. unyielding; 5. resolute
+坡	坡	坡	0	pō	1. slope; 2. sloping; 3. slanted
+坤	坤	坤	0	kūn	1. one of the Eight Trigrams 八卦[ba1 gua4], symbolizing earth; 2. female principle; 3. ☷; 4. ancient Chinese compass point: 225° (southwest); 5. variant of 坤[kun1]
+坦	坦	坦	0	tǎn	1. flat; 2. open-hearted; 3. level; 4. smooth
+坯	坯	坯	0	pī	1. blank (e.g. for a coin); 2. unburnt earthenware; 3. semifinished product; 4. Taiwan pr. [pei1]
+垂	垂	垂	0	chuí	1. to hang (down); 2. droop; 3. dangle; 4. bend down; 5. hand down; 6. bequeath; 7. nearly; 8. almost; 9. to approach
+型	型	型	0	xíng	1. mold; 2. type; 3. style; 4. model
+城	城	城	0	chéng	1. city walls; 2. city; 3. town
+域	域	域	0	yù	1. field; 2. region; 3. area; 4. domain (taxonomy)
+執	执	執	0	zhí	1. to execute (a plan); 2. to grasp
+基	基	基	0	jī	1. (bound form) base; foundation; 2. (bound form) radical (chemistry); 3. (bound form) gay (loanword from English into Cantonese, Jyutping: gei1, followed by orthographic borrowing from Cantonese)
+塌	塌	塌	0	tā	1. to collapse; 2. to droop; 3. to settle down
+塑	塑	塑	0	sù	1. to model (a figure) in clay; 2. (bound form) plastic (i.e. the synthetic material)
+塔	塔	塔	0	tǎ	1. pagoda (abbr. for 塔婆[ta3 po2], a loanword from Sanskrit stūpa); tower; pylon (CL:座[zuo4]); 2. (loanword) (pastry) tart; 3. old variant of 塔[ta3]
+塘	塘	塘	0	táng	1. dyke; 2. embankment; 3. pool or pond; 4. hot-water bathing pool
+填	填	填	0	tián	1. to fill or stuff; 2. (of a form etc) to fill in
+塵	尘	塵	0	chén	1. dust; 2. dirt; 3. earth
+境	境	境	0	jìng	1. border; 2. place; 3. condition; 4. boundary; 5. circumstances; 6. territory
+墨	墨	墨	0	mò	1. surname Mo; 2. abbr. for 墨西哥[Mo4 xi1 ge1], Mexico
+墨	墨	墨	0	mò	1. ink stick; 2. China ink; 3. corporal punishment consisting of tattooing characters on the victim's forehead
+壁	壁	壁	0	bì	1. wall; 2. rampart
+壯	壮	壯	0	zhuàng	1. Zhuang ethnic group, the largest ethnic minority in China
+壯	壮	壯	0	zhuàng	1. to strengthen; 2. strong; 3. robust
+壽	寿	壽	0	shòu	1. surname Shou
+壽	寿	壽	0	shòu	1. long life; 2. old age; 3. age; 4. life; 5. birthday; 6. funerary
+俻	备	俻	0	bèi	1. variant of 備|备[bei4]; 2. (bound form) to prepare; to equip; 3. (literary) fully; completely
+復	复	復	0	fù	1. to go and return; 2. to return; 3. to resume; 4. to return to a normal or original state; 5. to repeat; 6. again; 7. to recover; 8. to restore; 9. to turn over; 10. to reply; 11. to answer; 12. to reply to a letter
+夏	夏	夏	0	xià	1. the Xia or Hsia dynasty c. 2000 BC; 2. Xia of the Sixteen Kingdoms (407–432); 3. surname Xia
+夏	夏	夏	0	xià	1. summer
+夕	夕	夕	0	xī	1. (bound form) sunset; dusk; 2. (bound form) evening; night; 3. Taiwan pr. [xi4]
+夥	伙	夥	0	huǒ	1. companion; 2. partner; 3. group; 4. classifier for groups of people; 5. to combine; 6. together; 7. (literary) many; numerous
+夫	夫	夫	0	fū	1. husband; 2. man; 3. manual worker; 4. conscripted laborer (old)
+夫	夫	夫	0	fú	1. (classical) this, that; 2. he, she, they; 3. (exclamatory final particle); 4. (initial particle, introduces an opinion)
+奉	奉	奉	0	fèng	1. to offer (tribute); 2. to present respectfully (to superior, ancestor, deity etc); 3. to esteem; 4. to revere; 5. to believe in (a religion); 6. to wait upon; 7. to accept orders (from superior)
+奮	奋	奮	0	fèn	1. to exert oneself (bound form)
+奏	奏	奏	0	zòu	1. to play music; 2. to achieve; 3. to present a memorial to the emperor (old)
+妄	妄	妄	0	wàng	1. absurd; 2. fantastic; 3. presumptuous; 4. rash
+婦	妇	婦	0	fù	1. woman; 2. old variant of 婦|妇[fu4]
+妒	妒	妒	0	dù	1. to envy (success, talent); 2. jealous; 3. variant of 妒[du4]
+妙	妙	妙	0	miào	1. clever; 2. wonderful; 3. variant of 妙[miao4]
+妨	妨	妨	0	fáng	1. to hinder; 2. (in the negative or interrogative) (no) harm; 3. (what) harm
+妲	妲	妲	0	dá	1. female personal name (archaic)
+妹	妹	妹	0	mèi	1. younger sister
+妻	妻	妻	0	qī	1. (bound form) wife
+妻	妻	妻	0	qì	1. to marry off (a daughter)
+姆	姆	姆	0	m	1. used in 姆媽|姆妈[m1 ma1]
+姆	姆	姆	0	mǔ	1. (old) female tutor; 2. used in 保姆[bao3 mu3]
+姐	姐	姐	0	jiě	1. older sister
+姑	姑	姑	0	gū	1. paternal aunt; 2. husband's sister; 3. husband's mother (old); 4. nun; 5. for the time being (literary)
+委	委	委	0	wěi	1. surname Wei
+委	委	委	0	wēi	1. used in 委蛇[wei1 yi2]
+委	委	委	0	wěi	1. to entrust; 2. to cast aside; 3. to shift (blame etc); 4. to accumulate; 5. roundabout; 6. winding; 7. dejected; 8. listless; 9. committee member; 10. council; 11. end; 12. actually
+姿	姿	姿	0	zī	1. beauty; 2. disposition; 3. looks; 4. appearance
+威	威	威	0	wēi	1. power; 2. might; 3. prestige
+娘	娘	娘	0	niáng	1. mother; 2. young lady; 3. (coll.) effeminate; 4. variant of 娘[niang2]
+婚	婚	婚	0	hūn	1. (bound form) marriage; wedding; 2. (bound form) to marry
+婦	妇	婦	0	fù	1. woman
+媳	媳	媳	0	xí	1. daughter-in-law
+嫉	嫉	嫉	0	jí	1. jealousy; 2. to be jealous of
+嫩	嫩	嫩	0	nèn	1. young and tender; 2. (of food) tender; lightly cooked; 3. (of color) light; 4. (of a person) inexperienced; unskilled; 5. old variant of 嫩[nen4]
+孔	孔	孔	0	kǒng	1. surname Kong
+孔	孔	孔	0	kǒng	1. hole; 2. classifier for cave dwellings
+孜	孜	孜	0	zī	1. used in 孜孜[zi1 zi1]
+孝	孝	孝	0	xiào	1. filial piety or obedience; 2. mourning apparel
+孟	孟	孟	0	mèng	1. surname Meng
+孟	孟	孟	0	mèng	1. first month of a season; 2. eldest amongst brothers
+孤	孤	孤	0	gū	1. lone; 2. lonely
+孩	孩	孩	0	hái	1. (bound form) child
+孺	孺	孺	0	rú	1. surname Ru
+孺	孺	孺	0	rú	1. child
+宁	㝉	宁	0	zhù	1. to store; 2. to stand; 3. space between the door and the entrance screen
+寕	宁	寕	0	nìng	1. old variant of 寧|宁[ning4]; 2. would rather; 3. to prefer; 4. how (emphatic); 5. Taiwan pr. [ning2]
+寧	宁	寧	0	níng	1. abbr. for Ningxia Hui Autonomous Region 寧夏回族自治區|宁夏回族自治区[Ning2 xia4 Hui2 zu2 Zi4 zhi4 qu1]; 2. abbr. for Nanjing 南京[Nan2 jing1]; 3. surname Ning
+寧	宁	寧	0	níng	1. peaceful; 2. to pacify; 3. to visit (one's parents etc); 4. variant of 寧|宁[ning2]
+宇	宇	宇	0	yǔ	1. room; 2. universe
+宗	宗	宗	0	zōng	1. surname Zong
+宗	宗	宗	0	zōng	1. school; 2. sect; 3. purpose; 4. model; 5. ancestor; 6. clan; 7. to take as one's model (in academic or artistic work); 8. classifier for batches, items, cases (medical or legal), reservoirs
+宜	宜	宜	0	yí	1. surname Yi
+宜	宜	宜	0	yí	1. proper; 2. should; 3. suitable; 4. appropriate
+客	客	客	0	kè	1. customer; visitor; guest; 2. classifier for servings or portions (when ordering food)
+宣	宣	宣	0	xuān	1. surname Xuan
+宣	宣	宣	0	xuān	1. to declare (publicly); 2. to announce
+室	室	室	0	shì	1. surname Shi
+室	室	室	0	shì	1. room; 2. work unit; 3. grave; 4. scabbard; 5. family or clan; 6. one of the 28 constellations of Chinese astronomy
+宰	宰	宰	0	zǎi	1. to slaughter; to butcher; to kill (animals etc); 2. (coll.) to fleece; to rip off; to overcharge; 3. (bound form) to govern; to rule; 4. (bound form) (a title for certain government officials in ancient China)
+容	容	容	0	róng	1. surname Rong
+容	容	容	0	róng	1. to hold; 2. to contain; 3. to allow; 4. to tolerate; 5. appearance; 6. look; 7. countenance
+賓	宾	賓	0	bīn	1. visitor; 2. guest; 3. object (in grammar)
+富	富	富	0	fù	1. surname Fu
+富	富	富	0	fù	1. rich; 2. abundant; 3. wealthy
+察	察	察	0	chá	1. short name for Chahar Province 察哈爾|察哈尔[Cha2 ha1 er3]
+察	察	察	0	chá	1. to examine; 2. to inquire; 3. to observe; 4. to inspect; 5. to look into; 6. obvious; 7. clearly evident; 8. variant of 察[cha2]
+寥	寥	寥	0	liáo	1. empty; 2. lonesome; 3. very few
+寧	宁	寧	0	níng	1. peaceful; 2. to pacify; 3. to visit (one's parents etc)
+寧	宁	寧	0	nìng	1. would rather; 2. to prefer; 3. how (emphatic); 4. Taiwan pr. [ning2]
+尋	寻	尋	0	xún	1. to search; 2. to look for; 3. to seek
+導	导	導	0	dǎo	1. to transmit; 2. to lead; 3. to guide; 4. to conduct; 5. to direct
+䠶	射	䠶	0	shè	1. old variant of 射[she4]; 2. to shoot; 3. to launch; 4. to allude to; 5. radio- (chemistry)
+尒	尔	尒	0	ěr	1. variant of 爾|尔[er3]; 2. thus; 3. so; 4. like that; 5. you; 6. thou
+尤	尤	尤	0	yóu	1. surname You
+尤	尤	尤	0	yóu	1. outstanding; 2. particularly, especially; 3. a fault; 4. to express discontentment against
+尼	尼	尼	0	ní	1. Buddhist nun; 2. (often used in phonetic spellings)
+侷	局	侷	0	jú	1. narrow; 2. office; 3. situation; 4. classifier for games: match, set, round etc; 5. cramped; narrow
+屈	屈	屈	0	qū	1. surname Qu
+屈	屈	屈	0	qū	1. bent; 2. to feel wronged
+屬	属	屬	0	shǔ	1. category; 2. genus (taxonomy); 3. family members; 4. dependents; 5. to belong to; 6. subordinate to; 7. affiliated with; 8. be born in the year of (one of the 12 animals); 9. to be; 10. to prove to be; 11. to constitute
+屬	属	屬	0	zhǔ	1. to join together; 2. to fix one's attention on; 3. to concentrate on
+屠	屠	屠	0	tú	1. surname Tu
+屠	屠	屠	0	tú	1. to slaughter (animals for food); 2. to massacre
+嶼	屿	嶼	0	yǔ	1. islet
+岔	岔	岔	0	chà	1. fork in road; 2. bifurcation; 3. branch in road, river, mountain range etc; 4. to branch off; 5. to turn off; 6. to diverge; 7. to stray (from the path); 8. to change the subject; 9. to interrupt; 10. to stagger (times)
+㠀	岛	㠀	0	dǎo	1. variant of 島|岛[dao3]; 2. island
+㟁	岸	㟁	0	àn	1. variant of 岸[an4]; 2. bank; shore; beach; coast
+峽	峡	峽	0	xiá	1. gorge
+峨	峨	峨	0	é	1. lofty; 2. name of a mountain; 3. variant of 峨[e2]
+島	岛	島	0	dǎo	1. island
+崇	崇	崇	0	chóng	1. surname Chong
+崇	崇	崇	0	chóng	1. high; 2. sublime; 3. lofty; 4. to esteem; 5. to worship
+州	州	州	0	zhōu	1. prefecture; 2. (old) province; 3. (old) administrative division; 4. state (e.g. of US); 5. oblast (Russia); 6. canton (Switzerland)
+巢	巢	巢	0	cháo	1. surname Chao
+巢	巢	巢	0	cháo	1. nest
+工	工	工	0	gōng	1. work; 2. worker; 3. skill; 4. profession; 5. trade; 6. craft; 7. labor
+巾	巾	巾	0	jīn	1. towel; 2. general purpose cloth; 3. women's headcovering (old); 4. Kangxi radical 50
+㠶	帆	㠶	0	fān	1. variant of 帆[fan1]; 2. sail; 3. Taiwan pr. [fan2], except 帆布[fan1 bu4] canvas; 4. to gallop; 5. Taiwan pr. [fan2]
+希	希	希	0	xī	1. to hope; 2. to admire; 3. variant of 稀[xi1]
+帳	帐	帳	0	zhàng	1. (bound form) curtain; tent; canopy; 2. variant of 賬|账[zhang4]
+帝	帝	帝	0	dì	1. (bound form) emperor; sovereign; supreme deity
+倖	幸	倖	0	xìng	1. trusted; 2. intimate; 3. (of the emperor) to visit; 4. variant of 幸[xing4]; 5. fortunate; 6. lucky
+幸	幸	幸	0	xìng	1. surname Xing
+幻	幻	幻	0	huàn	1. fantasy
+庄	庄	庄	0	zhuāng	1. variant of 莊|庄[zhuang1]; 2. farmstead; 3. village; 4. manor; 5. place of business; 6. banker (in a gambling game); 7. grave or solemn; 8. holdings of a landlord (in imperial China)
+莊	庄	莊	0	zhuāng	1. surname Zhuang
+慶	庆	慶	0	qìng	1. to celebrate
+序	序	序	0	xù	1. (bound form) order; sequence; 2. (bound form) introductory; initial; 3. preface
+龐	庞	龐	0	páng	1. surname Pang
+龐	庞	龐	0	páng	1. (bound form) huge; 2. (bound form) numerous and disordered; 3. (bound form) face
+庭	庭	庭	0	tíng	1. main hall; 2. front courtyard; 3. law court
+康	康	康	0	kāng	1. surname Kang
+康	康	康	0	kāng	1. healthy; 2. peaceful; 3. abundant
+廁	厕	廁	0	cè	1. (bound form) restroom; toilet; lavatory; 2. (literary) to be mingled with; to be involved in
+廓	廓	廓	0	kuò	1. (bound form) extensive; vast; 2. (bound form) outline; general shape; 3. (bound form) to expand; to extend
+廝	厮	廝	0	sī	1. (bound form) together; each other; 2. (bound form) male servant; 3. (bound form) dude; so-and-so (used in 那廝|那厮[na4 si1] and 這廝|这厮[zhe4 si1])
+廷	廷	廷	0	tíng	1. palace courtyard
+建	建	建	0	jiàn	1. to establish; 2. to found; 3. to set up; 4. to build; 5. to construct
+異	异	異	0	yì	1. different; 2. other; 3. hetero-; 4. unusual; 5. strange; 6. surprising; 7. to distinguish; 8. to separate; 9. to discriminate
+棄	弃	棄	0	qì	1. to abandon; 2. to relinquish; 3. to discard; 4. to throw away
+引	引	引	0	yǐn	1. to draw (e.g. a bow); 2. to pull; 3. to stretch sth; 4. to extend; 5. to lengthen; 6. to involve or implicate in; 7. to attract; 8. to lead; 9. to guide; 10. to leave; 11. to provide evidence or justification for; 12. old unit of distance equal to 10 丈[zhang4], one-thirtieth of a km or 33.33 meters
+弟	弟	弟	0	dì	1. younger brother; 2. junior male; 3. I (modest word in letter)
+弟	弟	弟	0	tì	1. variant of 悌[ti4]
+彌	弥	彌	0	mí	1. full; 2. to fill; 3. completely; 4. more; 5. brimming or overflowing
+彌	弥	彌	0	mí	1. full; 2. to fill; 3. completely; 4. more
+彔	录	彔	0	lù	1. to carve wood; 2. diary; 3. record; 4. to hit; 5. to copy
+錄	录	錄	0	lù	1. surname Lu
+彩	彩	彩	0	cǎi	1. (bright) color; 2. variety; 3. applause; 4. applaud; 5. lottery prize
+徹	彻	徹	0	chè	1. thorough; 2. penetrating; 3. to pervade; 4. to pass through
+彼	彼	彼	0	bǐ	1. that; 2. those; 3. (one) another
+征	征	征	0	zhēng	1. journey; 2. trip; 3. expedition; 4. to go on long campaign; 5. to attack; 6. to invite; 7. to recruit; 8. to levy (taxes); 9. to draft (troops); 10. phenomenon; 11. symptom; 12. characteristic sign (used as proof)
+徑	径	徑	0	jìng	1. footpath; path; track; (fig.) a way; a means; 2. directly; straight; 3. diameter; 4. footpath; path; track; (fig.) a way; a means (variant of 徑|径[jing4]); 5. directly; straight (variant of 徑|径[jing4])
+徊	徊	徊	0	huái	1. used in 徘徊[pai2 huai2]
+律	律	律	0	lǜ	1. surname Lü
+律	律	律	0	lǜ	1. law
+徑	径	徑	0	jìng	1. footpath; path; track; (fig.) a way; a means; 2. directly; straight; 3. diameter
+徘	徘	徘	0	pái	1. used in 徘徊[pai2 huai2]
+循	循	循	0	xún	1. (bound form) to follow; to act in accordance with
+徵	征	徵	0	zhēng	1. to invite; 2. to recruit; 3. to levy (taxes); 4. to draft (troops); 5. phenomenon; 6. symptom; 7. characteristic sign (used as proof); 8. evidence
+徵	徵	徵	0	zhǐ	1. 4th note in the ancient Chinese pentatonic scale 五音[wu3 yin1], corresponding to sol
+必	必	必	0	bì	1. certainly; 2. must; 3. will; 4. necessarily
+憶	忆	憶	0	yì	1. to recollect; 2. to remember; 3. memory
+忌	忌	忌	0	jì	1. to be jealous of; 2. fear; 3. dread; 4. scruple; 5. to avoid or abstain from; 6. to quit; 7. to give up sth
+志	志	志	0	zhì	1. aspiration; 2. ambition; 3. the will; 4. sign; 5. mark; 6. to record; 7. to write a footnote
+忽	忽	忽	0	hū	1. surname Hu
+忽	忽	忽	0	hū	1. to neglect; 2. to overlook; 3. to ignore; 4. suddenly
+懷	怀	懷	0	huái	1. surname Huai
+懷	怀	懷	0	huái	1. bosom; 2. heart; 3. mind; 4. to think of; 5. to harbor in one's mind; 6. to conceive (a child)
+怎	怎	怎	0	zěn	1. how
+憐	怜	憐	0	lián	1. to pity
+恆	恒	恆	0	héng	1. surname Heng
+恆	恒	恆	0	héng	1. permanent; 2. constant; 3. fixed; 4. usual; 5. ordinary; 6. rule (old); 7. one of the 64 hexagrams of the Book of Changes (䷟)
+戀	恋	戀	0	liàn	1. to feel attached to; 2. to long for; 3. to love
+恆	恒	恆	0	héng	1. permanent; 2. constant; 3. fixed; 4. usual; 5. ordinary; 6. rule (old); 7. one of the 64 hexagrams of the Book of Changes (䷟); 8. variant of 恆|恒[heng2]
+恢	恢	恢	0	huī	1. (bound form) vast; expansive; 2. (bound form) to restore; to recover
+恰	恰	恰	0	qià	1. exactly; 2. just
+憫	悯	憫	0	mǐn	1. to sympathize; to pity; to feel compassion for; 2. (literary) to feel sorrow; to be grieved
+惕	惕	惕	0	tì	1. fearful; 2. respectful
+惜	惜	惜	0	xī	1. to cherish; 2. to begrudge; 3. to pity; 4. Taiwan pr. [xi2]
+惠	惠	惠	0	huì	1. surname Hui
+惠	惠	惠	0	huì	1. (bound form) act of kindness (from a superior); 2. (honorific prefix) kind (as in 惠顧|惠顾[hui4 gu4])
+懼	惧	懼	0	jù	1. to fear
+懲	惩	懲	0	chéng	1. to punish; 2. to reprimand; 3. to warn
+慣	惯	慣	0	guàn	1. accustomed to; 2. used to; 3. indulge; 4. to spoil (a child)
+愚	愚	愚	0	yú	1. to be stupid; 2. to cheat or deceive; 3. me or I (modest)
+憤	愤	憤	0	fèn	1. indignant; 2. anger; 3. resentment
+愿	愿	愿	0	yuàn	1. honest and prudent; 2. variant of 願|愿[yuan4]; 3. (bound form) wish; hope; desire; 4. to be willing; 5. to wish (that sth may happen); may ...; 6. vow; pledge
+慈	慈	慈	0	cí	1. compassionate; 2. gentle; 3. merciful; 4. kind; 5. humane
+慕	慕	慕	0	mù	1. to admire
+慮	虑	慮	0	lǜ	1. to think over; 2. to consider; 3. anxiety
+懊	懊	懊	0	ào	1. to regret
+懦	懦	懦	0	nuò	1. (bound form) cowardly; faint-hearted
+戰	战	戰	0	zhàn	1. to fight; 2. fight; 3. war; 4. battle
+慼	戚	慼	0	qī	1. variant of 戚[qi1]; 2. grief; 3. sorrow; 4. variant of 慼|戚[qi1]; 5. (bound form) relatives; kin; 6. (bound form) grief; sorrow; 7. (old) battle-axe
+戚	戚	戚	0	qī	1. surname Qi
+扁	扁	扁	0	piān	1. surname Pian
+扁	扁	扁	0	biǎn	1. flat; 2. (coll.) to beat (sb) up; 3. old variant of 匾[bian3]
+扁	扁	扁	0	piān	1. (bound form) small
+揚	扬	揚	0	yáng	1. abbr. for Yangzhou 揚州|扬州[Yang2 zhou1] in Jiangsu; 2. surname Yang
+揚	扬	揚	0	yáng	1. to raise; 2. to hoist; 3. the action of tossing or winnowing; 4. scattering (in the wind); 5. to flutter; 6. to propagate; 7. variant of 揚|扬[yang2]
+扭	扭	扭	0	niǔ	1. to turn; 2. to twist; 3. to wring; 4. to sprain; 5. to swing one's hips
+擾	扰	擾	0	rǎo	1. to disturb
+技	技	技	0	jì	1. skill
+抑	抑	抑	0	yì	1. to restrain; 2. to restrict; 3. to keep down; 4. or
+抖	抖	抖	0	dǒu	1. to tremble; 2. to shake out; 3. to reveal; 4. to make it in the world
+抗	抗	抗	0	kàng	1. to resist; 2. to fight; 3. to defy; 4. anti-
+護	护	護	0	hù	1. to protect
+披	披	披	0	pī	1. to drape over one's shoulders; 2. to open; 3. to unroll; 4. to split open; 5. to spread out
+抵	抵	抵	0	dǐ	1. to press against; to support; to prop up; 2. to resist; to withstand; 3. to be equal to; to match; 4. to balance; to offset; 5. to mortgage; 6. to make up for; to compensate for; 7. to arrive at; to reach; 8. to clap (one's hands) lightly (expressing delight) (Taiwan pr. [zhi3])
+擔	担	擔	0	dān	1. to undertake; 2. to carry; 3. to shoulder; 4. to take responsibility
+擔	担	擔	0	dàn	1. picul (100 catties, 50 kg); 2. two buckets full; 3. carrying pole and its load; 4. classifier for loads carried on a shoulder pole
+拐	拐	拐	0	guǎi	1. to turn (a corner etc); 2. to kidnap; 3. to swindle; 4. to misappropriate; 5. seven (used as a substitute for 七[qi1]); 6. variant of 枴|拐[guai3]; 7. cane; 8. walking stick; 9. crutch; 10. old man's staff
+拒	拒	拒	0	jù	1. to resist; 2. to repel; 3. to refuse
+擇	择	擇	0	zé	1. to select; 2. to choose; 3. to pick over; 4. to pick out; 5. to differentiate; 6. to eliminate; 7. also pr. [zhai2]
+括	括	括	0	kuò	1. (bound form) to tie up; to tighten up; 2. (bound form) to include; to comprise; 3. to put (text) in brackets; 4. Taiwan pr. [gua1]
+拼	拼	拼	0	pīn	1. to piece together; to put together; 2. to pool (resources etc); to share; 3. to risk all; to go all out; 4. to spell (words)
+拾	拾	拾	0	shè	1. to ascend in light steps
+拾	拾	拾	0	shí	1. to pick up; 2. to collate or arrange; 3. ten (banker's anti-fraud numeral)
+撓	挠	撓	0	náo	1. to scratch; 2. to thwart; 3. to yield
+揮	挥	揮	0	huī	1. to wave; 2. to brandish; 3. to command; 4. to conduct; 5. to scatter; 6. to disperse
+挨	挨	挨	0	āi	1. in order; in sequence; 2. close to; adjacent to
+挨	挨	挨	0	ái	1. to suffer; to endure; 2. to pull through (hard times); 3. to delay; to stall; to play for time; to dawdle
+搗	捣	搗	0	dǎo	1. to pound; 2. to beat; 3. to hull; 4. to attack; 5. to disturb; 6. to stir
+㨗	捷	㨗	0	jié	1. variant of 捷[jie2]; 2. quick; 3. nimble; 4. victory; 5. triumph; 6. prompt
+捷	捷	捷	0	jié	1. Czech; 2. Czech Republic; 3. abbr. for 捷克[Jie2 ke4]
+探	探	探	0	tàn	1. to explore; 2. to search out; 3. to scout; 4. to visit; 5. to stretch forward
+掰	掰	掰	0	bāi	1. to break off or break open sth with one's hands; 2. (fig.) to break off (a relationship)
+揚	扬	揚	0	yáng	1. to raise; 2. to hoist; 3. the action of tossing or winnowing; 4. scattering (in the wind); 5. to flutter; 6. to propagate
+揪	揪	揪	0	jiū	1. to seize; 2. to clutch; 3. to grab firmly and pull
+揭	揭	揭	0	jiē	1. surname Jie
+揭	揭	揭	0	jiē	1. to take the lid off; 2. to expose; 3. to unmask
+攪	搅	攪	0	jiǎo	1. to disturb; 2. to annoy; 3. to mix; 4. to stir
+搖	摇	搖	0	yáo	1. surname Yao
+搖	摇	搖	0	yáo	1. to shake; 2. to rock; 3. to row; 4. to crank
+搭	搭	搭	0	dā	1. to put up; 2. to build (scaffolding); 3. to hang (clothes on a pole); 4. to connect; 5. to join; 6. to arrange in pairs; 7. to match; 8. to add; 9. to throw in (resources); 10. to take (boat, train); 11. variant of 褡[da1]
+㩗	携	㩗	0	xié	1. old variant of 攜|携[xie2]; 2. to carry; 3. to take along; 4. to bring along; 5. to hold (hands); 6. also pr. [xi1]
+攤	摊	攤	0	tān	1. to spread out; 2. vendor's stand
+摩	摩	摩	0	mā	1. used in 摩挲[ma1 sa5]
+摩	摩	摩	0	mó	1. to rub
+撤	撤	撤	0	chè	1. to remove; to take away
+播	播	播	0	bō	1. (bound form) to sow (seeds); to spread (ideas, rumors etc); to broadcast (radio signals etc); 2. Taiwan pr. [bo4]
+撡	操	撡	0	cāo	1. old variant of 操[cao1]; 2. to grasp; 3. to hold; 4. to operate; 5. to manage; 6. to control; 7. to steer; 8. to exercise; 9. to drill (practice); 10. to play; 11. to speak (a language)
+操	操	操	0	cào	1. variant of 肏[cao4]
+擦	擦	擦	0	cā	1. to rub; to scratch; 2. to wipe; to polish; 3. to apply (lipstick, lotion etc); 4. to brush (past); 5. to shred (a vegetable etc)
+攜	携	攜	0	xié	1. to carry; 2. to take along; 3. to bring along; 4. to hold (hands); 5. also pr. [xi1]
+政	政	政	0	zhèng	1. political; 2. politics; 3. government
+故	故	故	0	gù	1. happening; 2. instance; 3. reason; 4. cause; 5. intentional; 6. former; 7. old; 8. friend; 9. therefore; 10. hence; 11. (of people) to die, dead
+俲	效	俲	0	xiào	1. variant of 傚|效[xiao4]; 2. to imitate (variant of 效[xiao4]); 3. variant of 效[xiao4]; 4. effect; 5. efficacy; 6. to imitate
+敏	敏	敏	0	mǐn	1. (bound form) quick; nimble; agile; 2. (bound form) quick-witted; smart
+捄	救	捄	0	jiù	1. variant of 救[jiu4]; 2. to save; 3. to assist; 4. to rescue
+敗	败	敗	0	bài	1. to defeat; 2. to damage; 3. to lose (to an opponent); 4. to fail; 5. to wither
+敞	敞	敞	0	chǎng	1. open to the view of all; 2. spacious; 3. to open wide; 4. to disclose
+敬	敬	敬	0	jìng	1. (bound form) respectful; to respect; 2. to offer politely
+敲	敲	敲	0	qiāo	1. to hit; 2. to strike; 3. to tap; 4. to rap; 5. to knock; 6. to rip sb off; 7. to overcharge
+文	文	文	0	wén	1. surname Wen
+文	文	文	0	wén	1. language; 2. culture; 3. writing; 4. formal; 5. literary; 6. gentle; 7. (old) classifier for coins; 8. Kangxi radical 67
+亝	斋	亝	0	zhāi	1. old variant of 齋|斋[zhai1]; 2. to fast or abstain from meat, wine etc; 3. vegetarian diet; 4. study room; 5. building; 6. to give alms (to a monk)
+斥	斥	斥	0	chì	1. to blame; 2. to reprove; 3. to reprimand; 4. to expel; 5. to oust; 6. to reconnoiter; 7. (of territory) to expand; 8. saline marsh
+斯	斯	斯	0	sī	1. Slovakia; 2. Slovak; 3. abbr. for 斯洛伐克[Si1 luo4 fa2 ke4]
+斯	斯	斯	0	sī	1. (phonetic); 2. this
+施	施	施	0	shī	1. surname Shi
+施	施	施	0	shī	1. (bound form) to put into effect (regulations etc); 2. to distribute (alms etc); 3. to apply (fertilizer etc)
+旁	旁	旁	0	páng	1. one side; 2. other; 3. different; 4. lateral component of a Chinese character (such as 刂[dao1], 亻[ren2] etc)
+族	族	族	0	zú	1. race; 2. nationality; 3. ethnicity; 4. clan; 5. by extension, social group (e.g. office workers 上班族)
+旂	旗	旂	0	qí	1. flag; 2. variant of 旗[qi2]; 3. banner; 4. (in Qing times) Manchu (cf. 八旗[Ba1 qi2]); 5. administrative subdivision in inner Mongolia equivalent to 縣|县[xian4] county
+旦	旦	旦	0	dàn	1. (literary) dawn; daybreak; 2. dan, female role in Chinese opera (traditionally played by specialized male actors)
+崐	昆	崐	0	kūn	1. variant of 崑|昆[kun1]; 2. used in place names, notably Kunlun Mountains 崑崙|昆仑[Kun1 lun2]; 3. (also used for transliteration); 4. descendant; 5. elder brother; 6. a style of Chinese poetry
+昌	昌	昌	0	chāng	1. surname Chang
+昌	昌	昌	0	chāng	1. (bound form) prosperous; flourishing
+星	星	星	0	xīng	1. star; 2. heavenly body; 3. satellite; 4. small amount
+旾	春	旾	0	chūn	1. old variant of 春[chun1]; 2. spring (season); 3. gay; 4. joyful; 5. youthful; 6. love; 7. lust; 8. life
+春	春	春	0	chūn	1. surname Chun
+昧	昧	昧	0	mèi	1. to conceal; 2. dark
+昨	昨	昨	0	zuó	1. yesterday
+暈	晕	暈	0	yūn	1. confused; 2. dizzy; 3. giddy; 4. to faint; 5. to swoon; 6. to lose consciousness; 7. to pass out
+暈	晕	暈	0	yùn	1. dizzy; 2. halo; 3. ring around moon or sun
+晨	晨	晨	0	chén	1. morning; 2. dawn; 3. daybreak
+普	普	普	0	pǔ	1. general; 2. popular; 3. everywhere; 4. universal
+景	景	景	0	jǐng	1. surname Jing
+景	景	景	0	jǐng	1. (bound form) scenery; 2. circumstance; 3. situation; 4. scene (of a play); 5. (literary) sunlight
+暫	暂	暫	0	zàn	1. temporary; 2. Taiwan pr. [zhan4]; 3. to scurry; 4. variant of 暫|暂[zan4]
+暫	暂	暫	0	zàn	1. temporary; 2. Taiwan pr. [zhan4]
+曝	曝	曝	0	bào	1. used in 曝光[bao4 guang1]; 2. Taiwan pr. [pu4]
+曝	曝	曝	0	pù	1. to air; 2. to sun
+曹	曹	曹	0	cáo	1. surname Cao; 2. Zhou Dynasty vassal state
+曹	曹	曹	0	cáo	1. class or grade; 2. generation; 3. plaintiff and defendant (old); 4. government department (old)
+朋	朋	朋	0	péng	1. friend
+朱	朱	朱	0	zhū	1. surname Zhu
+朱	朱	朱	0	zhū	1. vermilion; 2. (bound form) cinnabar
+朴	朴	朴	0	piáo	1. surname Piao; 2. Korean surname (Park, Pak or Bak); 3. also pr. [Pu2]
+朴	朴	朴	0	pō	1. used in 朴刀[po1 dao1]
+朴	朴	朴	0	pò	1. Celtis sinensis var. japonica
+樸	朴	樸	0	pǔ	1. (bound form) plain; simple; 2. Taiwan pr. [pu2]
+權	权	權	0	quán	1. surname Quan
+權	权	權	0	quán	1. authority; 2. power; 3. right; 4. (literary) to weigh; 5. expedient; 6. temporary
+杜	杜	杜	0	dù	1. surname Du
+杜	杜	杜	0	dù	1. birchleaf pear (tree); 2. to stop; 3. to prevent; 4. to restrict
+楊	杨	楊	0	yáng	1. surname Yang
+楊	杨	楊	0	yáng	1. poplar
+傑	杰	傑	0	jié	1. (bound form) hero; 2. heroic; 3. outstanding person; 4. prominent; 5. distinguished; 6. variant of 傑|杰[jie2]
+松	松	松	0	sōng	1. surname Song
+松	松	松	0	sōng	1. pine; 2. loose; 3. to loosen; 4. to relax; 5. floss (dry, fluffy food product made from shredded, seasoned meat or fish, used as a topping or filling)
+板	板	板	0	bǎn	1. board; 2. plank; 3. plate; 4. shutter; 5. table tennis bat; 6. clappers (music); 7. accented beat in Chinese music; 8. hard; 9. stiff; 10. to stop smiling or look serious; 11. used in 老闆|老板[lao3 ban3]
+闆	板	闆	0	pàn	1. to catch sight of in a doorway (old)
+析	析	析	0	xī	1. to separate; 2. to divide; 3. to analyze
+枯	枯	枯	0	kū	1. (of plants) withered; 2. (of wells, rivers etc) dried up; 3. (bound form) dull; boring; 4. (bound form) residue of pressed oilseeds
+柴	柴	柴	0	chái	1. surname Chai
+柴	柴	柴	0	chái	1. firewood; 2. lean (of meat); 3. thin (of a person)
+標	标	標	0	biāo	1. mark; 2. sign; 3. label; 4. to mark with a symbol, label, lettering etc; 5. to bear (a brand name, registration number etc); 6. prize; 7. award; 8. bid; 9. target; 10. quota; 11. (old) the topmost branches of a tree; 12. visible symptom
+栓	栓	栓	0	shuān	1. bottle stopper; 2. plug; 3. (gun) bolt; 4. (grenade) pin
+校	校	校	0	jiào	1. to check; to collate; to proofread
+校	校	校	0	xiào	1. (bound form) school; college; 2. (bound form) (military) field officer
+核	核	核	0	hé	1. pit; 2. stone; 3. nucleus; 4. nuclear; 5. to examine; 6. to check; 7. to verify; 8. variant of 核[he2]; 9. to investigate
+桃	桃	桃	0	táo	1. peach
+框	框	框	0	kuàng	1. frame (e.g. door frame); 2. casing; 3. fig. framework; 4. template; 5. to circle (i.e. draw a circle around sth); 6. to frame; 7. to restrict; 8. Taiwan pr. [kuang1]
+案	案	案	0	àn	1. (legal) case; 2. incident; 3. record; 4. file; 5. table
+桌	桌	桌	0	zhuō	1. table; 2. desk; 3. classifier for tables of guests at a banquet etc; 4. old variant of 桌[zhuo1]
+梢	梢	梢	0	shāo	1. tip of branch
+梯	梯	梯	0	tī	1. (bound form) ladder; stairs
+梵	梵	梵	0	fàn	1. abbr. for 梵教[Fan4 jiao4] Brahmanism; 2. abbr. for Sanskrit 梵語|梵语[Fan4 yu3] or 梵文[Fan4 wen2]; 3. abbr. for 梵蒂岡|梵蒂冈[Fan4 di4 gang1], the Vatican
+檢	检	檢	0	jiǎn	1. to check; 2. to examine; 3. to inspect; 4. to exercise restraint
+棒	棒	棒	0	bàng	1. stick; 2. club; 3. cudgel; 4. smart; 5. capable; 6. strong; 7. wonderful; 8. classifier for legs of a relay race
+森	森	森	0	sēn	1. Mori (Japanese surname)
+森	森	森	0	sēn	1. (bound form) densely wooded; 2. (fig.) (bound form) multitudinous; gloomy; forbidding
+椅	椅	椅	0	yǐ	1. chair
+植	植	植	0	zhí	1. to plant
+椎	椎	椎	0	chuí	1. hammer; mallet (variant of 槌[chui2]); 2. variant of 捶[chui2]
+椎	椎	椎	0	zhuī	1. (bound form) vertebra
+楣	楣	楣	0	méi	1. lintel; 2. crossbeam
+概	概	概	0	gài	1. (bound form) general; approximate; 2. without exception; categorically; 3. (bound form) bearing; deportment; 4. old variant of 概[gai4]
+榜	榜	榜	0	bǎng	1. notice or announcement; 2. list of names; 3. public roll of successful examinees; 4. variant of 榜[bang3]
+榜	榜	榜	0	bàng	1. (literary) oar; 2. (metonym) boat; 3. variant of 搒[bang4]; 4. (literary) to whip; to flog; 5. Taiwan pr. [beng4]
+榜	榜	榜	0	péng	1. variant of 搒[peng2]
+槃	槃	槃	0	pán	1. variant of 盤|盘; 2. wooden tray
+模	模	模	0	mó	1. to imitate; 2. model; 3. norm; 4. pattern
+模	模	模	0	mú	1. mold; 2. die; 3. matrix; 4. pattern
+橙	橙	橙	0	chéng	1. orange tree; 2. orange (color)
+欣	欣	欣	0	xīn	1. happy
+歐	欧	歐	0	ōu	1. Europe (abbr. for 歐洲|欧洲[Ou1 zhou1]); 2. European Union (abbr. for 歐盟|欧盟[Ou1 meng2]); 3. surname Ou
+歐	欧	歐	0	ōu	1. ohm (abbr. for 歐姆|欧姆[ou1 mu3]); 2. euro (abbr. for 歐元|欧元[ou1 yuan2]); 3. used in transliteration; 4. old variant of 謳|讴[ou1]
+歌	歌	歌	0	gē	1. song (CL:首[shou3],支[zhi1]); 2. (bound form) to sing; 3. variant of 歌[ge1]
+止	止	止	0	zhǐ	1. to stop; 2. to prohibit; 3. until; 4. only
+歧	歧	歧	0	qí	1. divergent; 2. side road
+歷	历	歷	0	lì	1. to experience; 2. to undergo; 3. to pass through; 4. all; 5. each; 6. every; 7. history
+殃	殃	殃	0	yāng	1. calamity
+殊	殊	殊	0	shū	1. (literary) to kill; to behead; to sever; to separate; to surpass; 2. (bound form) different; 3. (bound form) special; remarkable; 4. (literary) very; extremely
+殘	残	殘	0	cán	1. to destroy; 2. to spoil; 3. to ruin; 4. to injure; 5. cruel; 6. oppressive; 7. savage; 8. brutal; 9. incomplete; 10. disabled; 11. to remain; 12. to survive
+母	母	母	0	mǔ	1. mother; 2. elderly female relative; 3. origin; 4. source; 5. (of animals) female
+毒	毒	毒	0	dú	1. poison; 2. to poison; 3. poisonous; 4. malicious; 5. cruel; 6. fierce; 7. narcotics
+畢	毕	畢	0	bì	1. surname Bi
+畢	毕	畢	0	bì	1. the whole of; 2. to finish; 3. to complete; 4. complete; 5. full; 6. finished
+毛	毛	毛	0	máo	1. surname Mao
+毛	毛	毛	0	máo	1. hair; 2. feather; 3. down; 4. wool; 5. mildew; 6. mold; 7. coarse or semifinished; 8. young; 9. raw; 10. careless; 11. unthinking; 12. nervous
+毫	毫	毫	0	háo	1. hair; 2. drawing brush; 3. (in the) least; 4. one thousandth; 5. currency unit, 0.1 yuan
+民	民	民	0	mín	1. surname Min
+民	民	民	0	mín	1. (bound form) the people; 2. inhabitants of a country
+氛	氛	氛	0	fēn	1. miasma; 2. vapor
+汁	汁	汁	0	zhī	1. juice
+匯	汇	匯	0	huì	1. to remit; 2. to converge (of rivers); 3. to exchange; 4. class; 5. collection; 6. variant of 匯|汇[hui4]
+汗	汗	汗	0	hán	1. see 可汗[ke4 han2], 汗國|汗国[han2 guo2]
+汗	汗	汗	0	hàn	1. perspiration; 2. sweat; 3. to be speechless (out of helplessness, embarrassment etc) (Internet slang used as an interjection)
+池	池	池	0	chí	1. surname Chi
+池	池	池	0	chí	1. pond; 2. reservoir; 3. moat
+汙	污	汙	0	wū	1. variant of 污[wu1]; 2. dirty; 3. filthy; 4. foul; 5. corrupt; 6. to smear; 7. to defile; 8. dirt; 9. filth
+湯	汤	湯	0	tāng	1. surname Tang
+湯	汤	湯	0	shāng	1. rushing current
+湯	汤	湯	0	tāng	1. soup; 2. hot or boiling water; 3. decoction of medicinal herbs; 4. water in which sth has been boiled
+汰	汰	汰	0	tài	1. to discard; 2. to eliminate
+汽	汽	汽	0	qì	1. steam; 2. vapor
+沈	沈	沈	0	shěn	1. surname Shen; 2. short name for 瀋陽|沈阳[Shen3 yang2]
+沈	沉	沈	0	chén	1. variant of 沉[chen2]
+瀋	沈	瀋	0	shěn	1. (literary) juice
+溝	沟	溝	0	gōu	1. ditch; 2. gutter; 3. groove; 4. gully; 5. ravine
+泉	泉	泉	0	quán	1. spring (small stream); 2. mouth of a spring; 3. coin (archaic)
+泊	泊	泊	0	bó	1. to moor (a boat); 2. to park (a vehicle); 3. (literary) calm; quiet; peaceful
+泊	泊	泊	0	pō	1. lake; 2. Taiwan pr. [bo2]
+氾	泛	氾	0	fàn	1. variant of 泛[fan4]; 2. (bound form) general; 3. non-specific; 4. extensive; 5. pan-; 6. to flood; 7. (literary) to float about; 8. to be suffused with (a color, emotion, odor etc)
+波	波	波	0	bō	1. (bound form) Poland (abbr. for 波蘭|波兰[Bo1 lan2]); 2. surname Bo
+波	波	波	0	bō	1. wave; 2. ripple; 3. storm; 4. surge
+注	注	注	0	zhù	1. (bound form) to pour into; to flow into; to inject; 2. (bound form) to focus (one's spirit, gaze etc) on a single point; to concentrate; 3. (bound form) stake (in gambling); 4. classifier for stakes, sums of money, transactions or beams of light; 5. variant of 註|注[zhu4]; 6. to annotate; to provide explanatory notes on a written text; 7. an annotation; an explanatory note; 8. (bound form) to put on record; to register
+澤	泽	澤	0	zé	1. pool; 2. pond; 3. (of metals etc) luster; 4. favor or beneficence; 5. damp; 6. moist
+洋	洋	洋	0	yáng	1. ocean; 2. vast; 3. foreign; 4. silver dollar or coin
+津	津	津	0	jīn	1. abbr. for Tianjin 天津[Tian1 jin1]
+津	津	津	0	jīn	1. saliva; 2. sweat; 3. a ferry crossing; 4. a ford (river crossing)
+洲	洲	洲	0	zhōu	1. continent; 2. island in a river
+澆	浇	澆	0	jiāo	1. to pour liquid; 2. to irrigate (using waterwheel); 3. to water; 4. to cast (molten metal); 5. to mold
+濁	浊	濁	0	zhuó	1. turbid; 2. muddy; 3. impure
+濟	济	濟	0	jǐ	1. used in place names associated with the Ji River 濟水|济水[Ji3 Shui3]; 2. surname Ji
+濟	济	濟	0	jǐ	1. used in 濟濟|济济[ji3 ji3]
+濟	济	濟	0	jì	1. to cross a river; 2. to aid or relieve; 3. to be of help
+浩	浩	浩	0	hào	1. grand; 2. vast (water)
+浪	浪	浪	0	làng	1. wave; 2. breaker; 3. unrestrained; 4. dissipated; 5. to stroll; 6. to ramble
+浮	浮	浮	0	fú	1. to float; 2. superficial; 3. floating; 4. unstable; 5. movable; 6. provisional; 7. temporary; 8. transient; 9. impetuous; 10. hollow; 11. inflated; 12. to exceed
+浴	浴	浴	0	yù	1. bath; 2. to bathe
+海	海	海	0	hǎi	1. surname Hai
+海	海	海	0	hǎi	1. ocean; 2. sea; 3. great number of people or things; 4. (dialect) numerous
+涅	涅	涅	0	niè	1. (literary) alunite (formerly used as a black dye); 2. (literary) to dye black; 3. variant of 涅[nie4]
+涉	涉	涉	0	shè	1. (literary) to wade across a body of water; 2. (bound form) to experience; 3. to undergo; 4. to be involved; 5. to concern
+液	液	液	0	yè	1. (bound form) a liquid; 2. also pr. [yi4]
+涵	涵	涵	0	hán	1. to contain; 2. to include; 3. culvert
+殽	淆	殽	0	xiáo	1. variant of 淆[xiao2]; 2. confused and disorderly; 3. mixed; 4. Taiwan pr. [yao2]
+淤	淤	淤	0	yū	1. silt; 2. river sludge; 3. to silt up; 4. choked with silt; 5. variant of 瘀[yu1]
+淵	渊	淵	0	yuān	1. deep pool; 2. deep; 3. profound
+港	港	港	0	gǎng	1. Hong Kong (abbr. for 香港[Xiang1 gang3]); 2. surname Gang
+港	港	港	0	gǎng	1. harbor; 2. port
+湖	湖	湖	0	hú	1. lake
+潰	溃	潰	0	huì	1. used in 潰膿|溃脓[hui4 nong2]; 2. Taiwan pr. [kui4]
+潰	溃	潰	0	kuì	1. (bound form) (of floodwaters) to break through a dam or dike; 2. (bound form) to break through (a military encirclement); 3. (bound form) to be routed; to be overrun; to fall to pieces; 4. (bound form) to fester; to ulcerate
+源	源	源	0	yuán	1. root; 2. source; 3. origin
+準	准	準	0	zhǔn	1. accurate; 2. standard; 3. definitely; 4. certainly; 5. about to become (bride, son-in-law etc); 6. quasi-; 7. para-
+溜	溜	溜	0	liū	1. to slip away; 2. to escape in stealth; 3. to skate
+溜	溜	溜	0	liù	1. swift current; rapids; 2. (dialect) (of speech, actions etc) skilled; proficient; (of movements) quick; speedy; 3. (bound form) rain runoff from a roof; 4. (bound form) roof gutter; 5. classifier for rows, lines etc; 6. surroundings; neighborhood; 7. (dialect) to practice; 8. (dialect) to plaster; to fill in the cracks (with cement, lime plaster etc)
+溺	溺	溺	0	nì	1. to drown; 2. to indulge; 3. addicted to; 4. to spoil (a child)
+溺	溺	溺	0	niào	1. variant of 尿[niao4]
+滋	滋	滋	0	zī	1. to grow; 2. to nourish; 3. to increase; 4. to cause; 5. juice; 6. taste; 7. (dialect) to spout; 8. to spurt
+濫	滥	濫	0	làn	1. overflowing; 2. excessive; 3. indiscriminate
+漂	漂	漂	0	piāo	1. to float; 2. to drift
+漂	漂	漂	0	piǎo	1. to bleach
+漂	漂	漂	0	piào	1. used in 漂亮[piao4 liang5]
+漆	漆	漆	0	qī	1. paint; 2. lacquer; 3. to paint (furniture, walls etc)
+漫	漫	漫	0	màn	1. free; 2. unrestrained; 3. to inundate
+潛	潜	潛	0	qián	1. hidden; 2. secret; 3. latent; 4. to hide; 5. to conceal; 6. to submerge; 7. to dive
+潭	潭	潭	0	tán	1. surname Tan
+潭	潭	潭	0	tán	1. deep pool; 2. pond; 3. pit (dialect); 4. depression
+瀾	澜	瀾	0	lán	1. swelling water
+激	激	激	0	jī	1. to arouse; 2. to incite; 3. to excite; 4. to stimulate; 5. sharp; 6. fierce; 7. violent
+瀕	濒	瀕	0	bīn	1. to approach; 2. to border on; 3. near
+瀋	沈	瀋	0	shěn	1. short name for 瀋陽|沈阳[Shen3 yang2]
+瀚	瀚	瀚	0	hàn	1. ocean; 2. vastness
+瀰	弥	瀰	0	mí	1. brimming or overflowing
+燈	灯	燈	0	dēng	1. lamp; 2. light; 3. lantern
+灶	灶	灶	0	zào	1. kitchen stove; 2. kitchen; mess; canteen; 3. variant of 灶[zao4]
+灸	灸	灸	0	jiǔ	1. moxibustion (TCM)
+燦	灿	燦	0	càn	1. glorious; 2. bright; 3. brilliant; 4. lustrous; 5. resplendent
+炎	炎	炎	0	yán	1. flame; 2. inflammation; 3. -itis
+匟	炕	匟	0	kàng	1. old variant of 炕[kang4]; 2. kang (a heatable brick bed); 3. to bake; 4. to dry by the heat of a fire
+熾	炽	熾	0	chì	1. to burn; 2. to blaze; 3. splendid; 4. illustrious
+爛	烂	爛	0	làn	1. soft; mushy; 2. well-cooked and soft; 3. to rot; to decompose; 4. rotten; 5. worn out; 6. chaotic; messy; 7. utterly; thoroughly; 8. crappy; bad
+烈	烈	烈	0	liè	1. ardent; 2. intense; 3. fierce; 4. stern; 5. upright; 6. to give one's life for a noble cause; 7. exploits; 8. achievements
+烘	烘	烘	0	hōng	1. to bake; 2. to heat by fire; 3. to set off by contrast
+然	然	然	0	rán	1. correct; 2. right; 3. so; 4. thus; 5. like this; 6. -ly
+煞	煞	煞	0	shā	1. to terminate; 2. to cut short; 3. to bring to a stop; 4. to squeeze; 5. to tighten; 6. to damage; 7. variant of 殺|杀[sha1]
+煞	煞	煞	0	shà	1. fiend; 2. demon; 3. very; 4. (Tw) SARS (loanword)
+熒	荧	熒	0	yíng	1. a glimmer; 2. glimmering; 3. twinkling; 4. fluorescence; 5. phosphorescence; 6. perplexed; 7. dazzled and confused; 8. planet Mars (arch.)
+熟	熟	熟	0	shú	1. ripe; mature; 2. thoroughly cooked; done; 3. familiar; acquainted; 4. experienced; skilled; 5. (of sleep etc) deep; profound; 6. also pr. [shou2]
+營	营	營	0	yíng	1. camp; 2. barracks; 3. battalion; 4. to build; 5. to operate; 6. to manage; 7. to strive for
+爆	爆	爆	0	bào	1. to explode; to burst; 2. to stir-fry briefly; to quick-boil
+爪	爪	爪	0	zhǎo	1. foot of a bird or animal; 2. paw; 3. claws; 4. talons
+爪	爪	爪	0	zhuǎ	1. (coll.) foot of an animal or bird; 2. (coll.) foot supporting a cooking pot etc
+爵	爵	爵	0	jué	1. ancient bronze wine holder with 3 legs and loop handle; 2. nobility
+爾	尔	爾	0	ěr	1. thus; 2. so; 3. like that; 4. you; 5. thou
+牌	牌	牌	0	pái	1. signboard; plaque; plate; tablet (CL:塊|块[kuai4]); 2. brand; trademark; 3. mahjong tile; domino; playing card (CL:張|张[zhang1]); 4. (bound form) fixed pattern for lyrics or set melody in classical poetry or music (used in 詞牌|词牌[ci2 pai2] and 曲牌[qu3 pai2])
+牛	牛	牛	0	niú	1. surname Niu
+牛	牛	牛	0	niú	1. ox; 2. cow; 3. bull; 4. newton (abbr. for 牛頓|牛顿[niu2 dun4]); 5. (slang) awesome
+牟	牟	牟	0	móu	1. surname Mou
+牟	牟	牟	0	móu	1. barley; 2. to moo; 3. to seek or obtain; 4. old variant of 侔[mou2]; 5. old variant of 眸[mou2]
+牟	牟	牟	0	mù	1. used in 牟平[Mu4 ping2] (the name of a place in Shandong); 2. used in 中牟[Zhong1 mu4] (the name of a place in Henan)
+牢	牢	牢	0	láo	1. (literary) pen; fold (for livestock); 2. prison; jail; 3. firm; secure; fast
+牲	牲	牲	0	shēng	1. domestic animal; 2. sacrificial animal
+牽	牵	牽	0	qiān	1. to lead along; 2. to pull (an animal on a tether); 3. (bound form) to involve; 4. to draw in
+特	特	特	0	tè	1. special; 2. unique; 3. distinguished; 4. especially; 5. unusual; 6. very; 7. abbr. for 特克斯[te4 ke4 si1], tex
+狹	狭	狹	0	xiá	1. narrow; 2. narrow-minded; 3. old variant of 狹|狭[xia2]
+獄	狱	獄	0	yù	1. prison
+狸	狸	狸	0	lí	1. (bound form) used in the names of small mammals; 2. variant of 狸[li2]
+狹	狭	狹	0	xiá	1. narrow; 2. narrow-minded
+狼	狼	狼	0	láng	1. wolf
+獵	猎	獵	0	liè	1. hunting
+猖	猖	猖	0	chāng	1. ferocious
+獻	献	獻	0	xiàn	1. to offer; 2. to present; 3. to dedicate; 4. to donate; 5. to show; 6. to put on display; 7. worthy person (old)
+猴	猴	猴	0	hóu	1. monkey
+猨	猿	猨	0	yuán	1. variant of 猿[yuan2]; 2. ape
+獗	獗	獗	0	jué	1. used in 猖獗[chang1 jue2]
+王	王	王	0	wáng	1. surname Wang
+王	王	王	0	wáng	1. king or monarch; 2. best or strongest of its type; 3. grand; 4. great
+王	王	王	0	wàng	1. (literary) (of a monarch) to reign over (a kingdom)
+瑪	玛	瑪	0	mǎ	1. used in 瑪瑙|玛瑙[ma3 nao3]
+環	环	環	0	huán	1. surname Huan
+環	环	環	0	huán	1. ring; 2. hoop; 3. loop; 4. (chain) link; 5. classifier for scores in archery etc; 6. to surround; 7. to encircle; 8. to hem in
+玻	玻	玻	0	bō	1. see 玻璃[bo1 li5]
+珍	珍	珍	0	zhēn	1. precious thing; 2. treasure; 3. culinary delicacy; 4. rare; 5. valuable; 6. to value highly; 7. variant of 珍[zhen1]
+珠	珠	珠	0	zhū	1. bead; 2. pearl
+琅	琅	琅	0	láng	1. jade-like stone; 2. clean and white; 3. tinkling of pendants; 4. variant of 琅[lang2]
+瑯	琅	瑯	0	láng	1. used in 瑯琊|琅琊[Lang2 ya2]
+琉	琉	琉	0	liú	1. precious stone; 2. old variant of 琉[liu2]
+琢	琢	琢	0	zhuó	1. to cut (gems)
+琢	琢	琢	0	zuó	1. used in 琢磨[zuo2 mo5]; 2. Taiwan pr. [zhuo2]
+琳	琳	琳	0	lín	1. gem
+琵	琵	琵	0	pí	1. see 琵琶, pipa lute
+琶	琶	琶	0	pá	1. see 琵琶, pipa lute
+瑜	瑜	瑜	0	yú	1. excellence; 2. luster of gems
+瑯	琅	瑯	0	láng	1. variant of 琅[lang2]
+琍	璃	琍	0	lí	1. (phonetic character used in transliteration of foreign names); 2. Taiwan pr. [li4]; 3. variant of 璃[li2]; 4. colored glaze; 5. glass
+瓜	瓜	瓜	0	guā	1. melon; gourd; squash; 2. (slang) a piece of gossip
+甘	甘	甘	0	gān	1. surname Gan; 2. short name for Gansu 甘肅|甘肃[Gan1 su4]
+甘	甘	甘	0	gān	1. (bound form) sweet; pleasant (contrasted with 苦[ku3]: bitter, unpleasant); 2. to be willing (to do sth)
+產	产	產	0	chǎn	1. to give birth; 2. to reproduce; 3. to produce; 4. product; 5. resource; 6. estate; 7. property
+畜	畜	畜	0	chù	1. livestock; 2. domesticated animal; 3. domestic animal
+畜	畜	畜	0	xù	1. to raise (animals)
+略	略	略	0	lüè	1. brief; sketchy; 2. outline; summary; 3. to omit; 4. (bound form before a single-character verb) a bit; somewhat; slightly; 5. plan; strategy; 6. to capture (territory); 7. variant of 略[lu:e4]
+疇	畴	疇	0	chóu	1. arable fields; 2. cultivated field; 3. class; 4. category
+畸	畸	畸	0	jī	1. lopsided; 2. unbalanced; 3. abnormal; 4. irregular; 5. odd fractional remnant
+疆	疆	疆	0	jiāng	1. border; 2. boundary
+疑	疑	疑	0	yí	1. (bound form) to doubt; to suspect
+癤	疖	癤	0	jiē	1. pimple; 2. sore; 3. boil; 4. Taiwan pr. [jie2]
+療	疗	療	0	liáo	1. to treat; 2. to cure; 3. therapy
+瘍	疡	瘍	0	yáng	1. ulcers; 2. sores
+疾	疾	疾	0	jí	1. (bound form) disease; ailment; 2. (bound form) swift; 3. (literary) to hate; to abhor
+痒	痒	痒	0	yǎng	1. variant of 癢|痒[yang3]; 2. to itch; 3. to tickle
+痞	痞	痞	0	pǐ	1. constipation; 2. lump in the abdomen
+瘓	痪	瘓	0	huàn	1. used in 癱瘓|瘫痪[tan1 huan4]
+癱	瘫	癱	0	tān	1. paralyzed
+瘴	瘴	瘴	0	zhàng	1. malaria; 2. miasma
+癌	癌	癌	0	ái	1. cancer; (esp.) carcinoma
+癢	痒	癢	0	yǎng	1. to itch; 2. to tickle
+癲	癫	癲	0	diān	1. mentally deranged; 2. crazy
+皇	皇	皇	0	huáng	1. surname Huang
+皇	皇	皇	0	huáng	1. emperor; 2. old variant of 惶[huang2]
+皈	皈	皈	0	guī	1. to comply with; 2. to follow
+皺	皱	皺	0	zhòu	1. to wrinkle; 2. wrinkled; 3. to crease
+益	益	益	0	yì	1. surname Yi
+益	益	益	0	yì	1. benefit; 2. profit; 3. advantage; 4. beneficial; 5. to increase; 6. to add; 7. all the more
+監	监	監	0	jiān	1. to supervise; 2. to inspect; 3. jail; 4. prison
+監	监	監	0	jiàn	1. (bound form) supervisor; supervisory office (in imperial China)
+盾	盾	盾	0	dùn	1. shield (CL:面[mian4]); 2. (currency) Vietnamese dong; 3. currency unit of several countries (Indonesian rupiah, Dutch gulden etc)
+睹	睹	睹	0	dǔ	1. to observe; 2. to see; 3. old variant of 睹[du3]
+瞬	瞬	瞬	0	shùn	1. to wink
+瞳	瞳	瞳	0	tóng	1. pupil of the eye
+瞿	瞿	瞿	0	qú	1. surname Qu
+瞿	瞿	瞿	0	qú	1. startled; 2. Taiwan pr. [ju4]
+矛	矛	矛	0	máo	1. spear; lance; pike
+知	知	知	0	zhī	1. to know; 2. to be aware
+石	石	石	0	shí	1. surname Shi; 2. abbr. for Shijiazhuang 石家莊|石家庄[Shi2 jia1 zhuang1], the capital of Hebei
+石	石	石	0	dàn	1. dry measure for grain equal to ten dou 斗[dou3]; one hundred liters; 2. ancient pr. [shi2]
+石	石	石	0	shí	1. rock; 2. stone; 3. stone inscription; 4. one of the eight categories of ancient musical instruments 八音[ba1 yin1]
+碼	码	碼	0	mǎ	1. (archaic) agate; 2. (bound form) standard weight used with a balance scale; 3. number; 4. (computing) code; 5. (clothing) size; 6. yard (unit of length); 7. (coll.) kilometers per hour (informal misuse of "yard" to mean kph in speed references); 8. (coll.) to pile up; to stack; 9. classifier for matters, items, situations etc (esp. when indicating whether they are the same or different, as in 不是一碼事|不是一码事[bu4 shi4 yi1 ma3 shi4] "not the same thing"); 10. (Tw, HK) (finance) unit of 25 basis points (i.e. a 0.25% change in interest rate)
+砂	砂	砂	0	shā	1. sand; 2. gravel; 3. granule; 4. variant of 沙[sha1]
+研	研	研	0	yán	1. to grind; 2. study; 3. research
+礎	础	礎	0	chǔ	1. foundation; 2. base
+硃	朱	硃	0	zhū	1. (bound form) cinnabar
+碟	碟	碟	0	dié	1. dish; 2. plate
+磋	磋	磋	0	cuō	1. (old) to polish bones, horns, ivory etc into tools; 2. (bound form) to deliberate; to consult
+禮	礼	禮	0	lǐ	1. surname Li; 2. abbr. for 禮記|礼记[Li3 ji4], Classic of Rites
+禮	礼	禮	0	lǐ	1. gift; 2. rite; 3. ceremony; 4. propriety; 5. etiquette; 6. courtesy
+社	社	社	0	shè	1. (bound form) society; organization; agency; 2. (old) god of the land
+祁	祁	祁	0	qí	1. surname Qi
+祁	祁	祁	0	qí	1. large; 2. vast
+祥	祥	祥	0	xiáng	1. auspicious; 2. propitious
+旤	祸	旤	0	huò	1. old variant of 禍|祸[huo4]; 2. disaster; 3. misfortune; 4. calamity
+禁	禁	禁	0	jīn	1. to endure
+禁	禁	禁	0	jìn	1. to prohibit; 2. to forbid
+禍	祸	禍	0	huò	1. disaster; 2. misfortune; 3. calamity
+福	福	福	0	fú	1. surname Fu; 2. abbr. for Fujian province 福建省[Fu2 jian4 Sheng3]
+福	福	福	0	fú	1. good fortune; 2. happiness; 3. luck
+私	私	私	0	sī	1. personal; 2. private; 3. selfish
+秉	秉	秉	0	bǐng	1. surname Bing
+秉	秉	秉	0	bǐng	1. to grasp; 2. to hold; 3. to maintain
+秋	秋	秋	0	qiū	1. surname Qiu
+秋	秋	秋	0	qiū	1. autumn; 2. fall; 3. harvest time; 4. old variant of 秋[qiu1]; 5. used in 鞦韆|秋千[qiu1 qian1]
+移	移	移	0	yí	1. to move; 2. to shift; 3. to change; 4. to alter; 5. to remove
+稀	稀	稀	0	xī	1. sparse; scattered; 2. rare; uncommon; 3. diluted; thin; watery; 4. (bound form) sth liquid or of thin consistency (as in 綠豆稀|绿豆稀[lu : 4 dou4 xi1] "sweet mung bean soup"); 5. (bound form) totally; extremely (used with negative attributes, as in 稀糟[xi1 zao1] "utterly ruined")
+穩	稳	穩	0	wěn	1. settled; steady; stable
+穎	颖	穎	0	yǐng	1. head of grain; 2. husk; 3. tip; 4. point; 5. clever; 6. gifted; 7. outstanding
+穫	获	穫	0	huò	1. (bound form) to reap; to harvest
+究	究	究	0	jiū	1. after all; 2. to investigate; 3. to study carefully; 4. Taiwan pr. [jiu4]
+突	突	突	0	tū	1. to dash; 2. to move forward quickly; 3. to bulge; 4. to protrude; 5. to break through; 6. to rush out; 7. sudden; 8. Taiwan pr. [tu2]
+竊	窃	竊	0	qiè	1. to steal; 2. secretly; 3. (humble) I
+牎	窗	牎	0	chuāng	1. old variant of 窗[chuang1]; 2. variant of 窗[chuang1]; 3. window
+競	竞	競	0	jìng	1. to compete; 2. to contend; 3. to struggle
+童	童	童	0	tóng	1. surname Tong
+童	童	童	0	tóng	1. child
+竭	竭	竭	0	jié	1. to exhaust
+竹	竹	竹	0	zhú	1. (bound form) bamboo; 2. Kangxi radical 118
+籠	笼	籠	0	lóng	1. enclosing frame made of bamboo, wire etc; cage; basket; 2. steamer basket
+籠	笼	籠	0	lǒng	1. to envelop; to cover; 2. (used in 籠子|笼子[long3 zi5]) large box; 3. Taiwan pr. [long2]
+答	答	答	0	dā	1. bound form having the same meaning as the free word 答[da2], used in 答應|答应[da1 ying5], 答理[da1 li5] etc
+答	答	答	0	dá	1. to answer; 2. to reply; 3. to respond
+策	策	策	0	cè	1. surname Ce
+策	策	策	0	cè	1. policy; 2. plan; 3. scheme; 4. bamboo slip for writing (old); 5. to whip (a horse); 6. to encourage; 7. riding crop with sharp spines (old); 8. essay written for the imperial examinations (old); 9. upward horizontal stroke in calligraphy; 10. variant of 策[ce4]
+筷	筷	筷	0	kuài	1. chopstick
+簡	简	簡	0	jiǎn	1. simple; 2. uncomplicated; 3. letter; 4. to choose; 5. to select; 6. bamboo strips used for writing (old)
+箜	箜	箜	0	kōng	1. used in 箜篌[kong1 hou2]
+範	范	範	0	fàn	1. pattern; 2. model; 3. example
+篌	篌	篌	0	hóu	1. used in 箜篌[kong1 hou2]
+篡	篡	篡	0	cuàn	1. to seize; 2. to usurp; 3. old variant of 篡[cuan4]
+粕	粕	粕	0	pò	1. grains in distilled liquor
+糧	粮	糧	0	liáng	1. grain; 2. food; 3. provisions; 4. agricultural tax paid in grain
+糖	糖	糖	0	táng	1. sugar; 2. sweets; 3. candy; 4. old variant of 糖[tang2]
+穅	糠	穅	0	kāng	1. variant of 糠[kang1]; 2. old variant of 糠[kang1]; 3. husk; 4. (of a radish etc) spongy (and therefore unappetising)
+糾	纠	糾	0	jiū	1. to gather together; 2. to investigate; 3. to entangle; 4. to correct
+紀	纪	紀	0	jǐ	1. surname Ji; 2. also pr. [Ji4]
+紀	纪	紀	0	jì	1. order; 2. discipline; 3. age; 4. era; 5. period; 6. to chronicle
+紂	纣	紂	0	zhòu	1. Zhou, pejorative name given posthumously to the last king of the Shang dynasty, King Zhou of Shang 商紂王|商纣王[Shang1 Zhou4 Wang2] (the name refers to a crupper 紂|纣[zhou4], the piece of horse tack most likely to be soiled by the horse)
+紂	纣	紂	0	zhòu	1. crupper (harness strap running over a horse's hindquarters and under its tail)
+約	约	約	0	yāo	1. to weigh in a balance or on a scale
+約	约	約	0	yuē	1. to make an appointment; 2. to invite; 3. approximately; 4. pact; 5. treaty; 6. to economize; 7. to restrict; 8. to reduce (a fraction); 9. concise
+紋	纹	紋	0	wén	1. line; trace; mark; pattern; grain (of wood etc); 2. to tattoo
+紗	纱	紗	0	shā	1. cotton yarn; 2. muslin
+級	级	級	0	jí	1. level; 2. grade; 3. rank; 4. step (of stairs); 5. classifier: step, level
+紛	纷	紛	0	fēn	1. numerous; 2. confused; 3. disorderly
+素	素	素	0	sù	1. raw silk; 2. white; 3. plain, unadorned; 4. vegetarian (food); 5. essence; 6. nature; 7. element; 8. constituent; 9. usually; 10. always; 11. ever
+索	索	索	0	suǒ	1. surname Suo; 2. abbr. for 索馬里|索马里[Suo3 ma3 li3], Somalia
+索	索	索	0	suǒ	1. to search; 2. to demand; 3. to ask; 4. to exact; 5. large rope; 6. isolated
+細	细	細	0	xì	1. thin or slender; 2. finely particulate; 3. thin and soft; 4. fine; 5. delicate; 6. trifling; 7. (of a sound) quiet; 8. frugal
+紹	绍	紹	0	shào	1. surname Shao
+紹	绍	紹	0	shào	1. to continue; 2. to carry on
+終	终	終	0	zhōng	1. end; 2. finish
+組	组	組	0	zǔ	1. surname Zu
+組	组	組	0	zǔ	1. to form; 2. to organize; 3. group; 4. team; 5. classifier for sets, series, groups of people, batteries
+絡	络	絡	0	lào	1. small net
+絡	络	絡	0	luò	1. net-like object; 2. to hold sth in place with a net; 3. to wind; 4. to twist; 5. (TCM) channels in the human body
+統	统	統	0	tǒng	1. to gather; 2. to unite; 3. to unify; 4. whole
+維	维	維	0	wéi	1. abbr. for Uighur 維吾爾|维吾尔[Wei2 wu2 er3]; 2. surname Wei
+維	维	維	0	wéi	1. to preserve; 2. to maintain; 3. to hold together; 4. dimension; 5. vitamin (abbr. for 維生素|维生素[wei2 sheng1 su4])
+綱	纲	綱	0	gāng	1. head rope of a fishing net; 2. guiding principle; 3. key link; 4. class (taxonomy); 5. outline; 6. program
+線	线	線	0	xiàn	1. thread; 2. string; 3. wire; 4. line; 5. (after a number) tier (unofficial ranking of a Chinese city)
+縛	缚	縛	0	fù	1. to bind; 2. to tie; 3. Taiwan pr. [fu2]
+縮	缩	縮	0	suō	1. to withdraw; 2. to pull back; 3. to contract; 4. to shrink; 5. to reduce; 6. abbreviation; 7. also pr. [su4]
+縱	纵	縱	0	zòng	1. vertical; north-south (Taiwan pr. [zong1]); 2. from front to back; longitudinal; lengthwise (Taiwan pr. [zong1]); 3. military unit corresponding to an army corps (Taiwan pr. [zong1]); 4. (bound form) to release (a captive); 5. to indulge; 6. to leap up; 7. (literary) even if
+緐	繁	緐	0	fán	1. old variant of 繁[fan2]; 2. complicated; 3. many; 4. in great numbers; 5. abbr. for 繁體|繁体[fan2 ti3], traditional form of Chinese characters
+繁	繁	繁	0	pó	1. surname Po
+織	织	織	0	zhī	1. to weave; 2. to knit
+繞	绕	繞	0	rào	1. to wind; 2. to coil (thread); 3. to rotate around; 4. to spiral; 5. to move around; 6. to go round (an obstacle); 7. to by-pass; 8. to make a detour; 9. to confuse; 10. to perplex
+繼	继	繼	0	jì	1. to continue; 2. to follow after; 3. to go on with; 4. to succeed; 5. to inherit; 6. then; 7. afterwards
+續	续	續	0	xù	1. to continue; 2. to replenish
+糺	纠	糺	0	jiū	1. old variant of 糾|纠[jiu1]; 2. to gather together; 3. to investigate; 4. to entangle; 5. to correct
+綫	线	綫	0	xiàn	1. variant of 線|线[xian4]; 2. thread; 3. string; 4. wire; 5. line; 6. (after a number) tier (unofficial ranking of a Chinese city)
+繞	绕	繞	0	rào	1. to wind; 2. to coil (thread); 3. to rotate around; 4. to spiral; 5. to move around; 6. to go round (an obstacle); 7. to by-pass; 8. to make a detour; 9. to confuse; 10. to perplex; 11. variant of 繞|绕[rao4], to rotate around
+罕	罕	罕	0	hǎn	1. rare
+羅	罗	羅	0	luó	1. surname Luo
+羅	罗	羅	0	luó	1. gauze; 2. to collect; 3. to gather; 4. to catch; 5. to sift
+罰	罚	罰	0	fá	1. to punish; to penalize; to fine; 2. variant of 罰|罚[fa2]
+罰	罚	罰	0	fá	1. to punish; to penalize; to fine
+羞	羞	羞	0	xiū	1. shy; 2. ashamed; 3. shame; 4. bashful; 5. variant of 饈|馐[xiu1]; 6. delicacies
+羨	羡	羨	0	xiàn	1. to envy
+翁	翁	翁	0	wēng	1. surname Weng
+翁	翁	翁	0	wēng	1. elderly man; 2. father; 3. father-in-law; 4. neck feathers of a bird (old)
+攷	考	攷	0	kǎo	1. to beat; 2. to hit; 3. variant of 考[kao3]; 4. to inspect; 5. to test; 6. to take an exam; 7. to check; 8. to verify; 9. to examine; 10. to take an entrance exam for; 11. deceased father
+耐	耐	耐	0	nài	1. (bound form) to bear; to endure; to withstand
+畊	耕	畊	0	gēng	1. variant of 耕[geng1]; 2. to plow; 3. to till
+耷	耷	耷	0	dā	1. (literary) big ears; 2. (bound form) to droop
+聳	耸	聳	0	sǒng	1. to excite; 2. to raise up; 3. to shrug; 4. high; 5. lofty; 6. towering
+耽	耽	耽	0	dān	1. to indulge in; 2. to delay; 3. variant of 耽[dan1]
+職	职	職	0	zhí	1. office; 2. duty
+聯	联	聯	0	lián	1. (bound form) to ally oneself with; to unite; to combine; to join; 2. (bound form) (poetry) antithetical couplet
+聰	聪	聰	0	cōng	1. (literary) acute (of hearing); 2. (bound form) clever; intelligent; sharp
+肅	肃	肅	0	sù	1. surname Su
+肅	肃	肅	0	sù	1. respectful; 2. solemn; 3. to eliminate; 4. to clean up
+肆	肆	肆	0	sì	1. four (banker's anti-fraud numeral); 2. unrestrained; 3. wanton; 4. (literary) shop
+肌	肌	肌	0	jī	1. (bound form) flesh; muscle
+腸	肠	腸	0	cháng	1. intestines; 2. old variant of 腸|肠[chang2]
+肢	肢	肢	0	zhī	1. limb
+膚	肤	膚	0	fū	1. skin
+肩	肩	肩	0	jiān	1. shoulder; 2. to shoulder (responsibilities etc)
+骯	肮	骯	0	āng	1. used in 骯髒|肮脏[ang1 zang1]
+肎	肯	肎	0	kěn	1. old variant of 肯[ken3]; 2. to agree; to consent; 3. to be willing to
+脅	胁	脅	0	xié	1. flank (the side of one's torso); 2. to coerce; 3. to threaten; 4. variant of 脅|胁[xie2]
+膽	胆	膽	0	dǎn	1. gall bladder; 2. courage; 3. guts; 4. gall; 5. inner container (e.g. bladder of a football, inner container of a thermos)
+胎	胎	胎	0	tāi	1. fetus; 2. classifier for litters (of puppies etc); 3. padding (in clothing or bedding); 4. womb carrying a fetus; 5. (fig.) origin; 6. source; 7. (loanword) tire
+胞	胞	胞	0	bāo	1. placenta; 2. womb; 3. born of the same parents
+肐	胳	肐	0	gē	1. variant of 胳[ge1]; 2. armpit
+胳	胳	胳	0	gā	1. used in 胳肢窩|胳肢窝[ga1 zhi5 wo1]
+胳	胳	胳	0	gé	1. used in 胳肢[ge2 zhi5]
+膠	胶	膠	0	jiāo	1. to glue; 2. glue; 3. gum; 4. rubber
+胷	胸	胷	0	xiōng	1. variant of 胸[xiong1]; 2. chest; 3. bosom; 4. heart; 5. mind; 6. thorax
+脅	胁	脅	0	xié	1. flank (the side of one's torso); 2. to coerce; 3. to threaten
+脃	脆	脃	0	cuì	1. old variant of 脆[cui4]; 2. brittle; 3. fragile; 4. crisp; 5. crunchy; 6. clear and loud voice; 7. neat
+脖	脖	脖	0	bó	1. neck
+脫	脱	脫	0	tuō	1. to shed; 2. to take off; 3. to escape; 4. to get away from
+脾	脾	脾	0	pí	1. spleen
+腐	腐	腐	0	fǔ	1. decay; 2. rotten
+腑	腑	腑	0	fǔ	1. internal organs
+腕	腕	腕	0	wàn	1. wrist; 2. (squid, starfish etc) arm
+腮	腮	腮	0	sāi	1. cheek; 2. variant of 腮[sai1]
+腸	肠	腸	0	cháng	1. intestines
+腹	腹	腹	0	fù	1. abdomen; 2. stomach; 3. belly
+膩	腻	膩	0	nì	1. greasy; 2. soft; 3. unctuous; 4. intimate; 5. tired of
+膊	膊	膊	0	bó	1. shoulder; 2. upper arm
+厀	膝	厀	0	xī	1. old variant of 膝[xi1]; 2. knee
+臟	脏	臟	0	zàng	1. viscera; 2. (anatomy) organ
+緻	致	緻	0	zhì	1. (bound form) fine; delicate; exquisite; 2. (literary) to send; to transmit; to convey; 3. (bound form) to cause; to lead to; consequently
+舌	舌	舌	0	jī	1. used in 喇舌[la3 ji1] to transcribe the Taiwanese word for "tongue"
+舌	舌	舌	0	shé	1. tongue
+舒	舒	舒	0	shū	1. surname Shu
+舒	舒	舒	0	shū	1. to stretch; 2. to unfold; 3. to relax; 4. leisurely
+舞	舞	舞	0	wǔ	1. to dance; 2. to wield; 3. to brandish
+舟	舟	舟	0	zhōu	1. boat
+般	般	般	0	bān	1. sort; 2. kind; 3. class; 4. way; 5. manner
+般	般	般	0	bō	1. used in 般若[bo1 re3]
+般	般	般	0	pán	1. see 般樂|般乐[pan2 le4]
+良	良	良	0	liáng	1. good; 2. very; 3. very much
+艱	艰	艱	0	jiān	1. difficult; 2. hard; 3. hardship
+藝	艺	藝	0	yì	1. skill; 2. art
+蘆	芦	蘆	0	lú	1. rush; 2. reed; 3. Phragmites communis
+葦	苇	葦	0	wěi	1. reed; 2. rush; 3. Phragmites communis
+蒼	苍	蒼	0	cāng	1. surname Cang
+蒼	苍	蒼	0	cāng	1. dark blue; 2. deep green; 3. ash-gray
+囌	苏	囌	0	sū	1. used in 嚕囌|噜苏[lu1 su1]; 2. variant of 蘇|苏[su1]; 3. to revive; 4. Perilla frutescens (Chinese basil or wild red basil); 5. place name; 6. used as phonetic in transliteration; 7. old variant of 蘇|苏[su1]
+蘇	苏	蘇	0	sū	1. surname Su; 2. abbr. for Soviet Union 蘇維埃|苏维埃[Su1 wei2 ai1] or 蘇聯|苏联[Su1 lian2]; 3. abbr. for Jiangsu 江蘇|江苏[Jiang1 su1]; 4. abbr. for Suzhou 蘇州|苏州[Su1 zhou1]
+英	英	英	0	yīng	1. United Kingdom; 2. British; 3. England; 4. English; 5. abbr. for 英國|英国[Ying1 guo2]
+英	英	英	0	yīng	1. hero; 2. outstanding; 3. excellent; 4. (literary) flower; 5. blossom
+范	范	范	0	fàn	1. surname Fan
+荷	荷	荷	0	hé	1. Holland; the Netherlands (abbr. for 荷蘭|荷兰[He2 lan2])
+荷	荷	荷	0	hé	1. lotus
+荷	荷	荷	0	hè	1. to carry on one's shoulder or back; 2. burden; 3. responsibility
+莊	庄	莊	0	zhuāng	1. farmstead; 2. village; 3. manor; 4. place of business; 5. banker (in a gambling game); 6. grave or solemn; 7. holdings of a landlord (in imperial China)
+莫	莫	莫	0	mò	1. surname Mo
+莫	莫	莫	0	mò	1. do not; 2. there is none who
+蓮	莲	蓮	0	lián	1. lotus
+獲	获	獲	0	huò	1. (literary) to catch; to capture; 2. (literary) to get; to obtain; to win; 3. (bound form) to reap; to harvest
+菌	菌	菌	0	jūn	1. germ; 2. bacteria; 3. fungus; 4. mold; 5. Taiwan pr. [jun4]
+菌	菌	菌	0	jùn	1. mushroom
+菜	菜	菜	0	cài	1. vegetable; greens (CL:棵[ke1]); 2. dish (of food) (CL:樣|样[yang4],道[dao4],盤|盘[pan2]); 3. (of one's skills etc) weak; poor; 4. (coll.) (one's) type
+菩	菩	菩	0	pú	1. used in 菩薩|菩萨[pu2 sa4]; 2. used in 菩提[pu2 ti2]
+螢	萤	螢	0	yíng	1. firefly; 2. glow-worm
+薩	萨	薩	0	sà	1. surname Sa
+薩	萨	薩	0	sà	1. used in 菩薩|菩萨[pu2 sa4]; 2. used in transliteration
+葫	葫	葫	0	hú	1. used in 葫蘆|葫芦[hu2 lu5]
+蒂	蒂	蒂	0	dì	1. stem (of fruit); 2. variant of 蒂[di4]
+蓬	蓬	蓬	0	péng	1. surname Peng
+蓬	蓬	蓬	0	péng	1. fleabane (family Asteraceae); 2. disheveled; 3. classifier for luxuriant plants, smoke, ashes, campfires: clump, puff
+蔬	蔬	蔬	0	shū	1. vegetables
+蕾	蕾	蕾	0	lěi	1. bud
+蘇	苏	蘇	0	sū	1. Perilla frutescens (Chinese basil or wild red basil); 2. place name; 3. to revive; 4. used as phonetic in transliteration
+虎	虎	虎	0	hǔ	1. tiger
+虔	虔	虔	0	qián	1. to act with reverence; 2. reverent
+虛	虚	虛	0	xū	1. emptiness; 2. void; 3. abstract theory or guiding principles; 4. empty or unoccupied; 5. diffident or timid; 6. false; 7. humble or modest; 8. (of health) weak; 9. virtual; 10. in vain
+虞	虞	虞	0	yú	1. surname Yu
+虞	虞	虞	0	yú	1. (literary) to expect; to anticipate; 2. (literary) to be concerned about; to be apprehensive; 3. (literary) to deceive; to dupe
+虫	虫	虫	0	chóng	1. variant of 蟲|虫[chong2]; 2. lower form of animal life, including insects, insect larvae, worms and similar creatures; 3. (fig.) person with a particular undesirable characteristic
+雖	虽	雖	0	suī	1. although; 2. even though
+蟻	蚁	蟻	0	yǐ	1. ant
+螞	蚂	螞	0	mā	1. used in 螞螂|蚂螂[ma1 lang2]
+螞	蚂	螞	0	mǎ	1. used in 螞蟥|蚂蟥[ma3 huang2]; 2. used in 螞蟻|蚂蚁[ma3 yi3]
+螞	蚂	螞	0	mà	1. used in 螞蚱|蚂蚱[ma4 zha5]
+蚊	蚊	蚊	0	wén	1. mosquito; 2. old variant of 蚊[wen2]
+蠅	蝇	蠅	0	yíng	1. fly; 2. musca
+螺	螺	螺	0	luó	1. spiral shell; 2. snail; 3. conch
+蟲	虫	蟲	0	chóng	1. lower form of animal life, including insects, insect larvae, worms and similar creatures; 2. (fig.) person with a particular undesirable characteristic
+蝡	蠕	蝡	0	rú	1. variant of 蠕[ru2]; 2. to squirm; 3. to wiggle; 4. to wriggle; 5. Taiwan pr. [ruan3]
+衍	衍	衍	0	yǎn	1. to spread out; 2. to develop; 3. to overflow; 4. to amplify; 5. superfluous
+街	街	街	0	jiē	1. street
+衡	衡	衡	0	héng	1. to weigh; 2. weight; 3. measure
+衣	衣	衣	0	yī	1. clothes; 2. Kangxi radical 145
+衣	衣	衣	0	yì	1. to dress; 2. to wear; 3. to put on (clothes)
+表	表	表	0	biǎo	1. exterior surface; 2. family relationship via females; 3. to show (one's opinion); 4. a model; 5. a table (listing information); 6. a form; 7. a meter (measuring sth); 8. watch (timepiece); 9. meter; gauge
+袋	袋	袋	0	dài	1. pouch; 2. bag; 3. sack; 4. pocket
+臝	裸	臝	0	luǒ	1. variant of 裸[luo3]; 2. naked
+複	复	複	0	fù	1. to repeat; 2. to double; 3. to overlap; 4. complex (not simple); 5. compound; 6. composite; 7. double; 8. diplo-; 9. duplicate; 10. overlapping; 11. to duplicate
+覆	复	覆	0	fù	1. variant of 復|复[fu4]; 2. to reply to a letter; 3. to cover; 4. to overflow; 5. to overturn; 6. to capsize
+規	规	規	0	guī	1. compass; 2. a rule; 3. regulation; 4. to admonish; 5. to plan; 6. to scheme
+覽	览	覽	0	lǎn	1. to look at; 2. to view; 3. to read
+槼	规	槼	0	guī	1. variant of 規|规[gui1]; 2. compass; 3. a rule; 4. regulation; 5. to admonish; 6. to plan; 7. to scheme
+觸	触	觸	0	chù	1. to touch; 2. to make contact with sth; 3. to stir up sb's emotions
+計	计	計	0	jì	1. surname Ji
+計	计	計	0	jì	1. to calculate; 2. to compute; 3. to count; 4. to regard as important; 5. to plan; 6. ruse; 7. meter; 8. gauge
+討	讨	討	0	tǎo	1. to invite; 2. to provoke; 3. to demand or ask for; 4. to send armed forces to suppress; 5. to denounce or condemn; 6. to marry (a woman); 7. to discuss or study
+訓	训	訓	0	xùn	1. to teach; to train; to admonish; 2. (bound form) instruction (from superiors); teachings; rule
+訴	诉	訴	0	sù	1. to complain; 2. to sue; 3. to tell
+診	诊	診	0	zhěn	1. to examine or treat medically
+註	注	註	0	zhù	1. to annotate; to provide explanatory notes on a written text; 2. an annotation; an explanatory note; 3. (bound form) to put on record; to register
+詐	诈	詐	0	zhà	1. to cheat; 2. to swindle; 3. to pretend; 4. to feign; 5. to draw sb out; 6. to try to extract information by deceit or bluff
+評	评	評	0	píng	1. to discuss; 2. to comment; 3. to criticize; 4. to judge; 5. to choose (by public appraisal)
+詞	词	詞	0	cí	1. word; 2. statement; speech; lyrics; 3. a form of lyric poetry, flourishing in the Song dynasty 宋朝[Song4 chao2] (CL:首[shou3])
+詳	详	詳	0	xiáng	1. detailed; 2. comprehensive
+誅	诛	誅	0	zhū	1. to put (a criminal) to death; 2. to punish
+誌	志	誌	0	zhì	1. sign; 2. mark; 3. to record; 4. to write a footnote
+誘	诱	誘	0	yòu	1. (literary) to induce; to entice
+誠	诚	誠	0	chéng	1. (bound form) sincere; authentic; 2. (literary) really; truly
+誹	诽	誹	0	fěi	1. slander
+諦	谛	諦	0	dì	1. to examine; 2. truth (Buddhism)
+諧	谐	諧	0	xié	1. (bound form) harmonious; 2. (bound form) humorous; 3. (literary) to reach agreement
+諱	讳	諱	0	huì	1. to avoid mentioning; 2. taboo word; 3. name of deceased emperor or superior
+諷	讽	諷	0	fěng	1. to satirize; 2. to mock; 3. to recite; 4. Taiwan pr. [feng4]
+謀	谋	謀	0	móu	1. to plan; 2. to seek; 3. scheme
+謂	谓	謂	0	wèi	1. surname Wei
+謂	谓	謂	0	wèi	1. to speak; 2. to say; 3. to name; 4. to designate; 5. meaning; 6. sense
+謊	谎	謊	0	huǎng	1. lies; 2. to lie
+謝	谢	謝	0	xiè	1. surname Xie
+謝	谢	謝	0	xiè	1. to thank; 2. (bound form) to apologize; 3. (bound form) to decline; to refuse; 4. (bound form) (of flowers, leaves etc) to wither
+譏	讥	譏	0	jī	1. to ridicule
+譜	谱	譜	0	pǔ	1. chart; 2. list; 3. table; 4. register; 5. score (music); 6. spectrum (physics); 7. to set to music
+警	警	警	0	jǐng	1. to alert; 2. to warn; 3. police
+議	议	議	0	yì	1. to comment on; 2. to discuss; 3. to suggest
+愬	诉	愬	0	sù	1. variant of 訴|诉[su4]; 2. to complain; 3. to sue; 4. to tell
+䛐	词	䛐	0	cí	1. old variant of 詞|词[ci2]; 2. word; 3. statement; speech; lyrics; 4. a form of lyric poetry, flourishing in the Song dynasty 宋朝[Song4 chao2] (CL:首[shou3])
+荳	豆	荳	0	dòu	1. legume; pulse; bean; pea (CL:顆|颗[ke1],粒[li4]) (variant of 豆[dou4]); 2. legume; pulse; bean; pea (CL:顆|颗[ke1],粒[li4]); 3. (old) stemmed cup or bowl
+豐	丰	豐	0	fēng	1. abundant; 2. plentiful; 3. fertile; 4. plump; 5. great
+象	象	象	0	xiàng	1. elephant; 2. shape; 3. form; 4. appearance; 5. to imitate
+豪	豪	豪	0	háo	1. grand; 2. heroic
+貌	貌	貌	0	mào	1. (bound form) appearance; looks; outward form
+負	负	負	0	fù	1. to bear; 2. to carry (on one's back); 3. to turn one's back on; 4. to be defeated; 5. negative (math. etc)
+貢	贡	貢	0	gòng	1. surname Gong
+貢	贡	貢	0	gòng	1. to offer tribute; 2. tribute; 3. gifts
+貪	贪	貪	0	tān	1. to have a voracious desire for; 2. to covet; 3. greedy; 4. corrupt
+貫	贯	貫	0	guàn	1. to pierce through; 2. to pass through; 3. to be stringed together; 4. string of 1000 cash
+責	责	責	0	zé	1. duty; 2. responsibility; 3. to reproach; 4. to blame
+貿	贸	貿	0	mào	1. commerce; 2. trade
+資	资	資	0	zī	1. resources; 2. capital; 3. to provide; 4. to supply; 5. to support; 6. money; 7. expense
+賞	赏	賞	0	shǎng	1. to bestow (a reward); 2. to give (to an inferior); 3. to hand down; 4. a reward (bestowed by a superior); 5. to appreciate (beauty)
+賢	贤	賢	0	xián	1. worthy or virtuous person; 2. honorific used for a person of the same or a younger generation
+賬	账	賬	0	zhàng	1. account; 2. bill; 3. debt
+賴	赖	賴	0	lài	1. surname Lai; 2. (Tw) (coll.) LINE messaging app
+賴	赖	賴	0	lài	1. to depend on; 2. to hang on in a place; 3. bad; 4. to renege (on promise); 5. to disclaim; 6. to rat (on debts); 7. rascally; 8. to blame; 9. to put the blame on
+賺	赚	賺	0	zhuàn	1. to earn; 2. to make a profit
+賺	赚	賺	0	zuàn	1. to cheat; 2. to swindle
+贊	赞	贊	0	zàn	1. (bound form) to patronize; to support; to aid; 2. (bound form) to praise; to laud
+贛	赣	贛	0	gàn	1. abbr. for Jiangxi Province 江西省[Jiang1 xi1 Sheng3]; 2. Gan River in Jiangxi Province 江西省[Jiang1 xi1 Sheng3]
+賴	赖	賴	0	lài	1. to depend on; 2. to hang on in a place; 3. bad; 4. to renege (on promise); 5. to disclaim; 6. to rat (on debts); 7. rascally; 8. to blame; 9. to put the blame on; 10. variant of 賴|赖[lai4]
+讃	赞	讃	0	zàn	1. variant of 讚|赞[zan4]; 2. (bound form) to praise; to laud (variant of 贊|赞[zan4]); 3. variant of 贊|赞[zan4]; 4. (bound form) to patronize; to support; to aid; 5. (bound form) to praise; to laud
+灨	赣	灨	0	gàn	1. variant of 贛|赣[Gan4]; 2. abbr. for Jiangxi Province 江西省[Jiang1 xi1 Sheng3]; 3. Gan River in Jiangxi Province 江西省[Jiang1 xi1 Sheng3]
+赦	赦	赦	0	shè	1. to pardon (a convict)
+赫	赫	赫	0	hè	1. surname He
+赫	赫	赫	0	hè	1. awe-inspiring; 2. abbr. for 赫茲|赫兹[he4 zi1], hertz (Hz)
+趣	趣	趣	0	qù	1. interesting; 2. to interest
+趾	趾	趾	0	zhǐ	1. toe
+距	距	距	0	jù	1. to be at a distance of ... from; to be apart from; 2. (bound form) distance; 3. spur (on the leg of certain birds: gamecock, pheasant etc)
+踐	践	踐	0	jiàn	1. to fulfill (a promise); 2. to tread; 3. to walk
+踏	踏	踏	0	tā	1. see 踏實|踏实[ta1 shi5]
+踏	踏	踏	0	tà	1. to tread; 2. to stamp; 3. to step on; 4. to press a pedal; 5. to investigate on the spot
+蹈	蹈	蹈	0	dǎo	1. to tread on; 2. to trample; 3. to stamp; 4. to fulfill; 5. Taiwan pr. [dao4]
+蹋	蹋	蹋	0	tà	1. to step on
+蹟	迹	蹟	0	jì	1. (bound form) vestige; historical remains (variant of 跡|迹[ji4])
+躲	躲	躲	0	duǒ	1. to hide; 2. to dodge; 3. to avoid
+載	载	載	0	zǎi	1. to record in writing; 2. to carry (i.e. publish in a newspaper etc); 3. Taiwan pr. [zai4]; 4. year
+載	载	載	0	zài	1. to carry; 2. to convey; 3. to load; 4. to hold; 5. to fill up; 6. and; 7. also; 8. as well as; 9. simultaneously
+輔	辅	輔	0	fǔ	1. to assist; 2. to complement; 3. auxiliary
+輩	辈	輩	0	bèi	1. lifetime; 2. generation; 3. group of people; 4. class; 5. classifier for generations; 6. (literary) classifier for people
+輯	辑	輯	0	jí	1. to gather up; 2. to collect; 3. to edit; 4. to compile
+輸	输	輸	0	shū	1. to lose; to be beaten; 2. (bound form) to transport; 3. (literary) to donate; to contribute; 4. (coll.) to enter (a password)
+轎	轿	轎	0	jiào	1. sedan chair; 2. palanquin; 3. litter
+辛	辛	辛	0	xīn	1. surname Xin
+辛	辛	辛	0	xīn	1. (of taste) hot or pungent; 2. hard; 3. laborious; 4. suffering; 5. eighth in order; 6. eighth of the ten Heavenly Stems 十天干[shi2 tian1 gan1]; 7. letter "H" or Roman "VIII" in list "A, B, C", or "I, II, III" etc; 8. ancient Chinese compass point: 285°; 9. octa
+辨	辨	辨	0	biàn	1. to distinguish; 2. to recognize
+辯	辩	辯	0	biàn	1. to dispute; 2. to debate; 3. to argue; 4. to discuss
+辰	辰	辰	0	chén	1. 5th earthly branch: 7-9 a.m., 3rd solar month (5th April-4th May), year of the Dragon; 2. ancient Chinese compass point: 120°
+農	农	農	0	nóng	1. (bound form) agriculture
+達	达	達	0	dá	1. surname Da
+達	达	達	0	dá	1. to attain; 2. to reach; 3. to amount to; 4. to communicate; 5. eminent
+邁	迈	邁	0	mài	1. to take a step; 2. to stride
+迎	迎	迎	0	yíng	1. to welcome; to meet; 2. to forge ahead (esp. in the face of difficulties); to meet face to face
+違	违	違	0	wéi	1. to disobey; 2. to violate; 3. to separate; 4. to go against
+遲	迟	遲	0	chí	1. surname Chi
+遲	迟	遲	0	chí	1. late; 2. delayed; 3. slow
+迦	迦	迦	0	jiā	1. (phonetic sound for Buddhist terms)
+廹	迫	廹	0	pò	1. variant of 迫[po4]; 2. to persecute; 3. to oppress; 4. embarrassed; 5. to force; 6. to compel; 7. to approach or go towards; 8. urgent; 9. pressing
+迫	迫	迫	0	pǎi	1. used in 迫擊炮|迫击炮[pai3 ji1 pao4]
+述	述	述	0	shù	1. (bound form) to state; to tell; to narrate; to relate
+迸	迸	迸	0	bèng	1. to burst forth; 2. to spurt; 3. to crack; 4. split
+跡	迹	跡	0	jì	1. (bound form) trace; mark; vestige; clue; 2. Taiwan pr. [ji1]; 3. (bound form) vestige; historical remains (variant of 跡|迹[ji4]); 4. variant of 跡|迹[ji4]
+适	适	适	0	kuò	1. see 李适[Li3 Kuo4]
+適	适	適	0	shì	1. surname Shi
+適	适	適	0	shì	1. to fit; 2. suitable; 3. proper; 4. just (now); 5. comfortable; 6. well; 7. to go; 8. to follow or pursue
+逃	逃	逃	0	táo	1. to escape; 2. to run away; 3. to flee
+逆	逆	逆	0	nì	1. contrary; 2. opposite; 3. backwards; 4. to go against; 5. to oppose; 6. to betray; 7. to rebel
+遜	逊	遜	0	xùn	1. to abdicate; 2. modest; 3. yielding; 4. unpretentious; 5. inferior to; 6. (slang) to suck
+逐	逐	逐	0	zhú	1. (bound form) to pursue; to chase; to drive away; 2. one by one; individually
+途	途	途	0	tú	1. way; 2. route; 3. road
+逝	逝	逝	0	shì	1. (of flowing water or time) to pass by; 2. to pass away; to die
+速	速	速	0	sù	1. fast; 2. rapid; 3. quick; 4. velocity
+邏	逻	邏	0	luó	1. patrol
+徧	遍	徧	0	biàn	1. variant of 遍[bian4]; 2. everywhere; 3. all over; 4. classifier for actions: one time
+遺	遗	遺	0	yí	1. (bound form) to leave behind
+遛	遛	遛	0	liú	1. used in 逗遛[dou4 liu2]
+遛	遛	遛	0	liù	1. to stroll; 2. to walk (an animal)
+遮	遮	遮	0	zhē	1. to cover up (a shortcoming); 2. to screen off; 3. to hide; 4. to conceal
+遵	遵	遵	0	zūn	1. to observe; 2. to obey; 3. to follow; 4. to comply with
+避	避	避	0	bì	1. to avoid; 2. to shun; 3. to flee; 4. to escape; 5. to keep away from; 6. to leave; 7. to hide from
+邈	邈	邈	0	miǎo	1. profound; 2. remote
+鄰	邻	鄰	0	lín	1. neighbor; 2. adjacent; 3. close to; 4. variant of 鄰|邻[lin2]
+鄰	邻	鄰	0	lín	1. neighbor; 2. adjacent; 3. close to
+配	配	配	0	pèi	1. to join; 2. to fit; 3. to mate; 4. to mix; 5. to match; 6. to deserve; 7. to make up (a prescription); 8. to allocate
+詶	酬	詶	0	chóu	1. old variant of 酬[chou2]; 2. variant of 酬[chou2]; 3. to entertain; 4. to repay; 5. to return; 6. to reward; 7. to compensate; 8. to reply; 9. to answer
+醬	酱	醬	0	jiàng	1. thick paste of fermented soybean; 2. marinated in soy paste; 3. paste; 4. jam
+酷	酷	酷	0	kù	1. ruthless; 2. strong (e.g. of wine); 3. (loanword) cool; 4. hip
+醉	醉	醉	0	zuì	1. intoxicated
+釋	释	釋	0	shì	1. to explain; 2. to release; 3. Buddha (abbr. for 釋迦牟尼|释迦牟尼[Shi4 jia1 mou2 ni2]); 4. Buddhism
+鉗	钳	鉗	0	qián	1. pincers; 2. pliers; 3. tongs; 4. claw (of animal); 5. to grasp with pincers; 6. to pinch; 7. to clamp; 8. to restrain; 9. to restrict; 10. to gag
+鋻	鉴	鋻	0	jiàn	1. variant of 鑑|鉴[jian4]; 2. old variant of 鑒|鉴[jian4]; 3. bronze mirror (used in ancient times); 4. to reflect; 5. to mirror; 6. sth that serves as a warning or a lesson; 7. to examine; 8. to scrutinize
+銀	银	銀	0	yín	1. silver; 2. silver-colored; 3. relating to money or currency
+銘	铭	銘	0	míng	1. to engrave; 2. inscribed motto
+銳	锐	銳	0	ruì	1. acute
+銷	销	銷	0	xiāo	1. to melt (metal); 2. to cancel; to annul; 3. to sell; 4. to expend; to spend; 5. pin; bolt; 6. to fasten with a pin or bolt
+鋒	锋	鋒	0	fēng	1. point of a spear; 2. edge of a tool; 3. vanguard; 4. forward (in sports team)
+錄	录	錄	0	lù	1. diary; 2. record; 3. to hit; 4. to copy
+錘	锤	錘	0	chuí	1. hammer; 2. to hammer into shape; 3. weight (e.g. of a steelyard or balance); 4. to strike with a hammer
+鍵	键	鍵	0	jiàn	1. key (on a piano or computer keyboard); 2. button (on a mouse or other device); 3. chemical bond; 4. linchpin
+鎮	镇	鎮	0	zhèn	1. to press down; 2. to calm; 3. to subdue; 4. to suppress; 5. to guard; 6. garrison; 7. small town; 8. to cool or chill (food or drinks)
+鏈	链	鏈	0	liàn	1. chain; 2. cable (unit of length: 100 fathoms, about 185 m); 3. chain (unit of length: 66 feet, about 20 m); 4. to chain; 5. to enchain
+鏡	镜	鏡	0	jìng	1. mirror; 2. lens
+鑑	鉴	鑑	0	jiàn	1. bronze mirror (used in ancient times); 2. to reflect; 3. to mirror; 4. sth that serves as a warning or a lesson; 5. to examine; 6. to scrutinize
+錘	锤	錘	0	chuí	1. hammer; 2. to hammer into shape; 3. weight (e.g. of a steelyard or balance); 4. to strike with a hammer; 5. variant of 錘|锤[chui2]
+闆	板	闆	0	bǎn	1. used in 老闆|老板[lao3 ban3]
+闊	阔	闊	0	kuò	1. rich; 2. wide; 3. broad
+闡	阐	闡	0	chǎn	1. to express; 2. to disclose; 3. to enlighten; 4. to open
+濶	阔	濶	0	kuò	1. variant of 闊|阔[kuo4]; 2. rich; 3. wide; 4. broad
+堦	阶	堦	0	jiē	1. variant of 階|阶[jie1]; 2. rank or step; 3. stairs
+阻	阻	阻	0	zǔ	1. to hinder; 2. to block; 3. to obstruct
+陀	陀	陀	0	tuó	1. (phonetic); 2. declivity; 3. steep bank
+際	际	際	0	jì	1. border; 2. edge; 3. boundary; 4. interval; 5. between; 6. inter-; 7. to meet; 8. time; 9. occasion; 10. to meet with (circumstances)
+陸	陆	陸	0	lù	1. surname Lu
+陸	陆	陸	0	liù	1. six (banker's anti-fraud numeral)
+陸	陆	陸	0	lù	1. (bound form) land (as opposed to the sea)
+陳	陈	陳	0	chén	1. surname Chen; 2. Chen (c. 1045 – 479 BC), a Zhou dynasty state; 3. Chen (557–589), one of the Southern Dynasties 南朝[Nan2 Chao2]
+陳	陈	陳	0	chén	1. (bound form) to lay out; to exhibit; to display; 2. (bound form) to narrate; to state; to explain; to tell; 3. old; stale
+限	限	限	0	xiàn	1. to limit; 2. to restrict; 3. (bound form) limit; 4. bound
+陝	陕	陝	0	shǎn	1. short name for Shaanxi 陝西|陕西[Shan3 xi1]
+險	险	險	0	xiǎn	1. danger; 2. dangerous; 3. rugged
+陵	陵	陵	0	líng	1. mound; 2. tomb; 3. hill; 4. mountain
+階	阶	階	0	jiē	1. rank or step; 2. stairs
+隘	隘	隘	0	ài	1. (bound form) narrow; 2. (bound form) a defile; a narrow pass
+隙	隙	隙	0	xì	1. crack; 2. crevice; 3. gap or interval; 4. loophole; 5. discord; 6. rift
+障	障	障	0	zhàng	1. to block; 2. to hinder; 3. to obstruct
+隧	隧	隧	0	suì	1. tunnel; 2. underground passage
+雄	雄	雄	0	xióng	1. male; 2. staminate; 3. grand; 4. imposing; 5. powerful; 6. mighty; 7. person or state having great power and influence
+雅	雅	雅	0	yǎ	1. elegant
+集	集	集	0	jí	1. to gather; 2. to collect; 3. collected works; 4. classifier for sections of a TV series etc: episode
+彫	雕	彫	0	diāo	1. variant of 雕[diao1], to engrave; 2. to carve; 3. to engrave; 4. shrewd; 5. bird of prey
+雲	云	雲	0	yún	1. cloud
+零	零	零	0	líng	1. zero; 2. nought; 3. zero sign; 4. fractional; 5. fragmentary; 6. odd (of numbers); 7. (placed between two numbers to indicate a smaller quantity followed by a larger one); 8. fraction; 9. (in mathematics) remainder (after division); 10. extra; 11. to wither and fall; 12. to wither
+需	需	需	0	xū	1. to require; 2. to need; 3. to want; 4. necessity; 5. need
+霉	霉	霉	0	méi	1. mold; 2. mildew; 3. to become moldy; 4. variant of 霉[mei2]
+革	革	革	0	gé	1. animal hide; 2. leather; 3. to reform; 4. to remove; 5. to expel (from office)
+鞦	秋	鞦	0	qiū	1. used in 鞦韆|秋千[qiu1 qian1]
+韓	韩	韓	0	hán	1. Han, one of the Seven Hero States of the Warring States 戰國七雄|战国七雄; 2. Korea from the fall of the Joseon dynasty in 1897; 3. Korea, esp. South Korea 大韓民國|大韩民国; 4. surname Han
+韜	韬	韜	0	tāo	1. bow case or scabbard; 2. to hide; 3. military strategy
+須	须	須	0	xū	1. must; 2. to have to; 3. to wait
+顏	颜	顏	0	yán	1. surname Yan
+顏	颜	顏	0	yán	1. color; 2. face; 3. countenance
+願	愿	願	0	yuàn	1. (bound form) wish; hope; desire; 2. to be willing; 3. to wish (that sth may happen); may ...; 4. vow; pledge
+顧	顾	顧	0	gù	1. surname Gu
+顧	顾	顧	0	gù	1. to look after; to take into consideration; to attend to
+須	须	須	0	xū	1. must; 2. to have to; 3. to wait; 4. beard; 5. mustache; 6. feeler (of an insect etc); 7. tassel
+颼	飕	颼	0	sōu	1. to blow (as of wind); 2. sound of wind; 3. sough
+食	食	食	0	shí	1. to eat; 2. food; 3. animal feed; 4. eclipse
+食	食	食	0	sì	1. to feed (a person or animal)
+飲	饮	飲	0	yǐn	1. to drink
+飲	饮	飲	0	yìn	1. to give (animals) water to drink
+飽	饱	飽	0	bǎo	1. to eat till full; 2. satisfied
+餘	余	餘	0	yú	1. extra; 2. surplus; 3. remaining; 4. remainder after division; 5. (following numerical value) or more; 6. in excess of (some number); 7. residue (math.); 8. after; 9. I; 10. me; 11. variant of 餘|余[yu2], remainder
+餘	馀	餘	0	yú	1. surname Yu
+館	馆	館	0	guǎn	1. building; 2. shop; 3. term for certain service establishments; 4. embassy or consulate; 5. schoolroom (old)
+饅	馒	饅	0	mán	1. used in 饅頭|馒头[man2 tou5]
+㱃	饮	㱃	0	yǐn	1. old variant of 飲|饮[yin3]; 2. to drink
+舘	馆	舘	0	guǎn	1. variant of 館|馆[guan3]; 2. building; 3. shop; 4. term for certain service establishments; 5. embassy or consulate; 6. schoolroom (old)
+驅	驱	驅	0	qū	1. to expel; 2. to urge on; 3. to drive; 4. to run quickly
+驗	验	驗	0	yàn	1. to examine; 2. to test; 3. to check
+敺	驱	敺	0	qū	1. variant of 驅|驱[qu1]; 2. old variant of 驅|驱[qu1]; 3. to expel; 4. to urge on; 5. to drive; 6. to run quickly
+騐	验	騐	0	yàn	1. variant of 驗|验[yan4]; 2. to examine; 3. to test; 4. to check
+鬆	松	鬆	0	sōng	1. loose; 2. to loosen; 3. to relax; 4. floss (dry, fluffy food product made from shredded, seasoned meat or fish, used as a topping or filling)
+魏	魏	魏	0	wèi	1. surname Wei; 2. name of a vassal state of the Zhou dynasty from 661 BC in Shanxi, one of the Seven Hero Warring States; 3. Wei state, founded by Cao Cao 曹操[Cao2 Cao1], one of the Three Kingdoms after the Han dynasty; 4. the Wei dynasty 221–265; 5. Wei Prefecture or Wei County at various times in history
+魏	魏	魏	0	wèi	1. tower over a palace gateway (old)
+鳴	鸣	鳴	0	míng	1. to cry (of birds, animals and insects); 2. to make a sound; 3. to voice (one's gratitude, grievance etc)
+鵲	鹊	鵲	0	què	1. magpie
+黢	黢	黢	0	qū	1. black; 2. dark
+皷	鼓	皷	0	gǔ	1. old variant of 鼓[gu3]; 2. drum; 3. to drum; 4. to strike; 5. to rouse; 6. to bulge; 7. to swell
+鼠	鼠	鼠	0	shǔ	1. (bound form) rat; mouse
+鼬	鼬	鼬	0	yòu	1. (zoology) weasel
+鼻	鼻	鼻	0	bí	1. nose
+齊	齐	齊	0	qí	1. (name of states and dynasties at several different periods); 2. surname Qi
+齊	齐	齊	0	qí	1. neat; 2. even; 3. level with; 4. identical; 5. simultaneous; 6. all together; 7. to even sth out
+齋	斋	齋	0	zhāi	1. to fast or abstain from meat, wine etc; 2. vegetarian diet; 3. study room; 4. building; 5. to give alms (to a monk)
+齡	龄	齡	0	líng	1. age; 2. length of experience, membership etc
+龍	龙	龍	0	lóng	1. surname Long
+龍	龙	龍	0	lóng	1. Chinese dragon; loong; 2. (fig.) emperor; 3. dragon; 4. (bound form) dinosaur

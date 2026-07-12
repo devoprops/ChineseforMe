@@ -95,6 +95,9 @@ interface GlossDao {
     @Query("SELECT COUNT(*) FROM gloss_entries")
     suspend fun count(): Int
 
+    @Query("DELETE FROM gloss_entries")
+    suspend fun clearAll()
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAll(entries: List<GlossEntryEntity>)
 
@@ -106,6 +109,20 @@ interface GlossDao {
         """
     )
     suspend fun lookup(surface: String): List<GlossEntryEntity>
+
+    @Query(
+        """
+        SELECT * FROM gloss_entries
+        WHERE length(traditional) >= 2
+          AND (
+            traditional LIKE '%' || :ch || '%'
+            OR simplified LIKE '%' || :ch || '%'
+          )
+        ORDER BY frequency DESC
+        LIMIT 40
+        """
+    )
+    suspend fun entriesContaining(ch: String): List<GlossEntryEntity>
 
     @Query(
         """
@@ -133,4 +150,13 @@ interface AppMetaDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun put(entity: AppMetaEntity)
+}
+
+@Dao
+interface StrokeStatsDao {
+    @Query("SELECT * FROM stroke_char_stats WHERE character = :character LIMIT 1")
+    suspend fun get(character: String): StrokeCharStatsEntity?
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun upsert(entity: StrokeCharStatsEntity)
 }

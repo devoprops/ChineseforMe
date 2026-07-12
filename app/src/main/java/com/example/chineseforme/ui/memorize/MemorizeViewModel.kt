@@ -10,6 +10,7 @@ import com.example.chineseforme.data.settings.AppSettings
 import com.example.chineseforme.data.settings.SettingsRepository
 import com.example.chineseforme.domain.memorize.MemorizeSession
 import com.example.chineseforme.domain.memorize.MemorizeState
+import com.example.chineseforme.domain.pinyin.PinyinResolver
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -59,7 +60,7 @@ class MemorizeViewModel(
                 val changedPool = s.distractorCount != settings.distractorCount ||
                     s.memorizeHintStyle != settings.memorizeHintStyle ||
                     s.memorizeHintsPerAttempt != settings.memorizeHintsPerAttempt ||
-                    s.restartOnMistake != settings.restartOnMistake
+                    s.memorizeAllowedMistakes != settings.memorizeAllowedMistakes
                 settings = s
                 if (changedPool && _state.value.session != null && !_state.value.loading) {
                     restartWithSettings()
@@ -128,7 +129,7 @@ class MemorizeViewModel(
             sentenceText = sentence.text,
             workHanChars = workHanChars,
             distractorCount = settings.distractorCount,
-            restartOnMistake = settings.restartOnMistake,
+            allowedMistakes = settings.memorizeAllowedMistakes,
             hintsPerAttempt = settings.memorizeHintsPerAttempt,
             hintStyle = settings.memorizeHintStyle,
             preservedBest = 0
@@ -153,7 +154,7 @@ class MemorizeViewModel(
                 sentenceText = sentence.text,
                 workHanChars = workHanChars,
                 distractorCount = settings.distractorCount,
-                restartOnMistake = settings.restartOnMistake,
+                allowedMistakes = settings.memorizeAllowedMistakes,
                 hintsPerAttempt = settings.memorizeHintsPerAttempt,
                 hintStyle = settings.memorizeHintStyle,
                 preservedBest = visitBest
@@ -182,15 +183,7 @@ class MemorizeViewModel(
     }
 
     private suspend fun preferredPinyin(ch: Char): String? {
-        val glosses = glossDao.lookup(ch.toString())
-        val single = glosses
-            .map { it.pinyin.trim() }
-            .filter { it.isNotBlank() && !it.contains(' ') && !it.contains('　') }
-        val nonSurname = single.filter {
-            val first = it.firstOrNull() ?: return@filter false
-            !(first.isUpperCase() && first.isLetter())
-        }
-        return (nonSurname.ifEmpty { single }).firstOrNull()
+        return PinyinResolver.resolveCharacter(ch, glossDao).firstOrNull()
     }
 
     class Factory(

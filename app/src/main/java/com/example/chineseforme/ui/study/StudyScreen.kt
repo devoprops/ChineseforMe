@@ -40,8 +40,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.chineseforme.domain.model.SentenceReading
+import android.os.SystemClock
 import com.example.chineseforme.ui.components.GlossPopup
-import com.example.chineseforme.ui.components.GlossPopupCard
 import com.example.chineseforme.ui.components.GroupedTileRow
 import com.example.chineseforme.ui.theme.Parchment
 
@@ -65,10 +65,74 @@ fun StudyScreen(
     val state by viewModel.state.collectAsStateWithLifecycle()
     val settings by viewModel.settings.collectAsStateWithLifecycle()
     var glossPopup by remember { mutableStateOf<GlossPopup?>(null) }
+    var glossDismissIgnoreUntil by remember { mutableStateOf(0L) }
     var showParallelEditor by remember { mutableStateOf(false) }
+
+    fun setGlossPopup(next: GlossPopup?) {
+        // Avoid Popup outside-dismiss clearing a freshly selected tile in the same gesture.
+        glossDismissIgnoreUntil = SystemClock.uptimeMillis() + 150
+        glossPopup = next
+    }
 
     LaunchedEffect(state.sentence?.id) {
         glossPopup = null
+    }
+
+    val glossSurface = when (val popup = glossPopup) {
+        is GlossPopup.Character -> popup.tile.char
+        is GlossPopup.Group -> popup.group.surface
+        null -> null
+    }
+    val glossNeedsOnline = when (val popup = glossPopup) {
+        is GlossPopup.Character -> popup.tile.senses.isEmpty()
+        is GlossPopup.Group -> popup.group.senses.isEmpty()
+        null -> false
+    }
+
+    LaunchedEffect(glossSurface, glossNeedsOnline) {
+        if (glossSurface != null && glossNeedsOnline) {
+            viewModel.requestOnlineGloss(glossSurface)
+        }
+    }
+
+    LaunchedEffect(state.analysis, state.onlineGlossCache, glossPopup) {
+        val popup = glossPopup ?: return@LaunchedEffect
+        when (popup) {
+            is GlossPopup.Character -> {
+                if (popup.tile.senses.isNotEmpty()) return@LaunchedEffect
+                val fromAnalysis = state.analysis?.tiles?.find { it.index == popup.tile.index }
+                when {
+                    fromAnalysis != null && fromAnalysis.senses.isNotEmpty() -> {
+                        glossPopup = GlossPopup.Character(fromAnalysis)
+                    }
+                    state.onlineGlossCache[popup.tile.char] != null -> {
+                        glossPopup = GlossPopup.Character(
+                            popup.tile.copy(
+                                senses = listOf(state.onlineGlossCache.getValue(popup.tile.char))
+                            )
+                        )
+                    }
+                }
+            }
+            is GlossPopup.Group -> {
+                if (popup.group.senses.isNotEmpty()) return@LaunchedEffect
+                val fromAnalysis = state.analysis?.groups?.find { it.groupId == popup.group.groupId }
+                when {
+                    fromAnalysis != null && fromAnalysis.senses.isNotEmpty() -> {
+                        glossPopup = GlossPopup.Group(fromAnalysis)
+                    }
+                    state.onlineGlossCache[popup.group.surface] != null -> {
+                        glossPopup = GlossPopup.Group(
+                            popup.group.copy(
+                                senses = listOf(
+                                    state.onlineGlossCache.getValue(popup.group.surface)
+                                )
+                            )
+                        )
+                    }
+                }
+            }
+        }
     }
 
     Scaffold(
@@ -181,18 +245,29 @@ fun StudyScreen(
                             } else {
                                 GlossPopup.Group(group)
                             }
-                            glossPopup = if (isSameGlossFocus(glossPopup, next)) null else next
+                            setGlossPopup(
+                                if (isSameGlossFocus(glossPopup, next)) null else next
+                            )
                         },
                         onCharacterLongPress = { tile ->
                             val next = GlossPopup.Character(tile)
-                            glossPopup = if (isSameGlossFocus(glossPopup, next)) null else next
+                            setGlossPopup(
+                                if (isSameGlossFocus(glossPopup, next)) null else next
+                            )
                         },
-                        onGroupModeTileClick = viewModel::onTileClick
+                        onGroupModeTileClick = viewModel::onTileClick,
+                        onDismissGloss = {
+                            if (SystemClock.uptimeMillis() >= glossDismissIgnoreUntil) {
+                                glossPopup = null
+                            }
+                        },
+                        glossLoading = glossSurface != null &&
+                            glossSurface in state.onlineGlossLoading,
+                        glossFailed = glossSurface != null &&
+                            glossSurface in state.onlineGlossFailed,
+                        fromOnline = glossSurface != null &&
+                            glossSurface in state.onlineGlossCache
                     )
-
-                    glossPopup?.let { popup ->
-                        GlossPopupCard(popup = popup)
-                    }
 
                     Spacer(Modifier.height(4.dp))
                     Text("Notional translation", style = MaterialTheme.typography.titleMedium)

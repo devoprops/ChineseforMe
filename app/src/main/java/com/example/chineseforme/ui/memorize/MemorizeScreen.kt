@@ -117,7 +117,8 @@ fun MemorizeScreen(
                     verticalArrangement = Arrangement.spacedBy(14.dp)
                 ) {
                     Text(
-                        "${session.currentFilled}/${session.totalHan} filled · best ${session.bestFilled}/${session.totalHan}",
+                        "${session.currentFilled}/${session.totalHan} filled · best ${session.bestFilled}/${session.totalHan}" +
+                            " · mistakes ${session.mistakes}/${session.allowedMistakes}",
                         style = MaterialTheme.typography.titleMedium
                     )
                     session.statusMessage?.let { msg ->

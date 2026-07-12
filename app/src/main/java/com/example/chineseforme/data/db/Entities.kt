@@ -91,3 +91,16 @@ data class AppMetaEntity(
     @PrimaryKey val key: String,
     val value: String
 )
+
+/** Indefinite per-character stroke practice stats. */
+@Entity(tableName = "stroke_char_stats")
+data class StrokeCharStatsEntity(
+    @PrimaryKey val character: String,
+    val attempts: Int = 0,
+    val successes: Int = 0,
+    val fails: Int = 0,
+    val hintsUsed: Int = 0,
+    val bestStreak: Int = 0,
+    val currentStreak: Int = 0,
+    val lastPracticedEpochMs: Long = 0L
+)

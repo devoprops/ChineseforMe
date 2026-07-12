@@ -7,19 +7,45 @@ import com.example.chineseforme.data.db.GlossEntryEntity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
+/**
+ * Loads the FG frequency word list plus CC-CEDICT single-character fillers for
+ * characters that only appeared inside multi-character FG entries.
+ *
+ * Fillers are length-1 with frequency 0. [DictSegmenter] only indexes
+ * multi-character surfaces, so these do not change phrase grouping — they only
+ * supply gloss/pinyin for long-press / single-character lookup.
+ *
+ * CEDICT fillers: CC BY-SA 4.0 — https://www.mdbg.net/chinese/dictionary?page=cc-cedict
+ */
 class DictionaryImporter(
     private val context: Context,
     private val db: AppDatabase
 ) {
     suspend fun ensureLoaded() = withContext(Dispatchers.IO) {
         val meta = db.appMetaDao()
-        if (meta.get(KEY_LOADED) == "1" && db.glossDao().count() > 0) return@withContext
+        if (meta.get(KEY_LOADED) == DICT_VERSION && db.glossDao().count() > 0) {
+            return@withContext
+        }
+
+        db.glossDao().clearAll()
 
         val entries = mutableListOf<GlossEntryEntity>()
-        context.assets.open(ASSET_NAME).bufferedReader(Charsets.UTF_8).use { reader ->
-            reader.readLine() // header
+        entries.addAll(loadTsvAsset(FG_ASSET))
+        entries.addAll(loadTsvAsset(CEDICT_FILL_ASSET))
+        entries.addAll(domainExtras())
+
+        entries.chunked(500).forEach { chunk ->
+            db.glossDao().insertAll(chunk)
+        }
+        meta.put(AppMetaEntity(KEY_LOADED, DICT_VERSION))
+    }
+
+    private fun loadTsvAsset(assetName: String): List<GlossEntryEntity> {
+        val out = mutableListOf<GlossEntryEntity>()
+        context.assets.open(assetName).bufferedReader(Charsets.UTF_8).use { reader ->
             reader.lineSequence().forEach { line ->
-                if (line.isBlank()) return@forEach
+                if (line.isBlank() || line.startsWith("#")) return@forEach
+                if (line.startsWith("Word\t")) return@forEach
                 val parts = line.split('\t')
                 if (parts.size < 6) return@forEach
                 val simplified = parts[1].trim()
@@ -28,7 +54,7 @@ class DictionaryImporter(
                 val pinyin = parts[4].trim()
                 val definition = parts[5].trim()
                 if (traditional.isEmpty()) return@forEach
-                entries.add(
+                out.add(
                     GlossEntryEntity(
                         traditional = traditional,
                         simplified = simplified.ifEmpty { traditional },
@@ -39,14 +65,7 @@ class DictionaryImporter(
                 )
             }
         }
-
-        // Domain phrases that may be missing or under-weighted
-        entries.addAll(domainExtras())
-
-        entries.chunked(500).forEach { chunk ->
-            db.glossDao().insertAll(chunk)
-        }
-        meta.put(AppMetaEntity(KEY_LOADED, "1"))
+        return out
     }
 
     private fun domainExtras(): List<GlossEntryEntity> = listOf(
@@ -81,7 +100,10 @@ class DictionaryImporter(
     )
 
     companion object {
-        private const val ASSET_NAME = "fg_word_list.txt"
-        private const val KEY_LOADED = "fg_dict_loaded_v1"
+        private const val FG_ASSET = "fg_word_list.txt"
+        private const val CEDICT_FILL_ASSET = "cedict_single_char_fill.txt"
+        private const val KEY_LOADED = "fg_dict_loaded"
+        /** Bump when bundled dictionary assets change so Room reimports. */
+        private const val DICT_VERSION = "v2_cedict_singles"
     }
 }
