@@ -90,13 +90,12 @@ fun CharacterTile(
 @Composable
 fun GlossPopupCard(
     popup: GlossPopup,
-    glossDensity: Int,
     modifier: Modifier = Modifier
 ) {
     Surface(
         modifier = modifier
             .widthIn(min = 160.dp, max = 280.dp)
-            .heightIn(max = 240.dp)
+            .heightIn(max = 320.dp)
             .shadow(6.dp, RoundedCornerShape(10.dp)),
         shape = RoundedCornerShape(10.dp),
         color = TileFace,
@@ -130,15 +129,8 @@ fun GlossPopupCard(
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
                     } else {
-                        group.senses.take(glossDensity).forEachIndexed { i, sense ->
+                        group.senses.forEachIndexed { i, sense ->
                             Text("${i + 1}. $sense", style = MaterialTheme.typography.bodyMedium)
-                        }
-                        if (group.senses.size > glossDensity) {
-                            Text(
-                                "… ${group.senses.size - glossDensity} more",
-                                style = MaterialTheme.typography.labelSmall,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant
-                            )
                         }
                     }
                     val hanCount = group.tiles.count { !it.isPunctuation }
@@ -171,15 +163,8 @@ fun GlossPopupCard(
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
                     } else {
-                        tile.senses.take(glossDensity).forEachIndexed { i, sense ->
+                        tile.senses.forEachIndexed { i, sense ->
                             Text("${i + 1}. $sense", style = MaterialTheme.typography.bodyMedium)
-                        }
-                        if (tile.senses.size > glossDensity) {
-                            Text(
-                                "… ${tile.senses.size - glossDensity} more",
-                                style = MaterialTheme.typography.labelSmall,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant
-                            )
                         }
                     }
                 }
@@ -195,7 +180,6 @@ fun GroupedTileRow(
     showPinyin: Boolean,
     selectedIndices: Set<Int>,
     glossPopup: GlossPopup?,
-    glossDensity: Int,
     groupMode: Boolean,
     onDismissPopup: () -> Unit,
     onGroupTap: (WordGroup, CharTile) -> Unit,
@@ -203,6 +187,7 @@ fun GroupedTileRow(
     onGroupModeTileClick: (CharTile) -> Unit,
     modifier: Modifier = Modifier
 ) {
+    val phraseShape = RoundedCornerShape(6.dp)
     FlowRow(
         modifier = modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.spacedBy(4.dp),
@@ -216,8 +201,9 @@ fun GroupedTileRow(
                     .then(
                         if (multi) {
                             Modifier
-                                .clip(RoundedCornerShape(6.dp))
+                                .clip(phraseShape)
                                 .background(GroupBand.copy(alpha = 0.35f))
+                                .border(1.dp, GroupBand, phraseShape)
                                 .padding(3.dp)
                         } else Modifier
                     )
@@ -262,10 +248,7 @@ fun GroupedTileRow(
                             ) {
                                 Box(modifier = Modifier.padding(horizontal = 4.dp, vertical = 2.dp)) {
                                     if (glossPopup != null) {
-                                        GlossPopupCard(
-                                            popup = glossPopup,
-                                            glossDensity = glossDensity
-                                        )
+                                        GlossPopupCard(popup = glossPopup)
                                     }
                                 }
                             }

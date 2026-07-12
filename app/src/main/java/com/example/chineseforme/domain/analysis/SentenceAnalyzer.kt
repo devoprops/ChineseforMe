@@ -68,7 +68,9 @@ class SentenceAnalyzer(
             val surface = text.substring(span.start, span.endExclusive)
             val glosses = glossDao.lookup(surface)
             val senses = mergeSenses(glosses)
-            val pinyins = glosses.map { it.pinyin }.distinct().filter { it.isNotBlank() }
+            val pinyins = preferNonSurnamePinyin(
+                glosses.map { it.pinyin.trim() }.filter { it.isNotBlank() }.distinct()
+            )
             val groupTiles = mutableListOf<CharTile>()
             val groupSyllables = splitPinyinSyllables(pinyins.firstOrNull().orEmpty())
             var hanOffset = 0
@@ -168,16 +170,36 @@ class SentenceAnalyzer(
         groupSyllables: List<String>,
         hanOffsetInGroup: Int
     ): List<String> {
-        val fromChar = charGlosses
-            .map { it.pinyin.trim() }
-            .filter { it.isNotBlank() }
-            // Reject multi-syllable strings wrongly stored on a single-character entry
-            // (e.g. "nèi hán" on 涵) — those belong on the group, not the tile.
-            .filter { !it.contains(' ') && !it.contains('　') }
-            .distinct()
+        val fromChar = preferNonSurnamePinyin(
+            charGlosses
+                .map { it.pinyin.trim() }
+                .filter { it.isNotBlank() }
+                // Reject multi-syllable strings wrongly stored on a single-character entry
+                // (e.g. "nèi hán" on 涵) — those belong on the group, not the tile.
+                .filter { !it.contains(' ') && !it.contains('　') }
+                .distinct()
+        )
         if (fromChar.isNotEmpty()) return fromChar
         val syllable = groupSyllables.getOrNull(hanOffsetInGroup) ?: return emptyList()
         return listOf(syllable)
+    }
+
+    /**
+     * CEDICT marks surname readings with a capital (e.g. Hóng). Prefer lowercase
+     * readings for tiles/popups; keep capitalized ones only when they are alone,
+     * or after non-surname options so the user can still see them.
+     */
+    private fun preferNonSurnamePinyin(candidates: List<String>): List<String> {
+        if (candidates.size <= 1) return candidates
+        val nonSurname = candidates.filterNot { looksLikeSurnamePinyin(it) }
+        if (nonSurname.isEmpty()) return candidates
+        val surname = candidates.filter { looksLikeSurnamePinyin(it) }
+        return nonSurname + surname
+    }
+
+    private fun looksLikeSurnamePinyin(pinyin: String): Boolean {
+        val first = pinyin.trim().firstOrNull() ?: return false
+        return first.isUpperCase() && first.isLetter()
     }
 
     private fun splitPinyinSyllables(pinyin: String): List<String> {

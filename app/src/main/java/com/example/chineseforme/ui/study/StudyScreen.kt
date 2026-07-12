@@ -156,7 +156,6 @@ fun StudyScreen(
                         showPinyin = settings.showPinyinOnTiles,
                         selectedIndices = state.selectedIndices,
                         glossPopup = glossPopup,
-                        glossDensity = settings.glossDensity,
                         groupMode = state.groupMode,
                         onDismissPopup = { glossPopup = null },
                         onGroupTap = { group, tile ->
