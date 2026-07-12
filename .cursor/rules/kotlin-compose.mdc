@@ -1,0 +1,39 @@
+---
+description: Kotlin, Jetpack Compose, and Android conventions for Chinese for Me.
+globs: "**/*.{kt,kts}"
+alwaysApply: false
+---
+
+# Kotlin & Compose
+
+## Stack defaults
+
+- Kotlin, Jetpack Compose, Material 3, Navigation Compose, ViewModel + StateFlow
+- Room for app data; bundled SQLite/asset DB for the lexicon
+- Prefer coroutines + viewModelScope; no blocking calls on the main thread
+
+## Structure
+
+- Packages: data/ (Room, assets, repos), domain/ (segmenter, memorize, stroke engines), ui/ (screens)
+- UI state as immutable data classes; one-shot events via SharedFlow or Channel when needed
+- Keep composables focused; put business rules in domain/, not in @Composable
+
+## Compose
+
+- Hoist state; pass events upward rather than reaching into ViewModels from deep children
+- Use Modifier parameters; avoid hard-coded sizes unless matching the parchment-tile design
+- Preview small pure UI pieces; do not require Room in @Preview
+- Phone stacked nav; tablet may use two-pane Reader | Study
+
+## Room / data
+
+- Entities map to plan models (TextWork, Sentence, overrides, PersonalPhrase, stroke stats)
+- Migrations when schema changes — do not wipe user overrides or stroke stats casually
+- Lexicon lookups are read-heavy; index by surface/traditional form
+
+## Style
+
+- Prefer val, data classes, sealed interfaces for UI/domain events
+- Public APIs: brief KDoc when behavior is non-obvious
+- No empty catch; log or surface a user-visible failure
+- Match existing naming in a file; do not introduce a second style

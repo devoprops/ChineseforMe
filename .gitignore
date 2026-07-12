@@ -1,0 +1,66 @@
+# Built application files
+*.apk
+*.ap_
+*.aab
+
+# Files for the ART/Dalvik VM
+*.dex
+
+# Java class files
+*.class
+
+# Generated files
+bin/
+gen/
+out/
+release/
+
+# Gradle
+.gradle/
+build/
+**/build/
+
+# Local configuration (SDK path — never commit)
+local.properties
+
+# Android Studio / IntelliJ
+*.iml
+.idea/
+.navigation/
+
+# NDK
+.externalNativeBuild/
+.cxx/
+obj/
+
+# Kotlin
+.kotlin/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Captures / profiling
+captures/
+*.hprof
+
+# Signing — never commit secrets
+*.jks
+*.keystore
+*.key
+keystore.properties
+
+# Log / temp
+*.log
+*.tmp
+*.swp
+*~
+
+# Google Services (uncomment if this file contains secrets)
+# google-services.json
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output

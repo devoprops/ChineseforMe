@@ -1,0 +1,31 @@
+---
+description: Product UX constraints for study, memorize, strokes, and visual tone.
+alwaysApply: true
+---
+
+# Product UX
+
+## Visual tone
+
+- Background: warm parchment, not flat Material gray/purple
+- Characters on thin tiles (mahjong-inspired but flatter/thinner)
+- Avoid gamified chrome; light progress stats are OK
+
+## Study / reading tiles
+
+- Word groups visual; user merge/split remembered
+- Pinyin on study tiles: settings toggle; when on, small pinyin under the character
+- Multi-sense glosses; never collapse to one “best” English
+
+## Memorize
+
+- Configurable hints; exhausting hints → clear/reset that attempt
+- Hint styles: narrow choice pool and/or flash up to 3 candidates (one correct)
+- Stats: current and best chars filled for current paragraph/sentence lifetime only
+
+## Stroke practice
+
+- Large canvas; pinyin always at bottom of canvas
+- Small icons for translation and scholar deep-dive (radicals, senses, related forms)
+- Hint flashes next stroke; exhausting hints → fail that attempt
+- Per-character stroke stats stored indefinitely

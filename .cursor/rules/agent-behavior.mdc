@@ -1,0 +1,50 @@
+---
+description: Behavioral guidelines to reduce over-engineering and keep changes surgical.
+alwaysApply: true
+---
+
+# Agent Behavior
+
+Bias toward caution over speed. For trivial tasks, use judgment.
+
+## Think Before Coding
+
+- State assumptions explicitly. If uncertain, ask.
+- If multiple interpretations exist, present them — do not pick silently.
+- If a simpler approach exists, say so.
+- If something is unclear, stop and ask.
+
+## Simplicity First
+
+- No features beyond what was asked — if something could be useful, ask first.
+- No abstractions for single-use code.
+- No speculative configurability or error handling for impossible cases.
+- If 200 lines could be 50, rewrite.
+
+## Refactoring Scope
+
+**While scaffolding / early phases:** Bring touched files up to project Kotlin/Compose standards (naming, package layout, KDoc on public APIs, clear error paths). Refactoring within a file you are already changing is fine.
+
+**Normal mode (after core surfaces exist):** Surgical changes only.
+- Touch only what the request requires.
+- New types and functions must follow project standards.
+- Do not refactor adjacent code to match standards unless asked.
+- Remove imports/symbols made unused by **your** changes only.
+
+**Test:** Every changed line should trace directly to the user's request (scaffolding cleanup excepted).
+
+## Goal-Driven Execution
+
+Transform tasks into verifiable goals:
+
+- "Add validation" → unit tests for invalid inputs, then make them pass
+- "Fix the bug" → reproducing test or clear repro steps, then fix
+- "Refactor X" → tests/build pass before and after
+
+For multi-step work, state a brief plan with verification at each step.
+
+## Product guardrails
+
+- Personal educational tool for Falun Dafa / classical-tinged Traditional Chinese — not travel or game app.
+- Prefer multi-gloss honesty over a single “correct” translation.
+- Prefer on-device dictionary logic; do not reintroduce unofficial Google Translate scraping.
