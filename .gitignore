@@ -50,11 +50,9 @@ captures/
 *.key
 keystore.properties
 
-# Log / temp
-*.log
-*.tmp
-*.swp
-*~
+# Local scratch / source texts (not shipped; assets/texts holds bundled copies)
+tmp/
+
 
 # Google Services (uncomment if this file contains secrets)
 # google-services.json
