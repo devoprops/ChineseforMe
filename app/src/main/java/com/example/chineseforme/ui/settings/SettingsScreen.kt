@@ -27,6 +27,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.chineseforme.data.settings.SettingsRepository
+import com.example.chineseforme.domain.memorize.MemorizeHintStyle
 import com.example.chineseforme.ui.theme.Parchment
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
@@ -81,7 +82,21 @@ fun SettingsScreen(
                 label = settings.glossDensity.toString(),
                 onChange = { scope.launch { settingsRepository.setGlossDensity(it.toInt()) } }
             )
-            Text("Memorize (Phase 2)", style = MaterialTheme.typography.titleMedium)
+            Text("Memorize", style = MaterialTheme.typography.titleMedium)
+            SettingSwitch(
+                title = "Show pinyin on blank skeleton tiles",
+                checked = settings.showPinyinOnMemorizeSkeleton,
+                onCheckedChange = {
+                    scope.launch { settingsRepository.setShowPinyinOnMemorizeSkeleton(it) }
+                }
+            )
+            SettingSwitch(
+                title = "Show pinyin on pool tiles",
+                checked = settings.showPinyinOnMemorizePool,
+                onCheckedChange = {
+                    scope.launch { settingsRepository.setShowPinyinOnMemorizePool(it) }
+                }
+            )
             SettingSlider(
                 title = "Distractor count",
                 value = settings.distractorCount.toFloat(),
@@ -95,12 +110,24 @@ fun SettingsScreen(
                 onCheckedChange = { scope.launch { settingsRepository.setRestartOnMistake(it) } }
             )
             SettingSlider(
-                title = "Memorize hints per attempt",
+                title = "Hints per attempt",
                 value = settings.memorizeHintsPerAttempt.toFloat(),
                 range = 0f..10f,
                 label = settings.memorizeHintsPerAttempt.toString(),
                 onChange = { scope.launch { settingsRepository.setMemorizeHints(it.toInt()) } }
             )
+            SettingSwitch(
+                title = "Hint style: flash three (off = narrow pool)",
+                checked = settings.memorizeHintStyle == MemorizeHintStyle.FlashThree,
+                onCheckedChange = { flash ->
+                    scope.launch {
+                        settingsRepository.setMemorizeHintStyle(
+                            if (flash) MemorizeHintStyle.FlashThree else MemorizeHintStyle.NarrowPool
+                        )
+                    }
+                }
+            )
+            Text("Stroke practice (upcoming)", style = MaterialTheme.typography.titleMedium)
             SettingSlider(
                 title = "Stroke hints per attempt",
                 value = settings.strokeHintsPerAttempt.toFloat(),

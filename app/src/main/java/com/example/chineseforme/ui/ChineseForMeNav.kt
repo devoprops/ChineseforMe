@@ -18,6 +18,8 @@ import com.example.chineseforme.ChineseForMeApp
 import com.example.chineseforme.domain.model.StudyMode
 import com.example.chineseforme.ui.library.LibraryScreen
 import com.example.chineseforme.ui.library.LibraryViewModel
+import com.example.chineseforme.ui.memorize.MemorizeScreen
+import com.example.chineseforme.ui.memorize.MemorizeViewModel
 import com.example.chineseforme.ui.modes.ModePlaceholderScreen
 import com.example.chineseforme.ui.reader.ReaderScreen
 import com.example.chineseforme.ui.reader.ReaderViewModel
@@ -129,15 +131,19 @@ fun ChineseForMeNav() {
                 navArgument("sentenceId") { type = NavType.LongType }
             )
         ) { entry ->
+            val workId = entry.arguments!!.getLong("workId")
             val sentenceId = entry.arguments!!.getLong("sentenceId")
-            var preview by remember { mutableStateOf<String?>(null) }
-            LaunchedEffect(sentenceId) {
-                preview = app.textRepository.getSentence(sentenceId)?.text
-            }
-            ModePlaceholderScreen(
-                title = "Memorize",
-                blurb = "Fill characters with configurable hints. Practice will use this selected sentence.",
-                sentencePreview = preview,
+            val vm: MemorizeViewModel = viewModel(
+                factory = MemorizeViewModel.Factory(
+                    sentenceId = sentenceId,
+                    workId = workId,
+                    textRepository = app.textRepository,
+                    glossDao = app.database.glossDao(),
+                    settingsRepository = app.settingsRepository
+                )
+            )
+            MemorizeScreen(
+                viewModel = vm,
                 onBack = { navController.popBackStack() }
             )
         }
