@@ -7,6 +7,14 @@ alwaysApply: true
 
 Bias toward caution over speed. For trivial tasks, use judgment.
 
+## Environment
+
+- This project is developed on **Windows**.
+- Default shell is **PowerShell** — write and run commands for PowerShell, not bash.
+- Do not use bash-only syntax (`&&`, heredocs like `<<'EOF'`, `export`, POSIX paths as the primary form).
+- Prefer PowerShell idioms: `;` to chain, `$env:NAME` for env vars, `\` or Path cmdlets for paths.
+- When showing the user commands to copy, give PowerShell examples first.
+
 ## Think Before Coding
 
 - State assumptions explicitly. If uncertain, ask.
