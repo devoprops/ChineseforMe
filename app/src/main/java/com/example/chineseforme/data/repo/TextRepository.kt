@@ -85,6 +85,13 @@ class TextRepository(private val db: AppDatabase) {
         )
     }
 
+    suspend fun clearParallelEnglishForWork(workId: Long) {
+        val sentences = db.sentenceDao().listForWork(workId)
+        sentences.forEach { sentence ->
+            db.sentenceDao().setParallelEnglish(sentence.id, null)
+        }
+    }
+
     suspend fun applyParallelEnglishByIndex(workId: Long, englishByIndex: List<String?>) {
         val sentences = db.sentenceDao().listForWork(workId)
         sentences.forEachIndexed { index, sentence ->

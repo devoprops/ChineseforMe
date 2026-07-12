@@ -102,11 +102,7 @@ fun LibraryScreen(
                         Column(modifier = Modifier.padding(16.dp)) {
                             Text(bundled.title, style = MaterialTheme.typography.titleMedium)
                             Text(
-                                if (bundled.parallelEnglishAssetPath != null) {
-                                    "Tap to open · English 2014 paired for notional translations"
-                                } else {
-                                    "Tap to open · select a paragraph to study"
-                                },
+                                "Tap to open · select a paragraph to study",
                                 style = MaterialTheme.typography.bodySmall,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant
                             )

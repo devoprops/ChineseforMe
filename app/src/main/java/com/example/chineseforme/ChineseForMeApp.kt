@@ -9,6 +9,7 @@ import com.example.chineseforme.data.repo.TextRepository
 import com.example.chineseforme.data.settings.SettingsRepository
 import com.example.chineseforme.domain.analysis.SentenceAnalyzer
 import com.example.chineseforme.domain.segmentation.DictSegmenter
+import com.example.chineseforme.domain.translation.NotionalTranslationService
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -31,6 +32,8 @@ class ChineseForMeApp : Application() {
         private set
     lateinit var analyzer: SentenceAnalyzer
         private set
+    lateinit var notionalTranslationService: NotionalTranslationService
+        private set
 
     override fun onCreate() {
         super.onCreate()
@@ -41,6 +44,7 @@ class ChineseForMeApp : Application() {
         bundledTextCatalog = BundledTextCatalog(this)
         segmenter = DictSegmenter(database.glossDao(), database.personalPhraseDao())
         analyzer = SentenceAnalyzer(database.glossDao(), database.overrideDao(), segmenter)
+        notionalTranslationService = NotionalTranslationService(database.glossDao(), segmenter)
 
         appScope.launch {
             DictionaryImporter(this@ChineseForMeApp, database).ensureLoaded()

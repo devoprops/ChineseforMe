@@ -70,16 +70,25 @@ class SentenceAnalyzer(
             val senses = mergeSenses(glosses)
             val pinyins = glosses.map { it.pinyin }.distinct().filter { it.isNotBlank() }
             val groupTiles = mutableListOf<CharTile>()
+            val groupSyllables = splitPinyinSyllables(pinyins.firstOrNull().orEmpty())
+            var hanOffset = 0
             for (i in span.start until span.endExclusive) {
                 val ch = text[i].toString()
                 val isPunct = !isHanish(text[i])
                 val charGlosses = if (isPunct) emptyList() else glossDao.lookup(ch)
+                val tilePinyin = if (isPunct) {
+                    emptyList()
+                } else {
+                    characterPinyinCandidates(
+                        charGlosses = charGlosses,
+                        groupSyllables = groupSyllables,
+                        hanOffsetInGroup = hanOffset
+                    ).also { hanOffset++ }
+                }
                 val tile = CharTile(
                     char = ch,
                     index = i,
-                    pinyinCandidates = if (isPunct) emptyList() else {
-                        charGlosses.map { it.pinyin }.distinct().ifEmpty { pinyins }
-                    },
+                    pinyinCandidates = tilePinyin,
                     senses = if (isPunct) emptyList() else mergeSenses(charGlosses),
                     groupId = groupId,
                     groupSurface = surface,
@@ -105,7 +114,7 @@ class SentenceAnalyzer(
         sentence.parallelEnglish?.takeIf { it.isNotBlank() }?.let {
             readings.add(
                 SentenceReading(
-                    source = "official",
+                    source = "notional",
                     text = it,
                     kind = SentenceReading.Kind.FullSentence
                 )
@@ -148,6 +157,35 @@ class SentenceAnalyzer(
                 .forEach { out.add(it) }
         }
         return out.toList()
+    }
+
+    /**
+     * Prefer single-character dictionary pinyin. Never put the whole group reading
+     * on one tile — fall back to the matching syllable from the group pinyin.
+     */
+    private fun characterPinyinCandidates(
+        charGlosses: List<GlossEntryEntity>,
+        groupSyllables: List<String>,
+        hanOffsetInGroup: Int
+    ): List<String> {
+        val fromChar = charGlosses
+            .map { it.pinyin.trim() }
+            .filter { it.isNotBlank() }
+            // Reject multi-syllable strings wrongly stored on a single-character entry
+            // (e.g. "nèi hán" on 涵) — those belong on the group, not the tile.
+            .filter { !it.contains(' ') && !it.contains('　') }
+            .distinct()
+        if (fromChar.isNotEmpty()) return fromChar
+        val syllable = groupSyllables.getOrNull(hanOffsetInGroup) ?: return emptyList()
+        return listOf(syllable)
+    }
+
+    private fun splitPinyinSyllables(pinyin: String): List<String> {
+        return pinyin
+            .trim()
+            .split(Regex("""[\s　]+"""))
+            .map { it.trim() }
+            .filter { it.isNotEmpty() }
     }
 
     private fun isHanish(c: Char): Boolean =

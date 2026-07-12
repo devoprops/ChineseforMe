@@ -87,6 +87,7 @@ fun ChineseForMeNav() {
                     workId = workId,
                     textRepository = app.textRepository,
                     analyzer = app.analyzer,
+                    notionalTranslationService = app.notionalTranslationService,
                     settingsRepository = app.settingsRepository
                 )
             )

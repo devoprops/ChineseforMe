@@ -11,6 +11,7 @@ import com.example.chineseforme.domain.analysis.SentenceAnalyzer
 import com.example.chineseforme.domain.model.CharTile
 import com.example.chineseforme.domain.model.GroupSpan
 import com.example.chineseforme.domain.model.SentenceAnalysis
+import com.example.chineseforme.domain.translation.NotionalTranslationService
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
@@ -21,6 +22,7 @@ import kotlinx.coroutines.launch
 
 data class StudyUiState(
     val loading: Boolean = true,
+    val translating: Boolean = false,
     val sentence: SentenceEntity? = null,
     val analysis: SentenceAnalysis? = null,
     val selectedIndices: Set<Int> = emptySet(),
@@ -35,6 +37,7 @@ class StudyViewModel(
     private val workId: Long,
     private val textRepository: TextRepository,
     private val analyzer: SentenceAnalyzer,
+    private val notionalTranslationService: NotionalTranslationService,
     settingsRepository: SettingsRepository
 ) : ViewModel() {
     private val _state = MutableStateFlow(StudyUiState())
@@ -46,22 +49,35 @@ class StudyViewModel(
     private var sentences: List<SentenceEntity> = emptyList()
 
     init {
-        viewModelScope.launch { loadAround(sentenceId) }
+        viewModelScope.launch { loadAround(sentenceId, generateIfMissing = true) }
     }
 
-    private suspend fun loadAround(targetId: Long) {
+    private suspend fun loadAround(targetId: Long, generateIfMissing: Boolean) {
         _state.update { it.copy(loading = true, error = null) }
         sentences = textRepository.listSentences(workId)
-        val sentence = sentences.find { it.id == targetId }
+        var sentence = sentences.find { it.id == targetId }
             ?: textRepository.getSentence(targetId)
         if (sentence == null) {
             _state.update { it.copy(loading = false, error = "Sentence not found") }
             return
         }
+
+        if (generateIfMissing && sentence.parallelEnglish.isNullOrBlank()) {
+            _state.update { it.copy(translating = true) }
+            val draft = notionalTranslationService.translateSentence(sentence.text)
+            if (draft.isNotBlank()) {
+                textRepository.setSentenceParallelEnglish(sentence.id, draft)
+                sentences = textRepository.listSentences(workId)
+                sentence = sentences.find { it.id == targetId } ?: sentence.copy(parallelEnglish = draft)
+            }
+            _state.update { it.copy(translating = false) }
+        }
+
         val analysis = analyzer.analyze(sentence)
         _state.update {
             it.copy(
                 loading = false,
+                translating = false,
                 sentence = sentence,
                 analysis = analysis,
                 selectedIndices = emptySet(),
@@ -96,14 +112,11 @@ class StudyViewModel(
         val analysis = s.analysis ?: return
         val indices = s.selectedIndices.sorted()
         if (indices.size < 2) return
-        // Require contiguous selection
         if (indices.zipWithNext().any { (a, b) -> b != a + 1 }) return
         val spans = analysis.groups.map { GroupSpan(it.startIndex, it.endIndexExclusive) }
         viewModelScope.launch {
             val next = analyzer.mergeAndSave(sentence, spans, indices.first(), indices.last() + 1)
-            _state.update {
-                it.copy(analysis = next, selectedIndices = emptySet())
-            }
+            _state.update { it.copy(analysis = next, selectedIndices = emptySet()) }
         }
     }
 
@@ -131,7 +144,7 @@ class StudyViewModel(
         val idx = s.sentenceIndex
         if (idx <= 0) return
         val prev = sentences.getOrNull(idx - 1) ?: return
-        viewModelScope.launch { loadAround(prev.id) }
+        viewModelScope.launch { loadAround(prev.id, generateIfMissing = true) }
     }
 
     fun goNext() {
@@ -139,14 +152,33 @@ class StudyViewModel(
         val idx = s.sentenceIndex
         if (idx >= sentences.lastIndex) return
         val next = sentences.getOrNull(idx + 1) ?: return
-        viewModelScope.launch { loadAround(next.id) }
+        viewModelScope.launch { loadAround(next.id, generateIfMissing = true) }
     }
 
     fun saveParallelEnglish(english: String) {
         val sentence = _state.value.sentence ?: return
         viewModelScope.launch {
             textRepository.setSentenceParallelEnglish(sentence.id, english)
-            loadAround(sentence.id)
+            loadAround(sentence.id, generateIfMissing = false)
+        }
+    }
+
+    /** Overwrite stored notional with a freshly generated draft. */
+    fun regenerateNotional() {
+        val sentence = _state.value.sentence ?: return
+        viewModelScope.launch {
+            _state.update { it.copy(translating = true) }
+            textRepository.setSentenceParallelEnglish(sentence.id, null)
+            loadAround(sentence.id, generateIfMissing = true)
+        }
+    }
+
+    /** Wipe misaligned book-level pairs so each sentence regenerates on open. */
+    fun clearAllNotionalsForWork() {
+        viewModelScope.launch {
+            textRepository.clearParallelEnglishForWork(workId)
+            val current = _state.value.sentence?.id ?: return@launch
+            loadAround(current, generateIfMissing = true)
         }
     }
 
@@ -155,10 +187,18 @@ class StudyViewModel(
         private val workId: Long,
         private val textRepository: TextRepository,
         private val analyzer: SentenceAnalyzer,
+        private val notionalTranslationService: NotionalTranslationService,
         private val settingsRepository: SettingsRepository
     ) : ViewModelProvider.Factory {
         @Suppress("UNCHECKED_CAST")
         override fun <T : ViewModel> create(modelClass: Class<T>): T =
-            StudyViewModel(sentenceId, workId, textRepository, analyzer, settingsRepository) as T
+            StudyViewModel(
+                sentenceId,
+                workId,
+                textRepository,
+                analyzer,
+                notionalTranslationService,
+                settingsRepository
+            ) as T
     }
 }

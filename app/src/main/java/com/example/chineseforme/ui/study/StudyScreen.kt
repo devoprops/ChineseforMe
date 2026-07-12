@@ -39,7 +39,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.chineseforme.domain.model.SentenceReading
-import com.example.chineseforme.domain.model.WordGroup
+import com.example.chineseforme.ui.components.GlossPopup
 import com.example.chineseforme.ui.components.GroupedTileRow
 import com.example.chineseforme.ui.theme.Parchment
 
@@ -51,7 +51,7 @@ fun StudyScreen(
 ) {
     val state by viewModel.state.collectAsStateWithLifecycle()
     val settings by viewModel.settings.collectAsStateWithLifecycle()
-    var focusedGroup by remember { mutableStateOf<WordGroup?>(null) }
+    var glossPopup by remember { mutableStateOf<GlossPopup?>(null) }
     var showParallelEditor by remember { mutableStateOf(false) }
 
     Scaffold(
@@ -119,7 +119,10 @@ fun StudyScreen(
                     ) {
                         FilterChip(
                             selected = state.groupMode,
-                            onClick = viewModel::toggleGroupMode,
+                            onClick = {
+                                glossPopup = null
+                                viewModel.toggleGroupMode()
+                            },
                             label = { Text(if (state.groupMode) "Group mode on" else "Group mode") }
                         )
                         if (state.groupMode) {
@@ -140,29 +143,52 @@ fun StudyScreen(
                             style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
+                    } else {
+                        Text(
+                            "Tap a group for phrase senses · long-press for character senses",
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
                     }
 
                     GroupedTileRow(
                         groups = analysis.groups,
                         showPinyin = settings.showPinyinOnTiles,
                         selectedIndices = state.selectedIndices,
-                        onTileClick = { tile ->
-                            if (state.groupMode) {
-                                viewModel.onTileClick(tile)
+                        glossPopup = glossPopup,
+                        glossDensity = settings.glossDensity,
+                        groupMode = state.groupMode,
+                        onDismissPopup = { glossPopup = null },
+                        onGroupTap = { group, tile ->
+                            val hanCount = group.tiles.count { !it.isPunctuation }
+                            glossPopup = if (hanCount <= 1) {
+                                // Single-character group: tap shows character senses
+                                GlossPopup.Character(tile)
                             } else {
-                                focusedGroup = analysis.groups.find { it.groupId == tile.groupId }
+                                GlossPopup.Group(group)
                             }
-                        }
+                        },
+                        onCharacterLongPress = { tile ->
+                            glossPopup = GlossPopup.Character(tile)
+                        },
+                        onGroupModeTileClick = viewModel::onTileClick
                     )
 
                     Spacer(Modifier.height(4.dp))
                     Text("Notional translation", style = MaterialTheme.typography.titleMedium)
+                    if (state.translating) {
+                        Text(
+                            "Generating sentence translation…",
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    }
                     val fullReadings = analysis.readings.filter {
                         it.kind == SentenceReading.Kind.FullSentence
                     }
-                    if (fullReadings.isEmpty()) {
+                    if (!state.translating && fullReadings.isEmpty()) {
                         Text(
-                            "No full-sentence translation attached yet. Official English (when aligned) appears here—not a word-by-word gloss.",
+                            "No stored notional translation yet.",
                             style = MaterialTheme.typography.bodyMedium,
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
@@ -174,14 +200,18 @@ fun StudyScreen(
                             )
                         }
                     }
-                    TextButton(onClick = { showParallelEditor = true }) {
-                        Text(
-                            if (state.sentence?.parallelEnglish.isNullOrBlank()) {
-                                "Attach sentence translation"
-                            } else {
-                                "Edit sentence translation"
-                            }
-                        )
+                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        TextButton(onClick = { showParallelEditor = true }) {
+                            Text("Edit translation")
+                        }
+                        TextButton(
+                            onClick = viewModel::regenerateNotional,
+                            enabled = !state.translating
+                        ) { Text("Regenerate") }
+                        TextButton(
+                            onClick = viewModel::clearAllNotionalsForWork,
+                            enabled = !state.translating
+                        ) { Text("Clear book drafts") }
                     }
 
                     val glossChain = analysis.readings.firstOrNull {
@@ -199,49 +229,6 @@ fun StudyScreen(
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
                     }
-
-                    val group = focusedGroup
-                        ?: analysis.groups.firstOrNull { it.tiles.any { t -> !t.isPunctuation } }
-                    if (group != null) {
-                        Spacer(Modifier.height(4.dp))
-                        Text(
-                            "Phrase: ${group.surface}",
-                            style = MaterialTheme.typography.titleMedium
-                        )
-                        if (group.pinyinCandidates.isNotEmpty()) {
-                            Text(
-                                group.pinyinCandidates.joinToString(" / "),
-                                style = MaterialTheme.typography.bodyMedium
-                            )
-                        }
-                        group.senses.take(settings.glossDensity).forEachIndexed { i, sense ->
-                            Text("${i + 1}. $sense", style = MaterialTheme.typography.bodyMedium)
-                        }
-                        if (group.senses.size > settings.glossDensity) {
-                            Text(
-                                "… ${group.senses.size - settings.glossDensity} more senses",
-                                style = MaterialTheme.typography.labelMedium,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant
-                            )
-                        }
-
-                        Spacer(Modifier.height(8.dp))
-                        Text("Characters", style = MaterialTheme.typography.titleSmall)
-                        group.tiles.filter { !it.isPunctuation }.forEach { tile ->
-                            Text(
-                                "${tile.char}  ${tile.pinyinCandidates.firstOrNull().orEmpty()}",
-                                style = MaterialTheme.typography.bodyMedium,
-                                modifier = Modifier.fillMaxWidth()
-                            )
-                            tile.senses.take(3).forEach { sense ->
-                                Text(
-                                    "  · $sense",
-                                    style = MaterialTheme.typography.bodySmall,
-                                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                                )
-                            }
-                        }
-                    }
                 }
             }
         }
@@ -253,15 +240,22 @@ fun StudyScreen(
         }
         AlertDialog(
             onDismissRequest = { showParallelEditor = false },
-            title = { Text("Sentence translation") },
+            title = { Text("Notional translation") },
             text = {
-                OutlinedTextField(
-                    value = draft,
-                    onValueChange = { draft = it },
-                    label = { Text("Official / notional English") },
-                    modifier = Modifier.fillMaxWidth(),
-                    minLines = 4
-                )
+                Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Text(
+                        "Stored one-for-one with this sentence in your library. Edits persist until you delete the book.",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                    OutlinedTextField(
+                        value = draft,
+                        onValueChange = { draft = it },
+                        label = { Text("English") },
+                        modifier = Modifier.fillMaxWidth(),
+                        minLines = 4
+                    )
+                }
             },
             confirmButton = {
                 TextButton(

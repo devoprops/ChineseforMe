@@ -9,7 +9,6 @@ import com.example.chineseforme.data.importing.BundledText
 import com.example.chineseforme.data.importing.BundledTextCatalog
 import com.example.chineseforme.data.importing.DocumentTextExtractor
 import com.example.chineseforme.data.repo.TextRepository
-import com.example.chineseforme.domain.alignment.ZhuanFalunAligner
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
@@ -86,19 +85,6 @@ class LibraryViewModel(
                     content,
                     sourceKey = item.sourceKey
                 )
-                val englishPath = item.parallelEnglishAssetPath
-                if (englishPath != null) {
-                    withContext(Dispatchers.IO) {
-                        val english = bundledCatalog.read(englishPath)
-                        val sentences = textRepository.listSentences(workId).map { it.text }
-                        val parallels = ZhuanFalunAligner.parallelForSentences(
-                            chineseFull = content,
-                            englishFull = english,
-                            chineseSentences = sentences
-                        )
-                        textRepository.applyParallelEnglishByIndex(workId, parallels)
-                    }
-                }
                 workId
             }
         }
