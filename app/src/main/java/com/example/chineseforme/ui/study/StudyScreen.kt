@@ -30,6 +30,7 @@ import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -40,8 +41,20 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.chineseforme.domain.model.SentenceReading
 import com.example.chineseforme.ui.components.GlossPopup
+import com.example.chineseforme.ui.components.GlossPopupCard
 import com.example.chineseforme.ui.components.GroupedTileRow
 import com.example.chineseforme.ui.theme.Parchment
+
+private fun isSameGlossFocus(current: GlossPopup?, next: GlossPopup): Boolean {
+    return when {
+        current == null -> false
+        current is GlossPopup.Group && next is GlossPopup.Group ->
+            current.group.groupId == next.group.groupId
+        current is GlossPopup.Character && next is GlossPopup.Character ->
+            current.tile.index == next.tile.index
+        else -> false
+    }
+}
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -53,6 +66,10 @@ fun StudyScreen(
     val settings by viewModel.settings.collectAsStateWithLifecycle()
     var glossPopup by remember { mutableStateOf<GlossPopup?>(null) }
     var showParallelEditor by remember { mutableStateOf(false) }
+
+    LaunchedEffect(state.sentence?.id) {
+        glossPopup = null
+    }
 
     Scaffold(
         containerColor = Parchment,
@@ -157,21 +174,25 @@ fun StudyScreen(
                         selectedIndices = state.selectedIndices,
                         glossPopup = glossPopup,
                         groupMode = state.groupMode,
-                        onDismissPopup = { glossPopup = null },
                         onGroupTap = { group, tile ->
                             val hanCount = group.tiles.count { !it.isPunctuation }
-                            glossPopup = if (hanCount <= 1) {
-                                // Single-character group: tap shows character senses
+                            val next = if (hanCount <= 1) {
                                 GlossPopup.Character(tile)
                             } else {
                                 GlossPopup.Group(group)
                             }
+                            glossPopup = if (isSameGlossFocus(glossPopup, next)) null else next
                         },
                         onCharacterLongPress = { tile ->
-                            glossPopup = GlossPopup.Character(tile)
+                            val next = GlossPopup.Character(tile)
+                            glossPopup = if (isSameGlossFocus(glossPopup, next)) null else next
                         },
                         onGroupModeTileClick = viewModel::onTileClick
                     )
+
+                    glossPopup?.let { popup ->
+                        GlossPopupCard(popup = popup)
+                    }
 
                     Spacer(Modifier.height(4.dp))
                     Text("Notional translation", style = MaterialTheme.typography.titleMedium)

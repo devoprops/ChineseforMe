@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.intPreferencesKey
+import androidx.datastore.preferences.core.longPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
@@ -17,7 +18,9 @@ data class AppSettings(
     val distractorCount: Int = 8,
     val restartOnMistake: Boolean = true,
     val memorizeHintsPerAttempt: Int = 3,
-    val strokeHintsPerAttempt: Int = 3
+    val strokeHintsPerAttempt: Int = 3,
+    /** Work currently loaded for study; null if none selected. */
+    val currentWorkId: Long? = null
 )
 
 class SettingsRepository(private val context: Context) {
@@ -29,9 +32,11 @@ class SettingsRepository(private val context: Context) {
         val restartOnMistake = booleanPreferencesKey("restart_on_mistake")
         val memorizeHints = intPreferencesKey("memorize_hints")
         val strokeHints = intPreferencesKey("stroke_hints")
+        val currentWorkId = longPreferencesKey("current_work_id")
     }
 
     val settings: Flow<AppSettings> = context.dataStore.data.map { prefs ->
+        val workId = prefs[Keys.currentWorkId]
         AppSettings(
             showPinyinOnTiles = prefs[Keys.showPinyin] ?: true,
             glossDensity = prefs[Keys.glossDensity] ?: 5,
@@ -39,7 +44,8 @@ class SettingsRepository(private val context: Context) {
             distractorCount = prefs[Keys.distractorCount] ?: 8,
             restartOnMistake = prefs[Keys.restartOnMistake] ?: true,
             memorizeHintsPerAttempt = prefs[Keys.memorizeHints] ?: 3,
-            strokeHintsPerAttempt = prefs[Keys.strokeHints] ?: 3
+            strokeHintsPerAttempt = prefs[Keys.strokeHints] ?: 3,
+            currentWorkId = workId?.takeIf { it > 0L }
         )
     }
 
@@ -69,5 +75,15 @@ class SettingsRepository(private val context: Context) {
 
     suspend fun setStrokeHints(value: Int) {
         context.dataStore.edit { it[Keys.strokeHints] = value.coerceIn(0, 10) }
+    }
+
+    suspend fun setCurrentWorkId(workId: Long?) {
+        context.dataStore.edit { prefs ->
+            if (workId != null && workId > 0L) {
+                prefs[Keys.currentWorkId] = workId
+            } else {
+                prefs.remove(Keys.currentWorkId)
+            }
+        }
     }
 }

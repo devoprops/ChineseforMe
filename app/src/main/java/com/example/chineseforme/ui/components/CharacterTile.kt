@@ -16,7 +16,6 @@ import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -27,7 +26,6 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.chineseforme.domain.model.CharTile
@@ -181,7 +179,6 @@ fun GroupedTileRow(
     selectedIndices: Set<Int>,
     glossPopup: GlossPopup?,
     groupMode: Boolean,
-    onDismissPopup: () -> Unit,
     onGroupTap: (WordGroup, CharTile) -> Unit,
     onCharacterLongPress: (CharTile) -> Unit,
     onGroupModeTileClick: (CharTile) -> Unit,
@@ -195,7 +192,6 @@ fun GroupedTileRow(
     ) {
         groups.forEach { group ->
             val multi = group.tiles.count { !it.isPunctuation } > 1
-            val anchorTile = group.tiles.firstOrNull { !it.isPunctuation } ?: group.tiles.firstOrNull()
             Box(
                 modifier = Modifier
                     .then(
@@ -212,47 +208,28 @@ fun GroupedTileRow(
                     horizontalArrangement = Arrangement.spacedBy(2.dp)
                 ) {
                     group.tiles.forEach { tile ->
-                        val showMenuForTile = when (val p = glossPopup) {
-                            is GlossPopup.Character -> p.tile.index == tile.index
-                            is GlossPopup.Group ->
-                                p.group.groupId == group.groupId && tile.index == anchorTile?.index
-                            null -> false
-                        }
-                        Box {
-                            CharacterTile(
-                                tile = tile,
-                                showPinyin = showPinyin,
-                                selected = tile.index in selectedIndices ||
-                                    (glossPopup is GlossPopup.Group &&
-                                        glossPopup.group.groupId == group.groupId &&
-                                        !tile.isPunctuation) ||
-                                    (glossPopup is GlossPopup.Character &&
-                                        glossPopup.tile.index == tile.index),
-                                onClick = {
-                                    if (groupMode) {
-                                        onGroupModeTileClick(tile)
-                                    } else if (!tile.isPunctuation) {
-                                        onGroupTap(group, tile)
-                                    }
-                                },
-                                onLongClick = if (!groupMode && !tile.isPunctuation) {
-                                    { onCharacterLongPress(tile) }
-                                } else {
-                                    null
+                        CharacterTile(
+                            tile = tile,
+                            showPinyin = showPinyin,
+                            selected = tile.index in selectedIndices ||
+                                (glossPopup is GlossPopup.Group &&
+                                    glossPopup.group.groupId == group.groupId &&
+                                    !tile.isPunctuation) ||
+                                (glossPopup is GlossPopup.Character &&
+                                    glossPopup.tile.index == tile.index),
+                            onClick = {
+                                if (groupMode) {
+                                    onGroupModeTileClick(tile)
+                                } else if (!tile.isPunctuation) {
+                                    onGroupTap(group, tile)
                                 }
-                            )
-                            DropdownMenu(
-                                expanded = showMenuForTile,
-                                onDismissRequest = onDismissPopup,
-                                offset = DpOffset(0.dp, 4.dp)
-                            ) {
-                                Box(modifier = Modifier.padding(horizontal = 4.dp, vertical = 2.dp)) {
-                                    if (glossPopup != null) {
-                                        GlossPopupCard(popup = glossPopup)
-                                    }
-                                }
+                            },
+                            onLongClick = if (!groupMode && !tile.isPunctuation) {
+                                { onCharacterLongPress(tile) }
+                            } else {
+                                null
                             }
-                        }
+                        )
                     }
                 }
             }

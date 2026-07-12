@@ -3,28 +3,29 @@ package com.example.chineseforme.ui.library
 import android.provider.OpenableColumns
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
-import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
@@ -42,22 +43,24 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.example.chineseforme.data.db.TextWorkEntity
 import com.example.chineseforme.data.importing.BundledText
+import com.example.chineseforme.domain.model.StudyMode
 import com.example.chineseforme.ui.theme.Parchment
 import com.example.chineseforme.ui.theme.TileFace
 
-private enum class ImportMode { Paste, File, Link, Library }
+private enum class ImportMode { Library, Paste, File, Link, Bundled }
 
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 @Composable
 fun LibraryScreen(
     viewModel: LibraryViewModel,
-    onOpenWork: (Long) -> Unit,
+    onOpenMode: (Long, StudyMode) -> Unit,
     onOpenSettings: () -> Unit
 ) {
-    val works by viewModel.works.collectAsStateWithLifecycle()
-    val extras by viewModel.extras.collectAsStateWithLifecycle()
+    val state by viewModel.uiState.collectAsStateWithLifecycle()
     var showImport by remember { mutableStateOf(false) }
+    var importStartMode by remember { mutableStateOf(ImportMode.Paste) }
 
     Scaffold(
         containerColor = Parchment,
@@ -71,80 +74,97 @@ fun LibraryScreen(
                 },
                 colors = TopAppBarDefaults.topAppBarColors(containerColor = Parchment)
             )
-        },
-        floatingActionButton = {
-            FloatingActionButton(onClick = { showImport = true }) {
-                Icon(Icons.Default.Add, contentDescription = "Import text")
-            }
         }
     ) { padding ->
-        LazyColumn(
+        Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(padding),
-            contentPadding = PaddingValues(16.dp),
-            verticalArrangement = Arrangement.spacedBy(10.dp)
+                .padding(padding)
+                .verticalScroll(rememberScrollState())
+                .padding(16.dp),
+            verticalArrangement = Arrangement.spacedBy(20.dp)
         ) {
-            if (extras.bundled.isNotEmpty()) {
-                item {
-                    Text("Bundled texts", style = MaterialTheme.typography.titleMedium)
-                }
-                items(extras.bundled, key = { it.sourceKey }) { bundled ->
-                    Surface(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .clickable {
-                                viewModel.loadBundled(bundled) { id -> onOpenWork(id) }
-                            },
-                        color = TileFace,
-                        shape = RoundedCornerShape(12.dp)
-                    ) {
-                        Column(modifier = Modifier.padding(16.dp)) {
-                            Text(bundled.title, style = MaterialTheme.typography.titleMedium)
-                            Text(
-                                "Tap to open · select a paragraph to study",
-                                style = MaterialTheme.typography.bodySmall,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant
-                            )
-                        }
-                    }
-                }
-            }
-
-            item {
-                Text(
-                    if (works.isEmpty()) "Your imported works" else "Imported works",
-                    style = MaterialTheme.typography.titleMedium,
-                    modifier = Modifier.padding(top = 8.dp)
+            HomeSection(title = "Current text") {
+                CurrentTextBlock(
+                    work = state.currentWork,
+                    onClear = viewModel::clearCurrentWork
                 )
             }
 
-            if (works.isEmpty()) {
-                item {
-                    Text(
-                        "Import via paste, file (.txt / .pdf / .docx), or link. Bundled texts stay available above.",
-                        style = MaterialTheme.typography.bodyMedium
-                    )
-                }
-            } else {
-                items(works, key = { it.id }) { work ->
-                    Surface(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .clickable { onOpenWork(work.id) },
-                        color = TileFace,
-                        shape = RoundedCornerShape(12.dp)
-                    ) {
-                        Column(modifier = Modifier.padding(16.dp)) {
-                            Text(work.title, style = MaterialTheme.typography.titleMedium)
-                            Text(
-                                work.content.take(80).replace("\n", " ") +
-                                    if (work.content.length > 80) "…" else "",
-                                style = MaterialTheme.typography.bodySmall,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant
-                            )
+            HomeSection(title = "Import") {
+                Text(
+                    "Bring a text in, or choose one already stored. It becomes the current text.",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+                FlowRow(
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
+                    OutlinedButton(
+                        onClick = {
+                            importStartMode = ImportMode.Library
+                            showImport = true
                         }
-                    }
+                    ) { Text("Library") }
+                    OutlinedButton(
+                        onClick = {
+                            importStartMode = ImportMode.Paste
+                            showImport = true
+                        }
+                    ) { Text("Paste") }
+                    OutlinedButton(
+                        onClick = {
+                            importStartMode = ImportMode.File
+                            showImport = true
+                        }
+                    ) { Text("File") }
+                    OutlinedButton(
+                        onClick = {
+                            importStartMode = ImportMode.Link
+                            showImport = true
+                        }
+                    ) { Text("Link") }
+                    OutlinedButton(
+                        onClick = {
+                            importStartMode = ImportMode.Bundled
+                            showImport = true
+                        }
+                    ) { Text("Bundled") }
+                }
+            }
+
+            HomeSection(title = "Study modes") {
+                Text(
+                    "Opens sentence selection for that mode, using the current text.",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+                val workId = state.currentWork?.id
+                val enabled = workId != null
+                Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Button(
+                        onClick = { workId?.let { onOpenMode(it, StudyMode.Standard) } },
+                        enabled = enabled,
+                        modifier = Modifier.fillMaxWidth()
+                    ) { Text("Standard") }
+                    Button(
+                        onClick = { workId?.let { onOpenMode(it, StudyMode.Memorize) } },
+                        enabled = enabled,
+                        modifier = Modifier.fillMaxWidth()
+                    ) { Text("Memorize") }
+                    Button(
+                        onClick = { workId?.let { onOpenMode(it, StudyMode.Stroke) } },
+                        enabled = enabled,
+                        modifier = Modifier.fillMaxWidth()
+                    ) { Text("Stroke practice") }
+                }
+                if (!enabled) {
+                    Text(
+                        "Import or select a text first.",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
                 }
             }
         }
@@ -152,42 +172,44 @@ fun LibraryScreen(
 
     if (showImport) {
         ImportDialog(
-            bundled = extras.bundled,
-            importing = extras.importing,
-            error = extras.error,
+            initialMode = importStartMode,
+            libraryWorks = state.libraryWorks,
+            bundled = state.bundled,
+            importing = state.importing,
+            error = state.error,
             onDismiss = {
                 viewModel.clearError()
                 showImport = false
             },
+            onSelectLibraryWork = { work ->
+                viewModel.setCurrentWork(work.id)
+                showImport = false
+            },
             onPaste = { title, content ->
-                viewModel.importPaste(title, content) { id ->
+                viewModel.importPaste(title, content) {
                     showImport = false
-                    onOpenWork(id)
                 }
             },
             onFile = { uri, name, mime ->
-                viewModel.importUri(uri, name, mime) { id ->
+                viewModel.importUri(uri, name, mime) {
                     showImport = false
-                    onOpenWork(id)
                 }
             },
             onLink = { url ->
-                viewModel.importUrl(url) { id ->
+                viewModel.importUrl(url) {
                     showImport = false
-                    onOpenWork(id)
                 }
             },
             onBundled = { item ->
-                viewModel.loadBundled(item) { id ->
+                viewModel.loadBundled(item) {
                     showImport = false
-                    onOpenWork(id)
                 }
             },
             onClearError = viewModel::clearError
         )
     }
 
-    if (extras.importing && !showImport) {
+    if (state.importing && !showImport) {
         AlertDialog(
             onDismissRequest = {},
             title = { Text("Loading") },
@@ -204,7 +226,7 @@ fun LibraryScreen(
         )
     }
 
-    extras.error?.takeIf { !showImport }?.let { message ->
+    state.error?.takeIf { !showImport }?.let { message ->
         AlertDialog(
             onDismissRequest = viewModel::clearError,
             title = { Text("Import error") },
@@ -217,18 +239,79 @@ fun LibraryScreen(
 }
 
 @Composable
+private fun HomeSection(
+    title: String,
+    content: @Composable () -> Unit
+) {
+    Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+        Text(title, style = MaterialTheme.typography.titleMedium)
+        content()
+    }
+}
+
+@Composable
+private fun CurrentTextBlock(
+    work: TextWorkEntity?,
+    onClear: () -> Unit
+) {
+    Surface(
+        modifier = Modifier.fillMaxWidth(),
+        color = TileFace,
+        shape = RoundedCornerShape(12.dp)
+    ) {
+        Column(
+            modifier = Modifier.padding(16.dp),
+            verticalArrangement = Arrangement.spacedBy(8.dp)
+        ) {
+            if (work == null) {
+                Text(
+                    "None selected",
+                    style = MaterialTheme.typography.titleMedium
+                )
+                Text(
+                    "Import a text or pick one from your library to begin.",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            } else {
+                Text(work.title, style = MaterialTheme.typography.titleMedium)
+                Text(
+                    work.content.take(120).replace("\n", " ") +
+                        if (work.content.length > 120) "…" else "",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+                Text(
+                    "Last at sentence ${work.lastOpenedSentenceIndex + 1}",
+                    style = MaterialTheme.typography.labelMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+                TextButton(
+                    onClick = onClear,
+                    contentPadding = PaddingValues(horizontal = 0.dp)
+                ) { Text("Clear current") }
+            }
+        }
+    }
+}
+
+@OptIn(ExperimentalLayoutApi::class)
+@Composable
 private fun ImportDialog(
+    initialMode: ImportMode,
+    libraryWorks: List<TextWorkEntity>,
     bundled: List<BundledText>,
     importing: Boolean,
     error: String?,
     onDismiss: () -> Unit,
+    onSelectLibraryWork: (TextWorkEntity) -> Unit,
     onPaste: (String, String) -> Unit,
     onFile: (android.net.Uri, String?, String?) -> Unit,
     onLink: (String) -> Unit,
     onBundled: (BundledText) -> Unit,
     onClearError: () -> Unit
 ) {
-    var mode by remember { mutableStateOf(ImportMode.Paste) }
+    var mode by remember(initialMode) { mutableStateOf(initialMode) }
     var title by remember { mutableStateOf("") }
     var content by remember { mutableStateOf("") }
     var url by remember { mutableStateOf("") }
@@ -254,7 +337,12 @@ private fun ImportDialog(
         title = { Text("Import text") },
         text = {
             Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                FlowRow(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                    FilterChip(
+                        selected = mode == ImportMode.Library,
+                        onClick = { mode = ImportMode.Library },
+                        label = { Text("Library") }
+                    )
                     FilterChip(
                         selected = mode == ImportMode.Paste,
                         onClick = { mode = ImportMode.Paste },
@@ -271,13 +359,33 @@ private fun ImportDialog(
                         label = { Text("Link") }
                     )
                     FilterChip(
-                        selected = mode == ImportMode.Library,
-                        onClick = { mode = ImportMode.Library },
+                        selected = mode == ImportMode.Bundled,
+                        onClick = { mode = ImportMode.Bundled },
                         label = { Text("Bundled") }
                     )
                 }
 
                 when (mode) {
+                    ImportMode.Library -> {
+                        Text(
+                            "Stored texts not currently loaded. Tap one to make it current.",
+                            style = MaterialTheme.typography.bodyMedium
+                        )
+                        if (libraryWorks.isEmpty()) {
+                            Text(
+                                "No other stored texts yet.",
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                        } else {
+                            libraryWorks.forEach { work ->
+                                TextButton(
+                                    onClick = { onSelectLibraryWork(work) },
+                                    enabled = !importing
+                                ) { Text(work.title) }
+                            }
+                        }
+                    }
                     ImportMode.Paste -> {
                         OutlinedTextField(
                             value = title,
@@ -296,7 +404,7 @@ private fun ImportDialog(
                     }
                     ImportMode.File -> {
                         Text(
-                            "Choose a .txt, .pdf, or .docx file. Text is extracted for paragraph study.",
+                            "Choose a .txt, .pdf, or .docx file. Text is extracted for study.",
                             style = MaterialTheme.typography.bodyMedium
                         )
                         TextButton(
@@ -326,7 +434,7 @@ private fun ImportDialog(
                             modifier = Modifier.fillMaxWidth()
                         )
                     }
-                    ImportMode.Library -> {
+                    ImportMode.Bundled -> {
                         if (bundled.isEmpty()) {
                             Text("No bundled texts found in assets/texts.")
                         } else {
@@ -374,7 +482,7 @@ private fun ImportDialog(
                     },
                     enabled = url.isNotBlank() && !importing
                 ) { Text("Download") }
-                ImportMode.File, ImportMode.Library -> {}
+                ImportMode.Library, ImportMode.File, ImportMode.Bundled -> {}
             }
         },
         dismissButton = {

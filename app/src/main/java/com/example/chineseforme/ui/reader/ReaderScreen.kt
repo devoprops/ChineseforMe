@@ -1,6 +1,7 @@
 package com.example.chineseforme.ui.reader
 
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -24,6 +25,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.example.chineseforme.domain.model.StudyMode
 import com.example.chineseforme.ui.theme.Parchment
 import com.example.chineseforme.ui.theme.TileFace
 
@@ -31,6 +33,7 @@ import com.example.chineseforme.ui.theme.TileFace
 @Composable
 fun ReaderScreen(
     viewModel: ReaderViewModel,
+    mode: StudyMode,
     onBack: () -> Unit,
     onOpenSentence: (Long, Int) -> Unit
 ) {
@@ -41,7 +44,16 @@ fun ReaderScreen(
         containerColor = Parchment,
         topBar = {
             TopAppBar(
-                title = { Text(work?.title ?: "Reader") },
+                title = {
+                    Column {
+                        Text(mode.label)
+                        Text(
+                            work?.title ?: "Select sentence",
+                            style = MaterialTheme.typography.labelMedium,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    }
+                },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
                         Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
@@ -58,6 +70,14 @@ fun ReaderScreen(
             contentPadding = PaddingValues(16.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
+            item {
+                Text(
+                    "Choose a sentence for ${mode.label.lowercase()}.",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.padding(bottom = 4.dp)
+                )
+            }
             items(sentences, key = { it.id }) { sentence ->
                 Card(
                     onClick = {
